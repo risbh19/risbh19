@@ -1,6 +1,9 @@
-# Rishabh Pal
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg" />
+  <img src="assets/header-light.svg" width="650" alt="Rishabh Pal — full-stack development, FastAPI backends and competitive programming" />
+</picture>
 
-CSE student at **RKGIT (2024–2028)**, building full-stack apps with **Python, FastAPI, React and Next.js**. I also practise **competitive programming in C++ and Python**.
+**3rd-year CSE student at RKGIT**, building full-stack apps with **Python, FastAPI, React and Next.js**. I also practise **competitive programming in C++ and Python**.
 
 [LinkedIn](https://www.linkedin.com/in/rishabhpal19/) · [Email](mailto:palrishabh989@gmail.com) · [Repositories](https://github.com/risbh19?tab=repositories)
 

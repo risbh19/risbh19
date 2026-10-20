@@ -2,7 +2,7 @@
 
 The README uses original, repository-hosted SVG cards plus the requested GitHub Readme Stats card. The custom generator uses built-in Node.js 22 modules. The GitHub Stats card uses the maintained upstream action, pinned to v2.1.0's commit and renderer version 2.2.1. Both run with the repository's automatically supplied `GITHUB_TOKEN`; no personal access token is required.
 
-The current layout is minimal: a short introduction, five core skill groups, three featured projects, brief experience and achievements, and two 500-pixel GitHub cards. Coding-platform statistics and the full contribution calendar are expandable. GitHub scales images down on narrow screens. The refresh generator preserves the 500-pixel stats-card width.
+The current layout pairs an original 650-pixel animated profile header with a short introduction, five core skill groups, three featured projects, brief experience and achievements, and two 500-pixel GitHub cards. Coding-platform statistics and the full contribution calendar are expandable. GitHub scales images down on narrow screens. The refresh generator preserves the 500-pixel stats-card width.
 
 ## Refresh behavior
 
@@ -31,7 +31,7 @@ The earlier design explored categories from [Awesome GitHub Profile README](http
 
 [Arvind Kumar's profile](https://github.com/arvindkumar-ship-it/arvindkumar-ship-it) also informed the presentation of GitHub stats, streaks and contribution activity. This profile keeps its own introduction, project descriptions, skills and original light/dark chart design. Skills, achievements and the one-month work experience were supplied by the profile owner.
 
-The following records the earlier design exploration; decorative headers, badges, GIFs, code-mode introductions and the retro corner are not displayed in the current README.
+The following records the earlier design exploration. The original animated profile header remains; decorative badges, GIFs, code-mode introductions and the retro corner are not displayed in the current README.
 
 | Category | Element explored | Reference |
 | --- | --- | --- |
