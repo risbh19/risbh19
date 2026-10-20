@@ -3,7 +3,7 @@ name: Refresh profile
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 * * * *'
+    - cron: '47 18 * * *' # Daily at 00:17 IST (18:47 UTC)
   push:
     branches: [main]
     paths:
@@ -39,6 +39,26 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/update-profile.mjs
+      - name: Generate GitHub Stats card (light)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: stats
+          core_version: '2.2.1'
+          options: >-
+            username=risbh19&show_icons=true&include_all_commits=true&disable_animations=true&card_width=500&custom_title=Rishabh%20Pal%27s%20GitHub%20Stats&title_color=7957d5&icon_color=ff3860&ring_color=8b70df&bg_color=ffffff&text_color=434d58&border_color=e4e2e2
+          path: assets/github-stats-light.svg
+          token: ${{ github.token }}
+          fail_on_error: 'true'
+      - name: Generate GitHub Stats card (dark)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: stats
+          core_version: '2.2.1'
+          options: >-
+            username=risbh19&show_icons=true&include_all_commits=true&disable_animations=true&card_width=500&custom_title=Rishabh%20Pal%27s%20GitHub%20Stats&title_color=a78bfa&icon_color=ff577f&ring_color=a78bfa&bg_color=0d1117&text_color=e6edf3&border_color=30363d
+          path: assets/github-stats-dark.svg
+          token: ${{ github.token }}
+          fail_on_error: 'true'
       - name: Commit generated assets when changed
         run: |
           git config user.name 'github-actions[bot]'

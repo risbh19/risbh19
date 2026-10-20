@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="#about-me">About</a> · <a href="#tech-stack">Stack</a> · <a href="#featured-projects">Projects</a> · <a href="#backend-focus">Backend</a> · <a href="#competitive-programming">Competitive programming</a> · <a href="#contribution-stats">Contribution stats</a>
+  <a href="#about-me">About</a> · <a href="#tech-stack">Stack</a> · <a href="#featured-projects">Projects</a> · <a href="#languages">Languages</a> · <a href="#competitive-programming">Competitive programming</a> · <a href="#contribution-stats">Contribution stats</a>
 </p>
 
 ## About me
@@ -52,14 +52,9 @@ A college discussion platform with topic boards, posts, comments and voting. Bui
 
 ### [Careflow →](https://github.com/risbh19/Careflow)
 
-A fork of [Careflow by arvindkumar-ship-it](https://github.com/arvindkumar-ship-it/Careflow): a hospital workflow prototype using synthetic data, with separate doctor, nurse and patient roles. Combines a **Next.js frontend** with a **FastAPI backend** and server-side access controls.
+A hospital workflow prototype using synthetic data, with separate doctor, nurse and patient roles. Combines a **Next.js frontend** with a **FastAPI backend** and server-side access controls.
 
-## Backend focus
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/backend-dark.svg" />
-  <img src="assets/backend-light.svg" width="100%" alt="Backend focus: frontend interfaces, FastAPI services and relational data, with validation, access control and testing" />
-</picture>
+## Languages
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg" />
@@ -89,15 +84,12 @@ A fork of [Careflow by arvindkumar-ship-it](https://github.com/arvindkumar-ship-
 ## Contribution stats
 
 <!-- CONTRIBUTION_STATS:START -->
-| Metric | Last 7 days | Last 30 days | Calendar window |
-| :--- | ---: | ---: | ---: |
-| Contributions | 54 | 70 | 100 |
-| Active days | 4 | 5 | 10 |
-| Most contributions in one day | 26 | 26 | 26 |
-
-**Current streak:** 4 days · **Longest streak in the calendar window:** 4 days
-
-<sub>Periods end on 2026-10-20 (UTC). Updated 20 Oct 2026, 18:00 IST.</sub>
+<a href="https://github.com/risbh19">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/github-stats-dark.svg" />
+    <img src="assets/github-stats-light.svg" width="100%" alt="Rishabh Pal's GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />
+  </picture>
+</a>
 <!-- CONTRIBUTION_STATS:END -->
 
 <details>
@@ -129,4 +121,4 @@ A fork of [Careflow by arvindkumar-ship-it](https://github.com/arvindkumar-ship-
   <a href="https://www.linkedin.com/in/rishabhpal19/">LinkedIn</a> · <a href="mailto:palrishabh989@gmail.com">palrishabh989@gmail.com</a> · <a href="https://github.com/risbh19?tab=repositories">All repositories</a>
 </p>
 
-<p align="center"><sub>Statistics update hourly; data sections show their observation time. <a href="docs/PROFILE.md">Data &amp; credits</a></sub></p>
+<p align="center"><sub>Statistics refresh every 24 hours. <a href="docs/PROFILE.md">Data &amp; credits</a></sub></p>

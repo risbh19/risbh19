@@ -1,27 +1,26 @@
 # Profile data and design
 
-The README uses original, repository-hosted SVG cards. Public statistics are fetched by `scripts/update-profile.mjs` with Node.js 22; there are no runtime package dependencies and no personal access token is required. The workflow uses the repository's automatically supplied `GITHUB_TOKEN` for GitHub API requests and committing generated assets.
+The README uses original, repository-hosted SVG cards plus the requested GitHub Readme Stats card. The custom generator uses built-in Node.js 22 modules. The GitHub Stats card uses the maintained upstream action, pinned to v2.1.0's commit and renderer version 2.2.1. Both run with the repository's automatically supplied `GITHUB_TOKEN`; no personal access token is required.
 
 ## Refresh behavior
 
-- Runs hourly at minute 17, after changes to the README/generator/tests/workflow, and on manual dispatch.
+- Runs once every 24 hours at 18:47 UTC (00:17 IST), after changes to the README/generator/tests/workflow, and on manual dispatch.
 - GitHub schedules and image caching can delay visible updates; the README is not a continuously streaming dashboard.
 - Each source has its own observation time. A partial failure preserves its last successful data and marks that source as **Last available**. Missing values display an em dash, never an invented zero or rank.
 - When all data sources fail, the workflow fails and leaves the previously published cards available. Run history and the cards' timestamps make freshness visible.
-- Public repository updates elsewhere appear on the next hourly run. The workflow updates both the generated images and the marked contribution table in README.md.
+- Public repository updates elsewhere appear on the next daily run. The workflow updates the generated images; the marked contribution-stats section embeds the upstream card in light and dark variants.
+- The GitHub Stats action fails rather than committing an error image when its data source fails. The previously published card remains available.
 - GitHub may disable scheduled workflows in inactive public repositories. The manual **Actions → Refresh profile → Run workflow** control remains available; re-enable the schedule if GitHub disables it.
 
 ## What the numbers mean
 
 - **Languages:** source bytes from public, owned, non-fork repositories, excluding the profile repo. This is repository composition, not time spent coding or a proficiency score.
 - **Contributions:** counts from the same public GitHub calendar shown to a visitor. The displayed calendar can include a partial starting week. It follows GitHub's attribution rules and can include anonymized contribution counts if the account has chosen to display them publicly.
-- **Streaks:** consecutive active calendar days within the displayed window, using UTC date boundaries. The current streak remains active if yesterday had contributions and today is still empty. Longest streak is limited to the calendar window; it is not an all-time claim.
-- **Contribution table:** totals, active days and the largest daily count for the last 7 days, last 30 days and displayed calendar window. All periods include the calendar's latest observed date. Stale data keeps its original period end and is labeled **Last available**.
+- **GitHub Stats card:** total stars, total commits (`include_all_commits=true`), pull requests, issues, repositories contributed to in the last year, and the upstream rank ring. Counts and the rank are computed by the upstream renderer from the accessible public profile, not copied from the example screenshot. The rank is that project's scoring system, not an official GitHub rating.
 - **LeetCode:** accepted problem counts by difficulty and contest rating from the platform's public GraphQL endpoint. This endpoint is not a guaranteed stable public API.
 - **Codeforces:** current rating, maximum rating and rank from the official public `user.info` API.
 - **CodeChef:** current and highest ratings parsed from the public profile page. A layout change or access block causes a marked stale/unavailable state.
 - **Featured projects:** WaveSafe, College Forum and Careflow. WaveSafe is a private repository explicitly selected by the profile owner; its link requires repository access. Its basic project overview is included, while private code and statistics are not fetched by the scheduled workflow.
-- **Backend focus:** an explanatory request-flow illustration, not a claim about production deployment or measured performance.
 
 ## Reference categories
 
@@ -29,7 +28,7 @@ The structure was inspired by [Awesome GitHub Profile README](https://github.com
 
 | Category | Element in this profile | Reference |
 | --- | --- | --- |
-| GitHub Actions | Hourly data refresh and generated assets | [Simon Willison](https://github.com/simonw/simonw) |
+| GitHub Actions | Daily data refresh and generated assets | [Simon Willison](https://github.com/simonw/simonw) |
 | Code Mode | Python developer introduction | [Thaiane Braga](https://github.com/Thaiane/Thaiane) |
 | Dynamic Realtime | Freshness-stamped contribution and coding-platform statistics | [Anurag Hazra](https://github.com/anuraghazra/anuraghazra) |
 | A Little Bit of Everything | Balanced projects, tools, stats and contact sections | [Martin Heinz](https://github.com/MartinHeinz/MartinHeinz) |
@@ -50,6 +49,8 @@ The structure was inspired by [Awesome GitHub Profile README](https://github.com
 - [Awesome GitHub Profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme): category/reference discovery.
 - [Shields.io](https://shields.io/): externally hosted badges.
 - [Skill Icons](https://github.com/tandpfun/skill-icons): externally hosted technology icons.
+- [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats): the card design selected by the profile owner.
+- [GitHub Readme Stats Action](https://github.com/stats-organization/github-readme-stats-action) and its maintained core: daily generation of the repository-hosted stats card.
 - [Martin Heinz wave GIF](https://github.com/MartinHeinz/MartinHeinz/blob/master/wave.gif): externally linked waving-hand animation.
 - [Ashutosh anime GIF](https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX/blob/master/assets/208593.gif): externally linked anime illustration. These two GIFs remain hosted by their respective profile owners and are not relicensed by this repository.
 - [GitHub repository languages](https://docs.github.com/en/rest/repos/repos#list-repository-languages) and [Codeforces API](https://codeforces.com/apiHelp/methods): public data documentation.

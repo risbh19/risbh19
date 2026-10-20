@@ -64,40 +64,18 @@ export function streaks(days, today = new Date().toISOString().slice(0, 10)) {
   return { current, longest, active };
 }
 
-export function contributionSummary(days) {
-  if (!days?.length) return null;
-  const ordered = [...days].sort((a, b) => a.date.localeCompare(b.date));
-  const end = ordered.at(-1).date;
-  const endTime = Date.parse(end + 'T00:00:00Z');
-  const summarize = period => {
-    const selected = period ? ordered.filter(day => Date.parse(day.date + 'T00:00:00Z') >= endTime - (period - 1) * 86400000) : ordered;
-    return {
-      contributions: selected.reduce((sum, day) => sum + day.count, 0),
-      activeDays: selected.filter(day => day.count > 0).length,
-      busiestDay: Math.max(0, ...selected.map(day => day.count))
-    };
-  };
-  return { end, last7: summarize(7), last30: summarize(30), window: summarize(null), streak: streaks(ordered, end) };
-}
-
-export function contributionSection(source) {
-  const summary = contributionSummary(source?.data?.days);
-  if (!summary) return '_Contribution statistics are temporarily unavailable._';
-  const line = (label, key) => `| ${label} | ${number(summary.last7[key])} | ${number(summary.last30[key])} | ${number(summary.window[key])} |`;
+export function contributionSection() {
   return [
-    '| Metric | Last 7 days | Last 30 days | Calendar window |',
-    '| :--- | ---: | ---: | ---: |',
-    line('Contributions', 'contributions'),
-    line('Active days', 'activeDays'),
-    line('Most contributions in one day', 'busiestDay'),
-    '',
-    `**Current streak:** ${number(summary.streak.current)} days · **Longest streak in the calendar window:** ${number(summary.streak.longest)} days`,
-    '',
-    `<sub>Periods end on ${summary.end} (UTC). ${sourceLabel(source)}.</sub>`
+    '<a href="https://github.com/risbh19">',
+    '  <picture>',
+    '    <source media="(prefers-color-scheme: dark)" srcset="assets/github-stats-dark.svg" />',
+    '    <img src="assets/github-stats-light.svg" width="100%" alt="Rishabh Pal\'s GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />',
+    '  </picture>',
+    '</a>'
   ].join('\n');
 }
 
-export function replaceContributionSection(readme, source) {
+export function replaceContributionSection(readme) {
   const start = '<!-- CONTRIBUTION_STATS:START -->';
   const end = '<!-- CONTRIBUTION_STATS:END -->';
   if (readme.split(start).length !== 2 || readme.split(end).length !== 2 || readme.indexOf(start) > readme.indexOf(end)) {
@@ -105,7 +83,7 @@ export function replaceContributionSection(readme, source) {
   }
   const first = readme.indexOf(start) + start.length;
   const last = readme.indexOf(end);
-  return readme.slice(0, first) + '\n' + contributionSection(source) + '\n' + readme.slice(last);
+  return readme.slice(0, first) + '\n' + contributionSection() + '\n' + readme.slice(last);
 }
 
 export function parseCodeChef(html) {
@@ -168,26 +146,6 @@ function svg(width, height, title, theme, body) {
 function heading(title, subtitle, t) {
   return txt(28, 34, title, t.fg, 20, 'font-weight="650"') + txt(28, 57, subtitle, t.muted, 11);
 }
-function renderBackend(t) {
-  let body = heading('From interface to reliable backend', 'My focus across the request lifecycle', t);
-  const stages = [
-    { x: 28, title: 'INTERFACE', detail: 'React · Next.js' },
-    { x: 290, title: 'API', detail: 'Python · FastAPI' },
-    { x: 552, title: 'DATA', detail: 'PostgreSQL · SQLite' }
-  ];
-  for (const stage of stages) {
-    body += `<rect x="${stage.x}" y="83" width="220" height="78" rx="10" fill="${t.panel}" stroke="${t.line}"/>`;
-    body += txt(stage.x + 18, 111, stage.title, t.teal, 12, 'class="mono" letter-spacing="1"');
-    body += txt(stage.x + 18, 139, stage.detail, t.fg, 16, 'font-weight="600"');
-  }
-  for (const x of [260, 522]) body += `<path d="M${x - 2} 122h18m-6-5 6 5-6 5" fill="none" stroke="${t.teal}" stroke-width="2"/>`;
-  body += txt(28, 198, 'API contracts & validation', t.fg, 13);
-  body += txt(290, 198, 'Authentication & access control', t.fg, 13);
-  body += txt(552, 198, 'Data modeling & testing', t.fg, 13);
-  body += txt(28, 225, 'The engineering topics I am building around and continuing to learn.', t.muted, 11);
-  return svg(800, 250, 'Backend engineering focus: interfaces, FastAPI services, relational data, validation, access control and testing', t, body);
-}
-
 function renderLanguages(source, t) {
   const entries = source?.data?.languages || [];
   const total = entries.reduce((sum, [, bytes]) => sum + bytes, 0);
@@ -295,14 +253,14 @@ export async function refresh(root = ROOT) {
   await writeFile(resolve(root, 'data/profile.json'), JSON.stringify(snapshot, null, 2) + '\n');
   for (const [name, theme] of Object.entries(THEMES)) {
     const images = {
-      header: renderHeader(theme), backend: renderBackend(theme), languages: renderLanguages(sources.github, theme),
+      header: renderHeader(theme), languages: renderLanguages(sources.github, theme),
       contributions: renderCalendar(sources.calendar, theme), coding: renderCoding(sources, theme)
     };
     await Promise.all(Object.entries(images).map(([key, content]) => writeFile(resolve(root, `assets/${key}-${name}.svg`), content)));
   }
   const readmePath = resolve(root, 'README.md');
   const readme = await readFile(readmePath, 'utf8');
-  await writeFile(readmePath, replaceContributionSection(readme, sources.calendar));
+  await writeFile(readmePath, replaceContributionSection(readme));
   console.log(JSON.stringify({ refreshedAt: snapshot.refreshedAt, sources: Object.fromEntries(Object.entries(sources).map(([key, s]) => [key, { status: s.status, fetchedAt: s.fetchedAt }])) }, null, 2));
   if (!Object.values(sources).some(s => s.status === 'fresh')) throw new Error('All sources failed; kept the previous data with stale labels');
   return snapshot;
