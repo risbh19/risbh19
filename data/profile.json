@@ -1,20 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-20T11:48:46.871Z",
+  "refreshedAt": "2026-10-20T11:54:22.364Z",
   "sources": {
-    "codeforces": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T11:48:45.687Z",
-      "data": {
-        "handle": "Sensi__",
-        "rating": 1143,
-        "maxRating": 1224,
-        "rank": "newbie"
-      }
-    },
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:48:45.695Z",
+      "fetchedAt": "2026-10-20T11:54:21.227Z",
       "data": {
         "handle": "risbhh19",
         "solved": 173,
@@ -25,9 +15,19 @@
         "contests": 4
       }
     },
+    "codeforces": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-20T11:54:21.225Z",
+      "data": {
+        "handle": "Sensi__",
+        "rating": 1143,
+        "maxRating": 1224,
+        "rank": "newbie"
+      }
+    },
     "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:48:45.692Z",
+      "fetchedAt": "2026-10-20T11:54:21.226Z",
       "data": {
         "handle": "risbh_cf",
         "rating": 1479,
@@ -36,7 +36,7 @@
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:48:45.682Z",
+      "fetchedAt": "2026-10-20T11:54:21.220Z",
       "data": {
         "days": [
           {
@@ -1871,16 +1871,16 @@
           },
           {
             "date": "2026-10-20",
-            "count": 0,
-            "level": 0
+            "count": 1,
+            "level": 4
           }
         ],
-        "total": 29
+        "total": 30
       }
     },
     "activity": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:48:45.684Z",
+      "fetchedAt": "2026-10-20T11:54:21.221Z",
       "data": [
         {
           "label": "Forked a repository",
@@ -1904,7 +1904,7 @@
     },
     "collaboration": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:48:45.685Z",
+      "fetchedAt": "2026-10-20T11:54:21.222Z",
       "data": {
         "pullRequests": 0,
         "merged": 0,
@@ -1913,7 +1913,7 @@
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:48:45.640Z",
+      "fetchedAt": "2026-10-20T11:54:21.189Z",
       "data": {
         "followers": 8,
         "publicRepos": 4,
