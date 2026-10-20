@@ -64,6 +64,50 @@ export function streaks(days, today = new Date().toISOString().slice(0, 10)) {
   return { current, longest, active };
 }
 
+export function contributionSummary(days) {
+  if (!days?.length) return null;
+  const ordered = [...days].sort((a, b) => a.date.localeCompare(b.date));
+  const end = ordered.at(-1).date;
+  const endTime = Date.parse(end + 'T00:00:00Z');
+  const summarize = period => {
+    const selected = period ? ordered.filter(day => Date.parse(day.date + 'T00:00:00Z') >= endTime - (period - 1) * 86400000) : ordered;
+    return {
+      contributions: selected.reduce((sum, day) => sum + day.count, 0),
+      activeDays: selected.filter(day => day.count > 0).length,
+      busiestDay: Math.max(0, ...selected.map(day => day.count))
+    };
+  };
+  return { end, last7: summarize(7), last30: summarize(30), window: summarize(null), streak: streaks(ordered, end) };
+}
+
+export function contributionSection(source) {
+  const summary = contributionSummary(source?.data?.days);
+  if (!summary) return '_Contribution statistics are temporarily unavailable._';
+  const line = (label, key) => `| ${label} | ${number(summary.last7[key])} | ${number(summary.last30[key])} | ${number(summary.window[key])} |`;
+  return [
+    '| Metric | Last 7 days | Last 30 days | Calendar window |',
+    '| :--- | ---: | ---: | ---: |',
+    line('Contributions', 'contributions'),
+    line('Active days', 'activeDays'),
+    line('Most contributions in one day', 'busiestDay'),
+    '',
+    `**Current streak:** ${number(summary.streak.current)} days · **Longest streak in the calendar window:** ${number(summary.streak.longest)} days`,
+    '',
+    `<sub>Periods end on ${summary.end} (UTC). ${sourceLabel(source)}.</sub>`
+  ].join('\n');
+}
+
+export function replaceContributionSection(readme, source) {
+  const start = '<!-- CONTRIBUTION_STATS:START -->';
+  const end = '<!-- CONTRIBUTION_STATS:END -->';
+  if (readme.split(start).length !== 2 || readme.split(end).length !== 2 || readme.indexOf(start) > readme.indexOf(end)) {
+    throw new Error('Expected exactly one contribution statistics section');
+  }
+  const first = readme.indexOf(start) + start.length;
+  const last = readme.indexOf(end);
+  return readme.slice(0, first) + '\n' + contributionSection(source) + '\n' + readme.slice(last);
+}
+
 export function parseCodeChef(html) {
   const rating = Number(html.match(/<div\b[^>]*class="rating-number"[^>]*>\s*(\d+)/)?.[1]);
   const maxRating = Number(html.match(/Highest Rating\s+(\d+)/i)?.[1]);
@@ -72,7 +116,6 @@ export function parseCodeChef(html) {
 }
 
 async function githubData() {
-  const user = await json(`https://api.github.com/users/${CONFIG.github}`);
   const repos = [];
   for (let page = 1; ; page++) {
     const batch = await json(`https://api.github.com/users/${CONFIG.github}/repos?type=owner&sort=updated&per_page=100&page=${page}`);
@@ -89,32 +132,7 @@ async function githubData() {
       languages[name] = (languages[name] || 0) + bytes;
     }
   }));
-  if (![user.followers, user.public_repos].every(finite)) throw new Error('Invalid GitHub profile response');
-  return {
-    followers: user.followers, publicRepos: user.public_repos,
-    stars: repos.reduce((n, r) => n + r.stargazers_count, 0),
-    forks: repos.reduce((n, r) => n + r.forks_count, 0),
-    languages: Object.entries(languages).sort((a, b) => b[1] - a[1]),
-    projects: repos.filter(r => ['Careflow', 'college-forum', 'EduSense'].includes(r.name)).map(r => ({ name: r.name, stars: r.stargazers_count, updatedAt: r.pushed_at }))
-  };
-}
-
-async function activityData() {
-  const events = await json(`https://api.github.com/users/${CONFIG.github}/events/public?per_page=100`);
-  if (!Array.isArray(events)) throw new Error('Invalid public activity response');
-  const labels = { PushEvent: 'Pushed code', PullRequestEvent: 'Updated a pull request', IssuesEvent: 'Updated an issue', IssueCommentEvent: 'Commented', CreateEvent: 'Created a branch or repository', ReleaseEvent: 'Published a release', ForkEvent: 'Forked a repository' };
-  return events.filter(e => e.public && labels[e.type] && e.repo?.name !== `${CONFIG.github}/${CONFIG.github}`).slice(0, 5)
-    .map(e => ({ label: labels[e.type], repo: e.repo.name, date: e.created_at, url: `https://github.com/${e.repo.name}` }));
-}
-
-async function collaborationData() {
-  const count = async qualifier => {
-    const result = await json(`https://api.github.com/search/issues?q=${encodeURIComponent(`author:${CONFIG.github} is:public ${qualifier}`)}&per_page=1`);
-    if (!finite(result.total_count) || result.incomplete_results) throw new Error('Incomplete collaboration statistics');
-    return result.total_count;
-  };
-  const [pullRequests, merged, issues] = await Promise.all([count('is:pr'), count('is:pr is:merged'), count('is:issue')]);
-  return { pullRequests, merged, issues };
+  return { languages: Object.entries(languages).sort((a, b) => b[1] - a[1]) };
 }
 
 async function codeforcesData() {
@@ -150,29 +168,24 @@ function svg(width, height, title, theme, body) {
 function heading(title, subtitle, t) {
   return txt(28, 34, title, t.fg, 20, 'font-weight="650"') + txt(28, 57, subtitle, t.muted, 11);
 }
-function stat(x, y, label, value, t) {
-  return txt(x, y, value, t.teal, 31, 'font-weight="700"') + txt(x, y + 24, label, t.muted, 12);
-}
-
-function renderOverview(sources, t) {
-  const gh = sources.github?.data;
-  const cal = sources.calendar?.data;
-  const summary = cal ? streaks(cal.days) : null;
-  const collaboration = sources.collaboration?.data;
-  let body = heading('GitHub · by the numbers', 'Public profile and public, owned repositories', t);
-  body += stat(28, 111, 'Public repositories', number(gh?.publicRepos), t);
-  body += stat(270, 111, 'Repository stars', number(gh?.stars), t);
-  body += stat(510, 111, 'Followers', number(gh?.followers), t);
-  body += stat(28, 194, 'Contributions · calendar window', number(cal?.total), t);
-  body += stat(270, 194, 'Current streak · days', number(summary?.current), t);
-  body += stat(510, 194, 'Longest streak · window', number(summary?.longest), t);
-  body += stat(28, 277, 'Public PRs authored', number(collaboration?.pullRequests), t);
-  body += stat(270, 277, 'Public PRs merged', number(collaboration?.merged), t);
-  body += stat(510, 277, 'Public issues authored', number(collaboration?.issues), t);
-  body += txt(28, 329, `Profile: ${sourceLabel(sources.github)}`, t.muted, 10);
-  body += txt(28, 347, `Calendar: ${sourceLabel(sources.calendar)}`, t.muted, 10);
-  body += txt(28, 365, `Collaboration: ${sourceLabel(sources.collaboration)}`, t.muted, 10);
-  return svg(800, 384, 'GitHub statistics for risbh19', t, body);
+function renderBackend(t) {
+  let body = heading('From interface to reliable backend', 'My focus across the request lifecycle', t);
+  const stages = [
+    { x: 28, title: 'INTERFACE', detail: 'React · Next.js' },
+    { x: 290, title: 'API', detail: 'Python · FastAPI' },
+    { x: 552, title: 'DATA', detail: 'PostgreSQL · SQLite' }
+  ];
+  for (const stage of stages) {
+    body += `<rect x="${stage.x}" y="83" width="220" height="78" rx="10" fill="${t.panel}" stroke="${t.line}"/>`;
+    body += txt(stage.x + 18, 111, stage.title, t.teal, 12, 'class="mono" letter-spacing="1"');
+    body += txt(stage.x + 18, 139, stage.detail, t.fg, 16, 'font-weight="600"');
+  }
+  for (const x of [260, 522]) body += `<path d="M${x - 2} 122h18m-6-5 6 5-6 5" fill="none" stroke="${t.teal}" stroke-width="2"/>`;
+  body += txt(28, 198, 'API contracts & validation', t.fg, 13);
+  body += txt(290, 198, 'Authentication & access control', t.fg, 13);
+  body += txt(552, 198, 'Data modeling & testing', t.fg, 13);
+  body += txt(28, 225, 'The engineering topics I am building around and continuing to learn.', t.muted, 11);
+  return svg(800, 250, 'Backend engineering focus: interfaces, FastAPI services, relational data, validation, access control and testing', t, body);
 }
 
 function renderLanguages(source, t) {
@@ -207,10 +220,10 @@ function calendarLayout(source) {
   });
 }
 
-function renderCalendar(source, t, game = false) {
+function renderCalendar(source, t) {
   const cells = calendarLayout(source);
   const total = source?.data?.total;
-  let body = heading(game ? 'Contribution arcade' : 'A year of showing up', game ? 'An animated tour of the actual contribution grid' : `${number(total)} contributions across the displayed calendar window`, t);
+  let body = heading('A year of showing up', `${number(total)} contributions across the displayed calendar window`, t);
   body += txt(9, 119, 'M', t.muted, 9) + txt(9, 147, 'W', t.muted, 9) + txt(9, 175, 'F', t.muted, 9);
   let month;
   for (const d of cells) {
@@ -221,17 +234,11 @@ function renderCalendar(source, t, game = false) {
     body += `<rect x="${d.x}" y="${d.y}" width="11" height="11" rx="2" fill="${t.grid[d.level]}"><title>${d.date}: ${d.count} contributions</title></rect>`;
   }
   if (!cells.length) body += txt(28, 125, 'Contribution data temporarily unavailable', t.muted);
-  if (game && cells.length) {
-    // Smooth snake-like trail follows the dated calendar cells; the values remain visible.
-    const points = [...cells].sort((a, b) => a.x - b.x || ((Math.round((a.x - 39) / 14) % 2) ? b.y - a.y : a.y - b.y));
-    const path = points.map((p, i) => `${i ? 'L' : 'M'}${p.x + 5.5},${p.y + 5.5}`).join(' ');
-    body += `<g class="motion"><path d="${path}" pathLength="1000" fill="none" stroke="${t.blue}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 992"><animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="32s" repeatCount="indefinite"/></path><circle r="4.5" fill="${t.teal}"><animateMotion dur="32s" repeatCount="indefinite" path="${path}"/></circle></g>`;
-  }
   body += txt(28, 234, sourceLabel(source), t.muted, 10);
   body += txt(627, 234, 'Less', t.muted, 10);
   t.grid.forEach((color, i) => { body += `<rect x="${655 + i * 15}" y="224" width="11" height="11" rx="2" fill="${color}"/>`; });
   body += txt(735, 234, 'More', t.muted, 10);
-  return svg(800, 254, game ? 'Animated contribution arcade using actual GitHub data' : 'GitHub contribution heatmap', t, body);
+  return svg(800, 254, 'GitHub contribution heatmap', t, body);
 }
 
 function renderCoding(sources, t) {
@@ -253,21 +260,6 @@ function renderCoding(sources, t) {
   return svg(800, 316, 'Competitive programming statistics', t, body);
 }
 
-function renderActivity(source, t) {
-  const events = source?.data || [];
-  let body = heading('Recently on GitHub', 'Latest public events · profile automation excluded', t);
-  events.forEach((e, i) => {
-    const y = 91 + i * 43;
-    body += `<circle cx="32" cy="${y - 4}" r="3" fill="${t.teal}"/>`;
-    const label = `${e.label} · ${e.repo}`;
-    body += txt(47, y, label.length > 94 ? label.slice(0, 91) + '…' : label, t.fg, 13);
-    body += txt(47, y + 17, e.date.slice(0, 10), t.muted, 10);
-  });
-  if (!events.length) body += txt(28, 100, source?.data ? 'No recent public activity in the available event window.' : 'Public activity temporarily unavailable.', t.muted, 12);
-  body += txt(28, 319, sourceLabel(source), t.muted, 10);
-  return svg(800, 339, 'Recent public GitHub activity', t, body);
-}
-
 function renderHeader(t) {
   let body = `<defs><linearGradient id="glow" x2="1" y2="1"><stop stop-color="${t.teal}" stop-opacity="0.14"/><stop offset="1" stop-color="${t.blue}" stop-opacity="0.02"/></linearGradient><clipPath id="typing"><rect x="38" y="186" width="715" height="26"><animate attributeName="width" values="0;715;715;0" keyTimes="0;0.38;0.88;1" dur="9s" repeatCount="indefinite"/></rect></clipPath></defs><rect x="1" y="1" width="798" height="250" rx="16" fill="url(#glow)"/>`;
   body += txt(38, 43, 'RISBH19  /  DEVELOPER PROFILE', t.teal, 12, 'class="mono" letter-spacing="2"');
@@ -287,8 +279,6 @@ export async function refresh(root = ROOT) {
   const fetchers = {
     github: githubData,
     calendar: async () => parseCalendar(await (await request(`https://github.com/users/${CONFIG.github}/contributions`)).text()),
-    activity: activityData,
-    collaboration: collaborationData,
     codeforces: codeforcesData,
     codechef: async () => parseCodeChef(await (await request(`https://www.codechef.com/users/${CONFIG.codechef}`)).text()),
     leetcode: leetcodeData
@@ -305,12 +295,14 @@ export async function refresh(root = ROOT) {
   await writeFile(resolve(root, 'data/profile.json'), JSON.stringify(snapshot, null, 2) + '\n');
   for (const [name, theme] of Object.entries(THEMES)) {
     const images = {
-      header: renderHeader(theme), overview: renderOverview(sources, theme), languages: renderLanguages(sources.github, theme),
-      contributions: renderCalendar(sources.calendar, theme), arcade: renderCalendar(sources.calendar, theme, true),
-      coding: renderCoding(sources, theme), activity: renderActivity(sources.activity, theme)
+      header: renderHeader(theme), backend: renderBackend(theme), languages: renderLanguages(sources.github, theme),
+      contributions: renderCalendar(sources.calendar, theme), coding: renderCoding(sources, theme)
     };
     await Promise.all(Object.entries(images).map(([key, content]) => writeFile(resolve(root, `assets/${key}-${name}.svg`), content)));
   }
+  const readmePath = resolve(root, 'README.md');
+  const readme = await readFile(readmePath, 'utf8');
+  await writeFile(readmePath, replaceContributionSection(readme, sources.calendar));
   console.log(JSON.stringify({ refreshedAt: snapshot.refreshedAt, sources: Object.fromEntries(Object.entries(sources).map(([key, s]) => [key, { status: s.status, fetchedAt: s.fetchedAt }])) }, null, 2));
   if (!Object.values(sources).some(s => s.status === 'fresh')) throw new Error('All sources failed; kept the previous data with stale labels');
   return snapshot;

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { parseCalendar, parseCodeChef, streaks, refresh } from '../scripts/update-profile.mjs';
+import { parseCalendar, parseCodeChef, streaks, refresh, contributionSummary, replaceContributionSection } from '../scripts/update-profile.mjs';
 
 // Synthetic fixtures are test-only; production assets always use fetched public data.
 function calendarFixture() {
@@ -46,6 +46,33 @@ test('CodeChef parses primary ratings without mistaking secondary unrated sectio
   assert.throws(() => parseCodeChef('<div>Blocked</div>'), /unavailable/);
 });
 
+test('contribution summaries use inclusive 7- and 30-day boundaries and preserve the full calendar window', () => {
+  const days = Array.from({ length: 31 }, (_, index) => ({
+    date: new Date(Date.UTC(2026, 8, 20 + index)).toISOString().slice(0, 10), count: index === 0 ? 1000 : 1
+  }));
+  const summary = contributionSummary(days);
+  assert.equal(summary.end, '2026-10-20');
+  assert.deepEqual(summary.last7, { contributions: 7, activeDays: 7, busiestDay: 1 });
+  assert.deepEqual(summary.last30, { contributions: 30, activeDays: 30, busiestDay: 1 });
+  assert.deepEqual(summary.window, { contributions: 1030, activeDays: 31, busiestDay: 1000 });
+  assert.equal(summary.streak.current, 31);
+  assert.equal(contributionSummary([]), null);
+});
+
+test('contribution section updates only its marked region and explicitly labels stale or missing data', () => {
+  const template = 'Keep my projects\n<!-- CONTRIBUTION_STATS:START -->\nold\n<!-- CONTRIBUTION_STATS:END -->\nKeep my contact links';
+  const result = replaceContributionSection(template, {
+    status: 'stale', fetchedAt: '2026-10-20T10:00:00Z', data: { days: [{ date: '2026-10-20', count: 4 }] }
+  });
+  assert.ok(result.startsWith('Keep my projects\n'));
+  assert.ok(result.endsWith('\nKeep my contact links'));
+  assert.ok(result.includes('| Contributions | 4 | 4 | 4 |'));
+  assert.ok(result.includes('Last available'));
+  assert.ok(replaceContributionSection(template, { data: null }).includes('temporarily unavailable'));
+  assert.throws(() => replaceContributionSection('missing markers', null), /exactly one/);
+  assert.throws(() => replaceContributionSection(template + template, null), /exactly one/);
+});
+
 test('partial failures preserve last-good values, escape SVG text, and never send GitHub credentials to coding platforms', async () => {
   const root = await mkdtemp(join(tmpdir(), 'risbh-profile-test-'));
   const originalFetch = globalThis.fetch;
@@ -56,6 +83,7 @@ test('partial failures preserve last-good values, escape SVG text, and never sen
   const requests = [];
   try {
     await mkdir(join(root, 'data'));
+    await writeFile(join(root, 'README.md'), 'Profile intro\n<!-- CONTRIBUTION_STATS:START -->\nold\n<!-- CONTRIBUTION_STATS:END -->\nProfile footer');
     await writeFile(join(root, 'data/profile.json'), JSON.stringify({ sources: {
       codeforces: { fetchedAt: '2026-10-19T10:00:00Z', data: { rating: 1200, maxRating: 1400, rank: '<script>unsafe</script>' } }
     } }));
@@ -78,6 +106,11 @@ test('partial failures preserve last-good values, escape SVG text, and never sen
     assert.equal(result.sources.codeforces.data.rating, 1200);
     assert.equal(result.sources.codeforces.fetchedAt, '2026-10-19T10:00:00Z');
     assert.equal(result.sources.leetcode.status, 'unavailable');
+    assert.equal(result.sources.activity, undefined);
+    assert.equal(result.sources.collaboration, undefined);
+    assert.ok(!requests.some(r => r.address.includes('/events/') || r.address.includes('/search/issues')));
+    const readme = await readFile(join(root, 'README.md'), 'utf8');
+    assert.ok(readme.includes('| Metric | Last 7 days | Last 30 days | Calendar window |'));
     const coding = await readFile(join(root, 'assets/coding-dark.svg'), 'utf8');
     assert.ok(coding.includes('Last available'));
     assert.ok(coding.includes('&lt;script&gt;'));

@@ -6,12 +6,10 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/rishabhpal19/"><img src="https://img.shields.io/badge/LinkedIn-Rishabh_Pal-0969da?style=flat-square" alt="LinkedIn — Rishabh Pal" /></a>
   <a href="mailto:palrishabh989@gmail.com"><img src="https://img.shields.io/badge/Email-Let%27s_connect-087f75?style=flat-square&amp;logo=gmail&amp;logoColor=white" alt="Email Rishabh" /></a>
-  <a href="https://github.com/risbh19?tab=followers"><img src="https://img.shields.io/github/followers/risbh19?style=flat-square&amp;label=Followers&amp;color=8250df" alt="GitHub followers" /></a>
-  <a href="https://github.com/risbh19/risbh19/actions/workflows/profile.yml"><img src="https://img.shields.io/github/actions/workflow/status/risbh19/risbh19/profile.yml?branch=main&amp;style=flat-square&amp;label=Profile%20refresh" alt="Profile refresh workflow status" /></a>
 </p>
 
 <p align="center">
-  <a href="#about-me">About</a> · <a href="#tech-stack">Stack</a> · <a href="#featured-projects">Projects</a> · <a href="#github-stats">Stats</a> · <a href="#competitive-programming">Competitive programming</a> · <a href="#contributions">Contributions</a>
+  <a href="#about-me">About</a> · <a href="#tech-stack">Stack</a> · <a href="#featured-projects">Projects</a> · <a href="#backend-focus">Backend</a> · <a href="#competitive-programming">Competitive programming</a> · <a href="#contribution-stats">Contribution stats</a>
 </p>
 
 ## About me
@@ -44,23 +42,23 @@ developer = {
 
 ## Featured projects
 
-### [Careflow →](https://github.com/risbh19/Careflow)
+### [WaveSafe →](https://github.com/risbh19/waveSafe)
 
-A fork of [Careflow by arvindkumar-ship-it](https://github.com/arvindkumar-ship-it/Careflow): a hospital workflow prototype using synthetic data, with separate doctor, nurse and patient roles. Combines a **Next.js frontend** with a **FastAPI backend** and server-side access controls.
+A coastal safety and trip-planning project focused on beach-risk insights and emergency response workflows, using **FastAPI, React and PostgreSQL**. **Private repository.**
 
 ### [College Forum →](https://github.com/risbh19/college-forum)
 
 A college discussion platform with topic boards, posts, comments and voting. Built with **Next.js, TypeScript, Prisma and PostgreSQL**, with authentication and ownership checks.
 
-### [EduSense →](https://github.com/risbh19/EduSense)
+### [Careflow →](https://github.com/risbh19/Careflow)
 
-A learning recommendation application that analyzes student feedback, identifies skill gaps and suggests resources. Includes analysis history and per-skill progress tracking using **SQLite and SQLAlchemy**.
+A fork of [Careflow by arvindkumar-ship-it](https://github.com/arvindkumar-ship-it/Careflow): a hospital workflow prototype using synthetic data, with separate doctor, nurse and patient roles. Combines a **Next.js frontend** with a **FastAPI backend** and server-side access controls.
 
-## GitHub stats
+## Backend focus
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/overview-dark.svg" />
-  <img src="assets/overview-light.svg" width="100%" alt="GitHub public repository count, stars, followers, contributions and streaks, with source update times" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/backend-dark.svg" />
+  <img src="assets/backend-light.svg" width="100%" alt="Backend focus: frontend interfaces, FastAPI services and relational data, with validation, access control and testing" />
 </picture>
 
 <picture>
@@ -88,24 +86,19 @@ A learning recommendation application that analyzes student feedback, identifies
   <img src="assets/contributions-light.svg" width="100%" alt="Actual GitHub contribution calendar, including daily counts and update time" />
 </picture>
 
-<details>
-<summary><b>🎮 Contribution arcade — watch the grid come alive</b></summary>
+## Contribution stats
 
-<br />
+<!-- CONTRIBUTION_STATS:START -->
+| Metric | Last 7 days | Last 30 days | Calendar window |
+| :--- | ---: | ---: | ---: |
+| Contributions | 53 | 69 | 99 |
+| Active days | 4 | 5 | 10 |
+| Most contributions in one day | 26 | 26 | 26 |
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/arcade-dark.svg" />
-  <img src="assets/arcade-light.svg" width="100%" alt="Animated snake-like trail travelling across my actual contribution calendar" />
-</picture>
+**Current streak:** 4 days · **Longest streak in the calendar window:** 4 days
 
-</details>
-
-## Recent activity
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
-  <img src="assets/activity-light.svg" width="100%" alt="Recent public GitHub events, excluding automated profile updates" />
-</picture>
+<sub>Periods end on 2026-10-20 (UTC). Updated 20 Oct 2026, 17:57 IST.</sub>
+<!-- CONTRIBUTION_STATS:END -->
 
 <details>
 <summary><b>🌙 After hours — anime &amp; retro corner</b></summary>
@@ -136,4 +129,4 @@ A learning recommendation application that analyzes student feedback, identifies
   <a href="https://www.linkedin.com/in/rishabhpal19/">LinkedIn</a> · <a href="mailto:palrishabh989@gmail.com">palrishabh989@gmail.com</a> · <a href="https://github.com/risbh19?tab=repositories">All repositories</a>
 </p>
 
-<p align="center"><sub>Stats refresh hourly and after profile changes. Each card shows its source update time. <a href="docs/PROFILE.md">Data &amp; credits</a></sub></p>
+<p align="center"><sub>Statistics update hourly; data sections show their observation time. <a href="docs/PROFILE.md">Data &amp; credits</a></sub></p>

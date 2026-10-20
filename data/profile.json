@@ -1,10 +1,29 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-20T11:56:49.418Z",
+  "refreshedAt": "2026-10-20T12:27:05.514Z",
   "sources": {
+    "codeforces": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-20T12:27:04.142Z",
+      "data": {
+        "handle": "Sensi__",
+        "rating": 1143,
+        "maxRating": 1224,
+        "rank": "newbie"
+      }
+    },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-20T12:27:04.143Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1479,
+        "maxRating": 1615
+      }
+    },
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:56:48.732Z",
+      "fetchedAt": "2026-10-20T12:27:04.144Z",
       "data": {
         "handle": "risbhh19",
         "solved": 173,
@@ -15,28 +34,45 @@
         "contests": 4
       }
     },
-    "codechef": {
+    "github": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:56:48.730Z",
+      "fetchedAt": "2026-10-20T12:27:04.093Z",
       "data": {
-        "handle": "risbh_cf",
-        "rating": 1479,
-        "maxRating": 1615
-      }
-    },
-    "codeforces": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T11:56:48.729Z",
-      "data": {
-        "handle": "Sensi__",
-        "rating": 1143,
-        "maxRating": 1224,
-        "rank": "newbie"
+        "languages": [
+          [
+            "Jupyter Notebook",
+            439604
+          ],
+          [
+            "TypeScript",
+            108975
+          ],
+          [
+            "JavaScript",
+            102281
+          ],
+          [
+            "Python",
+            56724
+          ],
+          [
+            "CSS",
+            55857
+          ],
+          [
+            "Batchfile",
+            428
+          ],
+          [
+            "HTML",
+            360
+          ]
+        ]
       }
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:56:48.724Z",
+      "fetchedAt": "2026-10-20T12:27:04.140Z",
       "data": {
         "days": [
           {
@@ -1287,7 +1323,7 @@
           {
             "date": "2026-06-25",
             "count": 4,
-            "level": 4
+            "level": 1
           },
           {
             "date": "2026-06-26",
@@ -1601,8 +1637,8 @@
           },
           {
             "date": "2026-08-27",
-            "count": 1,
-            "level": 2
+            "count": 3,
+            "level": 1
           },
           {
             "date": "2026-08-28",
@@ -1681,13 +1717,13 @@
           },
           {
             "date": "2026-09-12",
-            "count": 0,
-            "level": 0
+            "count": 1,
+            "level": 1
           },
           {
             "date": "2026-09-13",
-            "count": 1,
-            "level": 2
+            "count": 21,
+            "level": 4
           },
           {
             "date": "2026-09-14",
@@ -1702,7 +1738,7 @@
           {
             "date": "2026-09-16",
             "count": 1,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-09-17",
@@ -1767,7 +1803,7 @@
           {
             "date": "2026-09-29",
             "count": 16,
-            "level": 4
+            "level": 3
           },
           {
             "date": "2026-09-30",
@@ -1856,111 +1892,26 @@
           },
           {
             "date": "2026-10-17",
-            "count": 0,
-            "level": 0
+            "count": 2,
+            "level": 1
           },
           {
             "date": "2026-10-18",
-            "count": 1,
+            "count": 11,
             "level": 2
           },
           {
             "date": "2026-10-19",
-            "count": 5,
+            "count": 26,
             "level": 4
           },
           {
             "date": "2026-10-20",
-            "count": 2,
-            "level": 4
+            "count": 14,
+            "level": 3
           }
         ],
-        "total": 31
-      }
-    },
-    "activity": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T11:56:48.725Z",
-      "data": [
-        {
-          "label": "Forked a repository",
-          "repo": "arvindkumar-ship-it/Careflow",
-          "date": "2026-10-19T19:50:35Z",
-          "url": "https://github.com/arvindkumar-ship-it/Careflow"
-        },
-        {
-          "label": "Created a branch or repository",
-          "repo": "risbh19/EduSense",
-          "date": "2026-09-29T06:27:40Z",
-          "url": "https://github.com/risbh19/EduSense"
-        },
-        {
-          "label": "Pushed code",
-          "repo": "risbh19/EduSense",
-          "date": "2026-09-29T06:35:58Z",
-          "url": "https://github.com/risbh19/EduSense"
-        }
-      ]
-    },
-    "collaboration": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T11:56:48.726Z",
-      "data": {
-        "pullRequests": 0,
-        "merged": 0,
-        "issues": 0
-      }
-    },
-    "github": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T11:56:48.683Z",
-      "data": {
-        "followers": 8,
-        "publicRepos": 4,
-        "stars": 0,
-        "forks": 0,
-        "languages": [
-          [
-            "Jupyter Notebook",
-            439604
-          ],
-          [
-            "TypeScript",
-            108975
-          ],
-          [
-            "JavaScript",
-            102281
-          ],
-          [
-            "Python",
-            56724
-          ],
-          [
-            "CSS",
-            55857
-          ],
-          [
-            "Batchfile",
-            428
-          ],
-          [
-            "HTML",
-            360
-          ]
-        ],
-        "projects": [
-          {
-            "name": "college-forum",
-            "stars": 0,
-            "updatedAt": "2026-10-18T23:01:13Z"
-          },
-          {
-            "name": "EduSense",
-            "stars": 0,
-            "updatedAt": "2026-09-29T06:35:58Z"
-          }
-        ]
+        "total": 99
       }
     }
   }
