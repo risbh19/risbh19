@@ -31,7 +31,7 @@ developer = {
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python,fastapi,ts,react,nextjs,tailwind,postgres,sqlite,prisma&amp;theme=dark&amp;perline=9" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python%2Cfastapi%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cpostgres%2Csqlite%2Cprisma&amp;theme=dark&amp;perline=9" />
     <img src="https://skillicons.dev/icons?i=python,fastapi,ts,react,nextjs,tailwind,postgres,sqlite,prisma&amp;theme=light&amp;perline=9" alt="Python, FastAPI, TypeScript, React, Next.js, Tailwind CSS, PostgreSQL, SQLite and Prisma" />
   </picture>
 </p>
