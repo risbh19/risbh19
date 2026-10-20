@@ -4,6 +4,8 @@ The README uses original, repository-hosted SVG cards plus the requested GitHub 
 
 The current layout pairs an original 650-pixel animated profile header with a short introduction, five core skill groups, three featured projects, brief experience and achievements, and two 500-pixel GitHub cards. Coding-platform statistics and the full contribution calendar are expandable. GitHub scales images down on narrow screens. The refresh generator preserves the 500-pixel stats-card width.
 
+Core technologies use compact name-and-icon badges. Brand icons come from Shields.io; SQL, REST APIs and JWT use original repository-hosted database, request/response and key glyphs. A short After Hours line keeps the anime, retro and problem-solving theme without adding another large card.
+
 ## Refresh behavior
 
 - Runs once every 24 hours at 18:47 UTC (00:17 IST), after changes to the README/generator/tests/workflow, and on manual dispatch.
@@ -31,7 +33,7 @@ The earlier design explored categories from [Awesome GitHub Profile README](http
 
 [Arvind Kumar's profile](https://github.com/arvindkumar-ship-it/arvindkumar-ship-it) also informed the presentation of GitHub stats, streaks and contribution activity. This profile keeps its own introduction, project descriptions, skills and original light/dark chart design. Skills, achievements and the one-month work experience were supplied by the profile owner.
 
-The following records the earlier design exploration. The original animated profile header remains; decorative badges, GIFs, code-mode introductions and the retro corner are not displayed in the current README.
+The following records the earlier design exploration. The current README retains the animated profile header, a small waving-hand GIF, technology badges and a short After Hours line. Code-mode introductions and large decorative panels are omitted.
 
 | Category | Element explored | Reference |
 | --- | --- | --- |
