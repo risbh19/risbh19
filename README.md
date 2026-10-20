@@ -7,7 +7,7 @@ Hi, I'm **Rishabh Pal** <img src="https://raw.githubusercontent.com/MartinHeinz/
 
 I build full-stack web applications, with a particular interest in **Python and FastAPI backends**. I enjoy connecting useful interfaces to APIs and databases, and working through algorithmic problems alongside development.
 
-[LinkedIn](https://www.linkedin.com/in/rishabhpal19/) · [Email](mailto:palrishabh989@gmail.com) · [Repositories](https://github.com/risbh19?tab=repositories)
+[Portfolio](https://risbh19.xyz) · [LinkedIn](https://www.linkedin.com/in/rishabhpal19/) · [Email](mailto:palrishabh989@gmail.com) · [Repositories](https://github.com/risbh19?tab=repositories)
 
 ## Skills
 
@@ -21,11 +21,17 @@ I build full-stack web applications, with a particular interest in **Python and 
 
 ## Featured projects
 
-| Project | Overview |
-| :--- | :--- |
-| [WaveSafe](https://github.com/risbh19/waveSafe) *(private)* | Coastal safety and SOS workflows · FastAPI, React, PostgreSQL |
-| [College Forum](https://github.com/risbh19/college-forum) | Campus discussions, comments and voting · Next.js, Prisma, PostgreSQL |
-| [Careflow](https://github.com/risbh19/Careflow) | Hospital workflow prototype with role-based portals · Next.js, FastAPI, MongoDB |
+### [WaveSafe →](https://github.com/risbh19/waveSafe)
+
+A coastal safety and trip-planning project focused on beach-risk insights and emergency response workflows, using **FastAPI, React and PostgreSQL**. **Private repository.**
+
+### [College Forum →](https://github.com/risbh19/college-forum)
+
+A college discussion platform with topic boards, posts, comments and voting. Built with **Next.js, TypeScript, Prisma and PostgreSQL**, with authentication and ownership checks.
+
+### [Careflow →](https://github.com/risbh19/Careflow)
+
+A hospital workflow prototype using synthetic data, with separate doctor, nurse and patient roles. Combines a **Next.js frontend** with a **FastAPI backend** and server-side access controls.
 
 ## Experience
 
