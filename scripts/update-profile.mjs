@@ -88,7 +88,7 @@ export function contributionSection() {
     '<a href="https://github.com/risbh19">',
     '  <picture>',
     '    <source media="(prefers-color-scheme: dark)" srcset="assets/github-stats-dark.svg" />',
-    '    <img src="assets/github-stats-light.svg" width="100%" alt="Rishabh Pal\'s GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />',
+    '    <img src="assets/github-stats-light.svg" width="500" alt="Rishabh Pal\'s GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />',
     '  </picture>',
     '</a>'
   ].join('\n');
@@ -222,29 +222,30 @@ function renderActivity(source, t) {
   const summary = activitySummary(source?.data?.days || []);
   const label = date => new Date(date + 'T00:00:00Z').toLocaleDateString('en-GB', { day: '2-digit', month: 'short', timeZone: 'UTC' });
   if (!summary) {
-    return svg(800, 200, 'GitHub activity graph temporarily unavailable', t,
+    return svg(600, 160, 'GitHub activity graph temporarily unavailable', t,
       heading('Contribution activity', 'Daily contributions from my public GitHub calendar', t) +
-      txt(28, 108, 'A complete 30-day contribution window is temporarily unavailable.', t.muted) +
-      txt(28, 170, sourceLabel(source), t.muted, 10));
+      txt(28, 98, 'The 30-day contribution window is temporarily unavailable.', t.muted, 12) +
+      txt(28, 137, sourceLabel(source), t.muted, 10));
   }
   const days = summary.days;
   const range = `${label(days[0].date)} – ${label(days.at(-1).date)} ${days.at(-1).date.slice(0, 4)}`;
-  let body = heading('Contribution activity', `Daily GitHub contributions · ${range}`, t);
+  let body = txt(22, 30, 'Contribution activity', t.fg, 19, 'font-weight="650"') +
+    txt(22, 50, `Last 30 days · ${range} · UTC`, t.muted, 11);
   const metrics = [
-    { x: 28, label: 'LAST 30 DAYS', value: `${number(summary.total)} contributions`, color: t.teal },
-    { x: 295, label: 'CURRENT STREAK', value: `${summary.current} day${summary.current === 1 ? '' : 's'}`, color: t.blue },
-    { x: 562, label: 'LONGEST IN SHOWN YEAR', value: `${summary.longest} day${summary.longest === 1 ? '' : 's'}`, color: t.purple }
+    { x: 22, label: 'CONTRIBUTIONS', value: number(summary.total), color: t.teal },
+    { x: 220, label: 'CURRENT STREAK', value: `${summary.current} day${summary.current === 1 ? '' : 's'}`, color: t.blue },
+    { x: 410, label: 'LONGEST IN CALENDAR', value: `${summary.longest} day${summary.longest === 1 ? '' : 's'}`, color: t.purple }
   ];
   for (const metric of metrics) {
-    body += txt(metric.x, 88, metric.label, t.muted, 10, 'letter-spacing="0.7"');
-    body += txt(metric.x, 115, metric.value, metric.color, 20, 'font-weight="650"');
+    body += txt(metric.x, 78, metric.label, t.muted, 10, 'letter-spacing="0.3"');
+    body += txt(metric.x, 103, metric.value, metric.color, 20, 'font-weight="650"');
   }
-  const left = 55, right = 759, top = 160, bottom = 328;
+  const left = 42, right = 572, top = 135, bottom = 239;
   const maximum = Math.max(4, Math.ceil(Math.max(...days.map(day => day.count)) / 4) * 4);
-  for (let index = 0; index <= 4; index++) {
-    const y = bottom - index / 4 * (bottom - top);
+  for (let index = 0; index <= 2; index++) {
+    const y = bottom - index / 2 * (bottom - top);
     body += `<path d="M${left} ${y}H${right}" stroke="${t.line}" stroke-dasharray="3 5"/>`;
-    body += txt(43, y + 4, number(maximum * index / 4), t.muted, 10, 'text-anchor="end"');
+    body += txt(32, y + 4, number(maximum * index / 2), t.muted, 10, 'text-anchor="end"');
   }
   const points = days.map((day, index) => ({ ...day,
     x: left + index / (days.length - 1) * (right - left),
@@ -255,12 +256,11 @@ function renderActivity(source, t) {
   body += `<path d="${path} L${right} ${bottom} L${left} ${bottom} Z" fill="url(#activity-fill)"/>`;
   body += `<path d="${path}" stroke="${t.teal}" stroke-width="2.2" fill="none" stroke-linejoin="round"/>`;
   for (const point of points) {
-    body += `<circle cx="${point.x.toFixed(2)}" cy="${point.y.toFixed(2)}" r="3" fill="${t.bg}" stroke="${t.teal}" stroke-width="1.5"><title>${point.date}: ${point.count} contribution${point.count === 1 ? '' : 's'}</title></circle>`;
+    body += `<circle cx="${point.x.toFixed(2)}" cy="${point.y.toFixed(2)}" r="2.5" fill="${t.bg}" stroke="${t.teal}" stroke-width="1.3"><title>${point.date}: ${point.count} contribution${point.count === 1 ? '' : 's'}</title></circle>`;
   }
-  for (const index of [0, 7, 14, 21, 29]) body += txt(points[index].x, 352, label(points[index].date), t.muted, 10, 'text-anchor="middle"');
-  body += txt(28, 382, 'Public calendar counts · UTC dates · today\'s count can still grow', t.muted, 10);
-  body += txt(28, 406, sourceLabel(source), t.muted, 10);
-  return svg(800, 426, `Rishabh Pal's last 30 days of GitHub contributions: ${summary.total} contributions, current streak ${summary.current} days, longest streak in shown year ${summary.longest} days`, t, body);
+  for (const index of [0, 7, 14, 21, 29]) body += txt(points[index].x, 258, label(points[index].date), t.muted, 10, 'text-anchor="middle"');
+  body += txt(22, 283, sourceLabel(source), t.muted, 10);
+  return svg(600, 300, `Rishabh Pal's last 30 days of GitHub contributions: ${summary.total} contributions, current streak ${summary.current} days, longest streak in the displayed calendar ${summary.longest} days`, t, body);
 }
 
 function renderCoding(sources, t) {

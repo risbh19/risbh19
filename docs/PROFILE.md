@@ -2,6 +2,8 @@
 
 The README uses original, repository-hosted SVG cards plus the requested GitHub Readme Stats card. The custom generator uses built-in Node.js 22 modules. The GitHub Stats card uses the maintained upstream action, pinned to v2.1.0's commit and renderer version 2.2.1. Both run with the repository's automatically supplied `GITHUB_TOKEN`; no personal access token is required.
 
+The current layout is minimal: a short introduction, five core skill groups, three featured projects, brief experience and achievements, and two 500-pixel GitHub cards. Coding-platform statistics and the full contribution calendar are expandable. GitHub scales images down on narrow screens. The refresh generator preserves the 500-pixel stats-card width.
+
 ## Refresh behavior
 
 - Runs once every 24 hours at 18:47 UTC (00:17 IST), after changes to the README/generator/tests/workflow, and on manual dispatch.
@@ -14,7 +16,7 @@ The README uses original, repository-hosted SVG cards plus the requested GitHub 
 
 ## What the numbers mean
 
-- **Languages:** source bytes from public, owned, non-fork repositories, excluding the profile repo. This is repository composition, not time spent coding or a proficiency score.
+- **Languages (optional asset):** source bytes from public, owned, non-fork repositories, excluding the profile repo. This asset is not shown in the minimal README. It describes repository composition, not time spent coding or a proficiency score.
 - **Contributions:** counts from the same public GitHub calendar shown to a visitor. The displayed calendar can include a partial starting week. It follows GitHub's attribution rules and can include anonymized contribution counts if the account has chosen to display them publicly.
 - **Activity graph:** an original 30-day line chart of those same calendar counts, ending on the last observed date. It shows the window's total, current streak (including yesterday if today has no contributions yet), and longest streak within the displayed calendar. The longest streak is not an all-time record. A missing daily observation makes the chart unavailable instead of inventing a zero. Cached charts retain their original date range and observation timestamp.
 - **GitHub Stats card:** total stars, total commits (`include_all_commits=true`), pull requests, issues, repositories contributed to in the last year, and the upstream rank ring. Counts and the rank are computed by the upstream renderer from the accessible public profile, not copied from the example screenshot. The rank is that project's scoring system, not an official GitHub rating.
@@ -23,13 +25,15 @@ The README uses original, repository-hosted SVG cards plus the requested GitHub 
 - **CodeChef:** current and highest ratings parsed from the public profile page. A layout change or access block causes a marked stale/unavailable state.
 - **Featured projects:** WaveSafe, College Forum and Careflow. WaveSafe is a private repository explicitly selected by the profile owner; its link requires repository access. Its basic project overview is included, while private code and statistics are not fetched by the scheduled workflow.
 
-## Reference categories
+## Design references
 
-The structure was inspired by [Awesome GitHub Profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme), using selected elements adapted to this profile. Personal claims and statistics from other profiles were not copied.
+The earlier design explored categories from [Awesome GitHub Profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme). The current version retains a small selection in a minimal layout. Personal claims and statistics from other profiles were not copied.
 
 [Arvind Kumar's profile](https://github.com/arvindkumar-ship-it/arvindkumar-ship-it) also informed the presentation of GitHub stats, streaks and contribution activity. This profile keeps its own introduction, project descriptions, skills and original light/dark chart design. Skills, achievements and the one-month work experience were supplied by the profile owner.
 
-| Category | Element in this profile | Reference |
+The following records the earlier design exploration; decorative headers, badges, GIFs, code-mode introductions and the retro corner are not displayed in the current README.
+
+| Category | Element explored | Reference |
 | --- | --- | --- |
 | GitHub Actions | Daily data refresh and generated assets | [Simon Willison](https://github.com/simonw/simonw) |
 | Code Mode | Python developer introduction | [Thaiane Braga](https://github.com/Thaiane/Thaiane) |
