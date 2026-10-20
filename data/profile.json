@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-20T13:23:15.917Z",
+  "refreshedAt": "2026-10-20T21:56:00.765Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T13:23:15.153Z",
+      "fetchedAt": "2026-10-20T21:56:00.308Z",
       "data": {
         "handle": "risbhh19",
-        "solved": 173,
+        "solved": 174,
         "easy": 113,
-        "medium": 54,
+        "medium": 55,
         "hard": 6,
         "contestRating": 1264,
         "contests": 4
@@ -17,16 +17,26 @@
     },
     "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T13:23:15.152Z",
+      "fetchedAt": "2026-10-20T21:56:00.308Z",
       "data": {
         "handle": "risbh_cf",
         "rating": 1479,
         "maxRating": 1615
       }
     },
+    "codeforces": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-20T21:56:00.307Z",
+      "data": {
+        "handle": "Sensi__",
+        "rating": 1143,
+        "maxRating": 1224,
+        "rank": "newbie"
+      }
+    },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T13:23:15.149Z",
+      "fetchedAt": "2026-10-20T21:56:00.306Z",
       "data": {
         "days": [
           {
@@ -1861,26 +1871,16 @@
           },
           {
             "date": "2026-10-20",
-            "count": 21,
+            "count": 27,
             "level": 4
           }
         ],
-        "total": 106
-      }
-    },
-    "codeforces": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T13:23:15.150Z",
-      "data": {
-        "handle": "Sensi__",
-        "rating": 1143,
-        "maxRating": 1224,
-        "rank": "newbie"
+        "total": 112
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T13:23:15.080Z",
+      "fetchedAt": "2026-10-20T21:56:00.274Z",
       "data": {
         "languages": [
           [
@@ -1897,7 +1897,7 @@
           ],
           [
             "Python",
-            56724
+            65706
           ],
           [
             "CSS",
