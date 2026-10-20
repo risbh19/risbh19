@@ -72,7 +72,7 @@ A learning recommendation application that analyzes student feedback, identifies
 
 <p align="center">
   <a href="https://leetcode.com/u/risbhh19/"><img src="https://img.shields.io/badge/LeetCode-risbhh19-ffa116?style=flat-square&amp;logo=leetcode&amp;logoColor=white" alt="LeetCode: risbhh19" /></a>
-  <a href="https://codeforces.com/profile/Sensi__"><img src="https://img.shields.io/badge/Codeforces-Sensi__-1f8acb?style=flat-square&amp;logo=codeforces&amp;logoColor=white" alt="Codeforces: Sensi__" /></a>
+  <a href="https://codeforces.com/profile/Sensi__"><img src="https://img.shields.io/badge/Codeforces-Sensi____-1f8acb?style=flat-square&amp;logo=codeforces&amp;logoColor=white" alt="Codeforces: Sensi__" /></a>
   <a href="https://www.codechef.com/users/risbh_cf"><img src="https://img.shields.io/badge/CodeChef-risbh__cf-5b4638?style=flat-square&amp;logo=codechef&amp;logoColor=white" alt="CodeChef: risbh_cf" /></a>
 </p>
 
