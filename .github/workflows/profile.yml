@@ -1,0 +1,52 @@
+name: Refresh profile
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/profile.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'risbh19/risbh19'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Verify data handling
+        run: node --test tests/profile.test.mjs
+      - name: Refresh public data and render cards
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/update-profile.mjs
+      - name: Commit generated assets when changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/ data/profile.json
+          if git diff --cached --quiet; then
+            echo 'Profile data is unchanged.'
+            exit 0
+          fi
+          git commit -m 'chore: refresh profile statistics [skip ci]'
+          git push
