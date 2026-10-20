@@ -1,20 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-20T12:27:05.514Z",
+  "refreshedAt": "2026-10-20T12:29:12.504Z",
   "sources": {
-    "codeforces": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T12:27:04.142Z",
-      "data": {
-        "handle": "Sensi__",
-        "rating": 1143,
-        "maxRating": 1224,
-        "rank": "newbie"
-      }
-    },
     "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T12:27:04.143Z",
+      "fetchedAt": "2026-10-20T12:29:12.017Z",
       "data": {
         "handle": "risbh_cf",
         "rating": 1479,
@@ -23,7 +13,7 @@
     },
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T12:27:04.144Z",
+      "fetchedAt": "2026-10-20T12:29:12.019Z",
       "data": {
         "handle": "risbhh19",
         "solved": 173,
@@ -34,45 +24,19 @@
         "contests": 4
       }
     },
-    "github": {
+    "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T12:27:04.093Z",
+      "fetchedAt": "2026-10-20T12:29:12.016Z",
       "data": {
-        "languages": [
-          [
-            "Jupyter Notebook",
-            439604
-          ],
-          [
-            "TypeScript",
-            108975
-          ],
-          [
-            "JavaScript",
-            102281
-          ],
-          [
-            "Python",
-            56724
-          ],
-          [
-            "CSS",
-            55857
-          ],
-          [
-            "Batchfile",
-            428
-          ],
-          [
-            "HTML",
-            360
-          ]
-        ]
+        "handle": "Sensi__",
+        "rating": 1143,
+        "maxRating": 1224,
+        "rank": "newbie"
       }
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T12:27:04.140Z",
+      "fetchedAt": "2026-10-20T12:29:12.015Z",
       "data": {
         "days": [
           {
@@ -1907,11 +1871,47 @@
           },
           {
             "date": "2026-10-20",
-            "count": 14,
+            "count": 15,
             "level": 3
           }
         ],
-        "total": 99
+        "total": 100
+      }
+    },
+    "github": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-20T12:29:11.972Z",
+      "data": {
+        "languages": [
+          [
+            "Jupyter Notebook",
+            439604
+          ],
+          [
+            "TypeScript",
+            108975
+          ],
+          [
+            "JavaScript",
+            102281
+          ],
+          [
+            "Python",
+            56724
+          ],
+          [
+            "CSS",
+            55857
+          ],
+          [
+            "Batchfile",
+            428
+          ],
+          [
+            "HTML",
+            360
+          ]
+        ]
       }
     }
   }
