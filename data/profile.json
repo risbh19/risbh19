@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-20T11:54:22.364Z",
+  "refreshedAt": "2026-10-20T11:56:49.418Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:54:21.227Z",
+      "fetchedAt": "2026-10-20T11:56:48.732Z",
       "data": {
         "handle": "risbhh19",
         "solved": 173,
@@ -15,9 +15,18 @@
         "contests": 4
       }
     },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-20T11:56:48.730Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1479,
+        "maxRating": 1615
+      }
+    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:54:21.225Z",
+      "fetchedAt": "2026-10-20T11:56:48.729Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1143,
@@ -25,18 +34,9 @@
         "rank": "newbie"
       }
     },
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T11:54:21.226Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1479,
-        "maxRating": 1615
-      }
-    },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:54:21.220Z",
+      "fetchedAt": "2026-10-20T11:56:48.724Z",
       "data": {
         "days": [
           {
@@ -1602,7 +1602,7 @@
           {
             "date": "2026-08-27",
             "count": 1,
-            "level": 4
+            "level": 2
           },
           {
             "date": "2026-08-28",
@@ -1687,7 +1687,7 @@
           {
             "date": "2026-09-13",
             "count": 1,
-            "level": 4
+            "level": 2
           },
           {
             "date": "2026-09-14",
@@ -1702,7 +1702,7 @@
           {
             "date": "2026-09-16",
             "count": 1,
-            "level": 4
+            "level": 2
           },
           {
             "date": "2026-09-17",
@@ -1862,7 +1862,7 @@
           {
             "date": "2026-10-18",
             "count": 1,
-            "level": 4
+            "level": 2
           },
           {
             "date": "2026-10-19",
@@ -1871,16 +1871,16 @@
           },
           {
             "date": "2026-10-20",
-            "count": 1,
+            "count": 2,
             "level": 4
           }
         ],
-        "total": 30
+        "total": 31
       }
     },
     "activity": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:54:21.221Z",
+      "fetchedAt": "2026-10-20T11:56:48.725Z",
       "data": [
         {
           "label": "Forked a repository",
@@ -1904,7 +1904,7 @@
     },
     "collaboration": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:54:21.222Z",
+      "fetchedAt": "2026-10-20T11:56:48.726Z",
       "data": {
         "pullRequests": 0,
         "merged": 0,
@@ -1913,7 +1913,7 @@
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T11:54:21.189Z",
+      "fetchedAt": "2026-10-20T11:56:48.683Z",
       "data": {
         "followers": 8,
         "publicRepos": 4,
