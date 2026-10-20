@@ -1,32 +1,29 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-20T12:52:55.201Z",
+  "refreshedAt": "2026-10-20T13:02:42.085Z",
   "sources": {
-    "leetcode": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T12:52:54.622Z",
-      "data": {
-        "handle": "risbhh19",
-        "solved": 173,
-        "easy": 113,
-        "medium": 54,
-        "hard": 6,
-        "contestRating": 1264,
-        "contests": 4
-      }
-    },
     "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T12:52:54.621Z",
+      "fetchedAt": "2026-10-20T13:02:41.250Z",
       "data": {
         "handle": "risbh_cf",
         "rating": 1479,
         "maxRating": 1615
       }
     },
+    "codeforces": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-20T13:02:41.248Z",
+      "data": {
+        "handle": "Sensi__",
+        "rating": 1143,
+        "maxRating": 1224,
+        "rank": "newbie"
+      }
+    },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T12:52:54.619Z",
+      "fetchedAt": "2026-10-20T13:02:41.247Z",
       "data": {
         "days": [
           {
@@ -1861,26 +1858,16 @@
           },
           {
             "date": "2026-10-20",
-            "count": 17,
+            "count": 19,
             "level": 3
           }
         ],
-        "total": 102
-      }
-    },
-    "codeforces": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T12:52:54.620Z",
-      "data": {
-        "handle": "Sensi__",
-        "rating": 1143,
-        "maxRating": 1224,
-        "rank": "newbie"
+        "total": 104
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T12:52:54.543Z",
+      "fetchedAt": "2026-10-20T13:02:41.205Z",
       "data": {
         "languages": [
           [
@@ -1912,6 +1899,19 @@
             360
           ]
         ]
+      }
+    },
+    "leetcode": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-20T13:02:41.251Z",
+      "data": {
+        "handle": "risbhh19",
+        "solved": 173,
+        "easy": 113,
+        "medium": 54,
+        "hard": 6,
+        "contestRating": 1264,
+        "contests": 4
       }
     }
   }
