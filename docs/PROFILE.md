@@ -16,6 +16,7 @@ The README uses original, repository-hosted SVG cards plus the requested GitHub 
 
 - **Languages:** source bytes from public, owned, non-fork repositories, excluding the profile repo. This is repository composition, not time spent coding or a proficiency score.
 - **Contributions:** counts from the same public GitHub calendar shown to a visitor. The displayed calendar can include a partial starting week. It follows GitHub's attribution rules and can include anonymized contribution counts if the account has chosen to display them publicly.
+- **Activity graph:** an original 30-day line chart of those same calendar counts, ending on the last observed date. It shows the window's total, current streak (including yesterday if today has no contributions yet), and longest streak within the displayed calendar. The longest streak is not an all-time record. A missing daily observation makes the chart unavailable instead of inventing a zero. Cached charts retain their original date range and observation timestamp.
 - **GitHub Stats card:** total stars, total commits (`include_all_commits=true`), pull requests, issues, repositories contributed to in the last year, and the upstream rank ring. Counts and the rank are computed by the upstream renderer from the accessible public profile, not copied from the example screenshot. The rank is that project's scoring system, not an official GitHub rating.
 - **LeetCode:** accepted problem counts by difficulty and contest rating from the platform's public GraphQL endpoint. This endpoint is not a guaranteed stable public API.
 - **Codeforces:** current rating, maximum rating and rank from the official public `user.info` API.
@@ -25,6 +26,8 @@ The README uses original, repository-hosted SVG cards plus the requested GitHub 
 ## Reference categories
 
 The structure was inspired by [Awesome GitHub Profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme), using selected elements adapted to this profile. Personal claims and statistics from other profiles were not copied.
+
+[Arvind Kumar's profile](https://github.com/arvindkumar-ship-it/arvindkumar-ship-it) also informed the presentation of GitHub stats, streaks and contribution activity. This profile keeps its own introduction, project descriptions, skills and original light/dark chart design. Skills, achievements and the one-month work experience were supplied by the profile owner.
 
 | Category | Element in this profile | Reference |
 | --- | --- | --- |

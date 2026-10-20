@@ -9,14 +9,16 @@
 </p>
 
 <p align="center">
-  <a href="#about-me">About</a> · <a href="#tech-stack">Stack</a> · <a href="#featured-projects">Projects</a> · <a href="#languages">Languages</a> · <a href="#competitive-programming">Competitive programming</a> · <a href="#contribution-stats">Contribution stats</a>
+  <a href="#about-me">About</a> · <a href="#skills">Skills</a> · <a href="#work-experience">Experience</a> · <a href="#featured-projects">Projects</a> · <a href="#achievements">Achievements</a> · <a href="#competitive-programming">Competitive programming</a> · <a href="#contribution-stats">Stats</a>
 </p>
 
 ## About me
 
 Hi, I'm **Rishabh Pal** <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="24" alt="Waving hand" />
 
-I build full-stack web applications, with a particular interest in **Python and FastAPI backends**. I enjoy connecting useful interfaces to APIs and databases, and working through algorithmic problems alongside development.
+I'm a **Computer Science Engineering student at Raj Kumar Goel Institute of Technology (2024–2028)**, building full-stack applications with **Python, FastAPI, React and Next.js**. My focus is on APIs, authentication, data modelling and real-time workflows—the backend details that connect an interface to a working product.
+
+Alongside development, I practise **competitive programming in C++ and Python** on LeetCode, Codeforces and CodeChef. A **one-month software testing internship** also gave me hands-on experience with API validation, regression testing and bug reporting.
 
 ```python
 developer = {
@@ -27,24 +29,45 @@ developer = {
 }
 ```
 
-## Tech stack
+## Skills
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python%2Cfastapi%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cpostgres%2Csqlite%2Cprisma&amp;theme=dark&amp;perline=9" />
-    <img src="https://skillicons.dev/icons?i=python,fastapi,ts,react,nextjs,tailwind,postgres,sqlite,prisma&amp;theme=light&amp;perline=9" alt="Python, FastAPI, TypeScript, React, Next.js, Tailwind CSS, PostgreSQL, SQLite and Prisma" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python%2Ccpp%2Cjs%2Chtml%2Cfastapi%2Cnextjs%2Creact%2Ctailwind%2Cmongodb%2Cpostgres%2Credis%2Cpostman%2Cdocker%2Caws%2Cgit%2Cgithubactions&amp;theme=dark&amp;perline=8" />
+    <img src="https://skillicons.dev/icons?i=python,cpp,js,html,fastapi,nextjs,react,tailwind,mongodb,postgres,redis,postman,docker,aws,git,githubactions&amp;theme=light&amp;perline=8" alt="Python, C++, JavaScript, HTML, FastAPI, Next.js, React, Tailwind CSS, MongoDB, PostgreSQL, Redis, Postman, Docker, AWS, Git and GitHub Actions" />
   </picture>
 </p>
 
-| Backend | Frontend | Data |
-| :--- | :--- | :--- |
-| Python · FastAPI · REST APIs | TypeScript · React · Next.js · Tailwind CSS | PostgreSQL · SQLite · Prisma · SQLAlchemy |
+| Area | Skills & technologies |
+| :--- | :--- |
+| Languages | Python · C++ · JavaScript · HTML · SQL |
+| Frameworks & frontend | FastAPI · Next.js 14 (App Router) · React.js · React Hooks · Tailwind CSS |
+| Databases & caching | MongoDB Atlas · PostgreSQL / PostGIS · Redis |
+| Background jobs & real-time | Celery · Server-Sent Events (SSE) |
+| Data science & analytics | pandas · NumPy · EDA · Feature engineering · Customer segmentation |
+| AI & LLMs | Groq (Llama 3.3 70B / Llama 3.1 8B) · Gemini Flash · HuggingFace Embeddings · NLP |
+| Testing & QA | Postman · API testing · Functional testing · Regression testing · Test report documentation |
+| APIs & integrations | GitHub REST API · NewsAPI · Reddit API |
+| Authentication & security | JWT · Role-gated access · Environment-based secrets management |
+| Deployment & DevOps | Docker · Docker Compose · AWS · Vercel · Render |
+| Version control & CI | Git · GitHub · GitHub Actions |
+| BI & tools | Power BI · Windows Subsystem for Linux (WSL) |
+
+## Work experience
+
+### Software Testing Intern · R-Cube Green Technology LLP
+
+**Remote · 1 month**
+
+- Performed functional and regression testing on **AcadShree School ERP** modules, using **Postman** for API endpoint and response validation.
+- Documented defects with reproduction steps and severity classifications, and prepared structured test reports covering usability and workflows.
+- Collaborated with developers on bug triage and issue resolution, using Postman collections to verify end-to-end API behaviour.
 
 ## Featured projects
 
 ### [WaveSafe →](https://github.com/risbh19/waveSafe)
 
-A coastal safety and trip-planning project focused on beach-risk insights and emergency response workflows, using **FastAPI, React and PostgreSQL**. **Private repository.**
+A coastal safety and trip-planning project with a **FastAPI backend covering 60+ REST endpoints**, beach-risk insights and SOS dispatch workflows. Uses **React, PostgreSQL/PostGIS, Redis, Celery and Docker Compose**, with OTP/JWT authentication and offline SOS queueing. **Private repository.**
 
 ### [College Forum →](https://github.com/risbh19/college-forum)
 
@@ -52,7 +75,13 @@ A college discussion platform with topic boards, posts, comments and voting. Bui
 
 ### [Careflow →](https://github.com/risbh19/Careflow)
 
-A hospital workflow prototype using synthetic data, with separate doctor, nurse and patient roles. Combines a **Next.js frontend** with a **FastAPI backend** and server-side access controls.
+A hospital management prototype with separate **Doctor, Nurse and Patient portals**, JWT-gated access and **real-time updates through SSE**. Combines **Next.js, FastAPI and MongoDB Atlas** with task assignment and prescription workflows.
+
+## Achievements
+
+- 🏆 **Global Finalist** — Strategy Storm 2026, **IIT Guwahati**.
+- 🏅 **Top 8 Teams** — Investomania 2026, **IIT Hyderabad**.
+- 🥈 **First Runner-Up** — Hackwarts, college hackathon.
 
 ## Languages
 
@@ -74,13 +103,6 @@ A hospital workflow prototype using synthetic data, with separate doctor, nurse 
   <img src="assets/coding-light.svg" width="100%" alt="LeetCode solved problems and difficulty breakdown; Codeforces and CodeChef current and best ratings" />
 </picture>
 
-## Contributions
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/contributions-dark.svg" />
-  <img src="assets/contributions-light.svg" width="100%" alt="Actual GitHub contribution calendar, including daily counts and update time" />
-</picture>
-
 ## Contribution stats
 
 <!-- CONTRIBUTION_STATS:START -->
@@ -91,6 +113,27 @@ A hospital workflow prototype using synthetic data, with separate doctor, nurse 
   </picture>
 </a>
 <!-- CONTRIBUTION_STATS:END -->
+
+## Activity graph
+
+<a href="https://github.com/risbh19?tab=overview">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
+    <img src="assets/activity-light.svg" width="100%" alt="Daily contributions over the last 30 days, current streak and longest streak in the displayed calendar year" />
+  </picture>
+</a>
+
+<details>
+<summary><b>View the full contribution calendar</b></summary>
+
+<br />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/contributions-dark.svg" />
+  <img src="assets/contributions-light.svg" width="100%" alt="Actual GitHub contribution calendar, including daily counts and update time" />
+</picture>
+
+</details>
 
 <details>
 <summary><b>🌙 After hours — anime &amp; retro corner</b></summary>

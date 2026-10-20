@@ -64,6 +64,25 @@ export function streaks(days, today = new Date().toISOString().slice(0, 10)) {
   return { current, longest, active };
 }
 
+export function activitySummary(days, endDate = days.at(-1)?.date) {
+  if (!days.length) return null;
+  const end = Date.parse(endDate + 'T00:00:00Z');
+  if (!Number.isFinite(end)) throw new Error('Invalid activity window date');
+  const byDate = new Map(days.map(day => [day.date, day]));
+  const series = Array.from({ length: 30 }, (_, index) => {
+    const date = new Date(end - (29 - index) * 86400000).toISOString().slice(0, 10);
+    return byDate.get(date);
+  });
+  // Missing observations are unavailable data, never invented zeroes.
+  if (series.some(day => !day || !finite(day.count) || day.count < 0)) return null;
+  const observed = days.filter(day => day.date <= endDate);
+  return {
+    days: series,
+    total: series.reduce((sum, day) => sum + day.count, 0),
+    ...streaks(observed, endDate)
+  };
+}
+
 export function contributionSection() {
   return [
     '<a href="https://github.com/risbh19">',
@@ -199,6 +218,51 @@ function renderCalendar(source, t) {
   return svg(800, 254, 'GitHub contribution heatmap', t, body);
 }
 
+function renderActivity(source, t) {
+  const summary = activitySummary(source?.data?.days || []);
+  const label = date => new Date(date + 'T00:00:00Z').toLocaleDateString('en-GB', { day: '2-digit', month: 'short', timeZone: 'UTC' });
+  if (!summary) {
+    return svg(800, 200, 'GitHub activity graph temporarily unavailable', t,
+      heading('Contribution activity', 'Daily contributions from my public GitHub calendar', t) +
+      txt(28, 108, 'A complete 30-day contribution window is temporarily unavailable.', t.muted) +
+      txt(28, 170, sourceLabel(source), t.muted, 10));
+  }
+  const days = summary.days;
+  const range = `${label(days[0].date)} – ${label(days.at(-1).date)} ${days.at(-1).date.slice(0, 4)}`;
+  let body = heading('Contribution activity', `Daily GitHub contributions · ${range}`, t);
+  const metrics = [
+    { x: 28, label: 'LAST 30 DAYS', value: `${number(summary.total)} contributions`, color: t.teal },
+    { x: 295, label: 'CURRENT STREAK', value: `${summary.current} day${summary.current === 1 ? '' : 's'}`, color: t.blue },
+    { x: 562, label: 'LONGEST IN SHOWN YEAR', value: `${summary.longest} day${summary.longest === 1 ? '' : 's'}`, color: t.purple }
+  ];
+  for (const metric of metrics) {
+    body += txt(metric.x, 88, metric.label, t.muted, 10, 'letter-spacing="0.7"');
+    body += txt(metric.x, 115, metric.value, metric.color, 20, 'font-weight="650"');
+  }
+  const left = 55, right = 759, top = 160, bottom = 328;
+  const maximum = Math.max(4, Math.ceil(Math.max(...days.map(day => day.count)) / 4) * 4);
+  for (let index = 0; index <= 4; index++) {
+    const y = bottom - index / 4 * (bottom - top);
+    body += `<path d="M${left} ${y}H${right}" stroke="${t.line}" stroke-dasharray="3 5"/>`;
+    body += txt(43, y + 4, number(maximum * index / 4), t.muted, 10, 'text-anchor="end"');
+  }
+  const points = days.map((day, index) => ({ ...day,
+    x: left + index / (days.length - 1) * (right - left),
+    y: bottom - day.count / maximum * (bottom - top)
+  }));
+  const path = points.map((point, index) => `${index ? 'L' : 'M'}${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
+  body += `<defs><linearGradient id="activity-fill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="${t.teal}" stop-opacity="0.22"/><stop offset="1" stop-color="${t.teal}" stop-opacity="0.02"/></linearGradient></defs>`;
+  body += `<path d="${path} L${right} ${bottom} L${left} ${bottom} Z" fill="url(#activity-fill)"/>`;
+  body += `<path d="${path}" stroke="${t.teal}" stroke-width="2.2" fill="none" stroke-linejoin="round"/>`;
+  for (const point of points) {
+    body += `<circle cx="${point.x.toFixed(2)}" cy="${point.y.toFixed(2)}" r="3" fill="${t.bg}" stroke="${t.teal}" stroke-width="1.5"><title>${point.date}: ${point.count} contribution${point.count === 1 ? '' : 's'}</title></circle>`;
+  }
+  for (const index of [0, 7, 14, 21, 29]) body += txt(points[index].x, 352, label(points[index].date), t.muted, 10, 'text-anchor="middle"');
+  body += txt(28, 382, 'Public calendar counts · UTC dates · today\'s count can still grow', t.muted, 10);
+  body += txt(28, 406, sourceLabel(source), t.muted, 10);
+  return svg(800, 426, `Rishabh Pal's last 30 days of GitHub contributions: ${summary.total} contributions, current streak ${summary.current} days, longest streak in shown year ${summary.longest} days`, t, body);
+}
+
 function renderCoding(sources, t) {
   const lc = sources.leetcode?.data, cf = sources.codeforces?.data, cc = sources.codechef?.data;
   let body = heading('The problem-solving side', 'LeetCode · Codeforces · CodeChef', t);
@@ -254,7 +318,8 @@ export async function refresh(root = ROOT) {
   for (const [name, theme] of Object.entries(THEMES)) {
     const images = {
       header: renderHeader(theme), languages: renderLanguages(sources.github, theme),
-      contributions: renderCalendar(sources.calendar, theme), coding: renderCoding(sources, theme)
+      contributions: renderCalendar(sources.calendar, theme), activity: renderActivity(sources.calendar, theme),
+      coding: renderCoding(sources, theme)
     };
     await Promise.all(Object.entries(images).map(([key, content]) => writeFile(resolve(root, `assets/${key}-${name}.svg`), content)));
   }

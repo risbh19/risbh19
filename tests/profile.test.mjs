@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { parseCalendar, parseCodeChef, streaks, refresh, replaceContributionSection } from '../scripts/update-profile.mjs';
+import { parseCalendar, parseCodeChef, streaks, activitySummary, refresh, replaceContributionSection } from '../scripts/update-profile.mjs';
 
 // Synthetic fixtures are test-only; production assets always use fetched public data.
 function calendarFixture() {
@@ -44,6 +44,26 @@ test('CodeChef parses primary ratings without mistaking secondary unrated sectio
   const result = parseCodeChef('<style>.rating-number{}</style><div class="rating-number"> 1479 </div><small>(Highest Rating 1615)</small><div class="rating-number">NA</div>');
   assert.deepEqual(result, { handle: 'risbh_cf', rating: 1479, maxRating: 1615 });
   assert.throws(() => parseCodeChef('<div>Blocked</div>'), /unavailable/);
+});
+
+test('activity uses exactly 30 observed UTC dates across month boundaries and keeps stale windows honest', () => {
+  const days = Array.from({ length: 40 }, (_, index) => ({
+    date: new Date(Date.UTC(2026, 8, index + 11)).toISOString().slice(0, 10),
+    count: index >= 35 ? 2 : 0
+  }));
+  const summary = activitySummary(days);
+  assert.equal(summary.days.length, 30);
+  assert.equal(summary.days[0].date, '2026-09-21');
+  assert.equal(summary.days.at(-1).date, '2026-10-20');
+  assert.equal(summary.total, 10);
+  assert.equal(summary.current, 5);
+  assert.equal(summary.longest, 5);
+  const earlier = activitySummary(days, '2026-10-19');
+  assert.equal(earlier.total, 8);
+  assert.equal(earlier.current, 4);
+  assert.equal(earlier.longest, 4);
+  assert.equal(activitySummary(days.filter(day => day.date !== '2026-10-01')), null);
+  assert.equal(activitySummary([]), null);
 });
 
 test('contribution section embeds the requested GitHub Stats card without changing surrounding content', () => {
@@ -101,6 +121,11 @@ test('partial failures preserve last-good values, escape SVG text, and never sen
     assert.ok(coding.includes('Last available'));
     assert.ok(coding.includes('&lt;script&gt;'));
     assert.ok(!coding.includes('<script>'));
+    const activity = await readFile(join(root, 'assets/activity-dark.svg'), 'utf8');
+    assert.ok(activity.includes('Contribution activity'));
+    assert.equal((activity.match(/<circle /g) || []).length, 30);
+    assert.ok(activity.includes('2025-12-31:'));
+    assert.ok(!activity.includes('2026-10-20:'));
     const snapshot = await readFile(join(root, 'data/profile.json'), 'utf8');
     assert.ok(!snapshot.includes(token));
     assert.ok(requests.some(r => new URL(r.address).hostname === 'api.github.com' && r.authorization === `Bearer ${token}`));
