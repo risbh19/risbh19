@@ -1,22 +1,9 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-20T21:56:00.765Z",
+  "refreshedAt": "2026-10-21T21:59:48.343Z",
   "sources": {
-    "leetcode": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-20T21:56:00.308Z",
-      "data": {
-        "handle": "risbhh19",
-        "solved": 174,
-        "easy": 113,
-        "medium": 55,
-        "hard": 6,
-        "contestRating": 1264,
-        "contests": 4
-      }
-    },
     "codechef": {
-      "status": "fresh",
+      "status": "stale",
       "fetchedAt": "2026-10-20T21:56:00.308Z",
       "data": {
         "handle": "risbh_cf",
@@ -24,9 +11,22 @@
         "maxRating": 1615
       }
     },
+    "leetcode": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-21T21:59:47.570Z",
+      "data": {
+        "handle": "risbhh19",
+        "solved": 175,
+        "easy": 113,
+        "medium": 56,
+        "hard": 6,
+        "contestRating": 1264,
+        "contests": 4
+      }
+    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T21:56:00.307Z",
+      "fetchedAt": "2026-10-21T21:59:47.568Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1143,
@@ -36,7 +36,7 @@
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T21:56:00.306Z",
+      "fetchedAt": "2026-10-21T21:59:47.568Z",
       "data": {
         "days": [
           {
@@ -1873,14 +1873,19 @@
             "date": "2026-10-20",
             "count": 27,
             "level": 4
+          },
+          {
+            "date": "2026-10-21",
+            "count": 8,
+            "level": 2
           }
         ],
-        "total": 112
+        "total": 120
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-10-20T21:56:00.274Z",
+      "fetchedAt": "2026-10-21T21:59:47.541Z",
       "data": {
         "languages": [
           [
@@ -1889,15 +1894,15 @@
           ],
           [
             "TypeScript",
-            108975
-          ],
-          [
-            "JavaScript",
-            102281
+            186204
           ],
           [
             "Python",
-            65706
+            135130
+          ],
+          [
+            "JavaScript",
+            112885
           ],
           [
             "CSS",
@@ -1910,6 +1915,10 @@
           [
             "HTML",
             360
+          ],
+          [
+            "Dockerfile",
+            329
           ]
         ]
       }
