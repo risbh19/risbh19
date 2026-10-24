@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Rishabh Pal&#39;s GitHub Stats, Rank: C</title>
-        <desc id="descId">Total Stars Earned: 0, Total Commits  : 50, Total PRs: 2, Total Issues: 1, Contributed to (last year): 0</desc>
+        <desc id="descId">Total Stars Earned: 0, Total Commits  : 50, Total PRs: 2, Total Issues: 1, Contributed to (last year): 1</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 238.3012801239179;
+        stroke-dashoffset: 237.68888389514794;
       }
     }
   
@@ -229,7 +229,7 @@
         x="224.01"
         y="12.5"
         data-testid="contribs"
-      >0</text>
+      >1</text>
     </g>
   </g>
     </svg>

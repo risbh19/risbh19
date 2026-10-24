@@ -1,20 +1,42 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-23T21:43:30.326Z",
+  "refreshedAt": "2026-10-24T21:13:36.339Z",
   "sources": {
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-24T21:13:35.775Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1484,
+        "maxRating": 1615
+      }
+    },
+    "leetcode": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-24T21:13:35.776Z",
+      "data": {
+        "handle": "risbhh19",
+        "solved": 178,
+        "easy": 114,
+        "medium": 58,
+        "hard": 6,
+        "contestRating": 1264,
+        "contests": 4
+      }
+    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-10-23T21:43:29.697Z",
+      "fetchedAt": "2026-10-24T21:13:35.774Z",
       "data": {
         "handle": "Sensi__",
-        "rating": 1099,
+        "rating": 1062,
         "maxRating": 1130,
         "rank": "newbie"
       }
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-23T21:43:29.696Z",
+      "fetchedAt": "2026-10-24T21:13:35.772Z",
       "data": {
         "days": [
           {
@@ -1866,36 +1888,19 @@
             "date": "2026-10-23",
             "count": 0,
             "level": 0
+          },
+          {
+            "date": "2026-10-24",
+            "count": 1,
+            "level": 1
           }
         ],
-        "total": 120
-      }
-    },
-    "leetcode": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-23T21:43:29.699Z",
-      "data": {
-        "handle": "risbhh19",
-        "solved": 177,
-        "easy": 113,
-        "medium": 58,
-        "hard": 6,
-        "contestRating": 1264,
-        "contests": 4
-      }
-    },
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-23T21:43:29.698Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1484,
-        "maxRating": 1615
+        "total": 121
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-10-23T21:43:29.673Z",
+      "fetchedAt": "2026-10-24T21:13:35.670Z",
       "data": {
         "languages": [
           [
