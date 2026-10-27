@@ -283,13 +283,12 @@ function renderCoding(sources, t) {
 }
 
 function renderHeader(t) {
-  let body = `<defs><linearGradient id="glow" x2="1" y2="1"><stop stop-color="${t.teal}" stop-opacity="0.14"/><stop offset="1" stop-color="${t.blue}" stop-opacity="0.02"/></linearGradient><clipPath id="typing"><rect x="38" y="186" width="715" height="26"><animate attributeName="width" values="0;715;715;0" keyTimes="0;0.38;0.88;1" dur="9s" repeatCount="indefinite"/></rect></clipPath></defs><rect x="1" y="1" width="798" height="250" rx="16" fill="url(#glow)"/>`;
-  body += txt(38, 43, 'RISBH19  /  DEVELOPER PROFILE', t.teal, 12, 'class="mono" letter-spacing="2"');
-  body += txt(38, 108, 'Rishabh Pal', t.fg, 49, 'font-weight="750" letter-spacing="-2"');
-  body += txt(38, 151, 'Full-stack development. Backend at heart.', t.muted, 20);
-  body += `<g clip-path="url(#typing)">${txt(38, 207, '> FastAPI backends · useful interfaces · competitive programming', t.teal, 15, 'class="mono"')}</g>`;
-  body += `<text x="718" y="108" fill="${t.blue}" opacity="0.4" font-family="monospace" font-size="43">{ }</text>`;
-  return svg(800, 252, 'Rishabh Pal — full-stack development, FastAPI backends and competitive programming', t, body);
+  let body = `<path d="M32 30V142" stroke="${t.teal}" stroke-width="3" stroke-linecap="round"/>`;
+  body += txt(54, 42, 'RISBH19  /  BUILD & SOLVE', t.teal, 11, 'class="mono" letter-spacing="1.8"');
+  body += txt(52, 96, 'Rishabh Pal', t.fg, 43, 'font-weight="750" letter-spacing="-1.4"');
+  body += txt(54, 130, 'Full-stack development · Competitive programming', t.muted, 19);
+  body += `<text x="716" y="95" fill="${t.blue}" opacity="0.5" font-family="monospace" font-size="34">{ }</text>`;
+  return svg(800, 172, 'Rishabh Pal — full-stack development and competitive programming', t, body);
 }
 
 export async function refresh(root = ROOT) {

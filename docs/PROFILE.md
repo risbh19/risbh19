@@ -2,9 +2,9 @@
 
 The README uses original, repository-hosted SVG cards plus the requested GitHub Readme Stats card. The custom generator uses built-in Node.js 22 modules. The GitHub Stats card uses the maintained upstream action, pinned to v2.1.0's commit and renderer version 2.2.1. Both run with the repository's automatically supplied `GITHUB_TOKEN`; no personal access token is required.
 
-The current layout pairs an original 650-pixel animated profile header with a short introduction, five core skill groups, three featured projects, brief experience and achievements, and two 500-pixel GitHub cards. Coding-platform statistics and the full contribution calendar are expandable. GitHub scales images down on narrow screens. The refresh generator preserves the 500-pixel stats-card width.
+The current layout pairs an original, static 650-pixel profile header with a short full-stack and competitive-programming introduction, five compact technology groups and three featured projects. Coding-profile links and a 600-pixel platform-statistics card are visible. Experience/achievements and the full contribution calendar are expandable. The two GitHub cards remain 500 pixels wide; GitHub scales images down on narrow screens. The refresh generator preserves the current header and the 500-pixel stats-card width.
 
-Core technologies use compact name-and-icon badges. Brand icons come from Shields.io; SQL, REST APIs and JWT use original repository-hosted database, request/response and key glyphs. A short After Hours line keeps the anime, retro and problem-solving theme without adding another large card.
+Core technologies use compact name-and-icon badges, with frontend, backend, languages, data and tools grouped separately. Brand icons come from Shields.io; SQL, REST APIs and JWT use original repository-hosted database, request/response and key glyphs. A short After Hours line keeps the anime, retro and problem-solving theme.
 
 ## Refresh behavior
 
@@ -29,11 +29,13 @@ Core technologies use compact name-and-icon badges. Brand icons come from Shield
 
 ## Design references
 
+The October 2026 redesign draws layout inspiration from GitSkins' [Recruiter-ready](https://www.gitskins.com/templates/recruiter) and [Backend](https://www.gitskins.com/templates/backend) previews: an explicit role, concise sections and direct access to projects. The README wording, header SVG and custom statistics cards are original to this repository. GitSkins template code, generated claims and follower counters were not imported.
+
 The earlier design explored categories from [Awesome GitHub Profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme). The current version retains a small selection in a minimal layout. Personal claims and statistics from other profiles were not copied.
 
 [Arvind Kumar's profile](https://github.com/arvindkumar-ship-it/arvindkumar-ship-it) also informed the presentation of GitHub stats, streaks and contribution activity. This profile keeps its own introduction, project descriptions, skills and original light/dark chart design. Skills, achievements and the one-month work experience were supplied by the profile owner.
 
-The following records the earlier design exploration. The current README retains the animated profile header, a small waving-hand GIF, technology badges and a short After Hours line. Code-mode introductions and large decorative panels are omitted.
+The following records the earlier design exploration. The current README uses a static profile header, technology/platform badges and a short After Hours line. Code-mode introductions, waving-hand animations and large decorative panels are omitted.
 
 | Category | Element explored | Reference |
 | --- | --- | --- |
@@ -55,6 +57,7 @@ The following records the earlier design exploration. The current README retains
 
 ## Credits and sources
 
+- [GitSkins](https://www.gitskins.com/): minimal README layout reference, reviewed through its public Recruiter-ready and Backend previews.
 - [Awesome GitHub Profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme): category/reference discovery.
 - [Shields.io](https://shields.io/): externally hosted badges.
 - [Skill Icons](https://github.com/tandpfun/skill-icons): externally hosted technology icons.

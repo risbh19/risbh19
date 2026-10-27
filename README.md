@@ -1,68 +1,50 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg" />
-  <img src="assets/header-light.svg" width="650" alt="Rishabh Pal — full-stack development, FastAPI backends and competitive programming" />
+  <img src="assets/header-light.svg" width="650" alt="Rishabh Pal — full-stack development and competitive programming" />
 </picture>
 
-Hi, I'm **Rishabh Pal** <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="22" alt="Waving hand" /> — a **3rd-year CSE student at RKGIT**.
+Hi, I'm **Rishabh Pal**, a **3rd-year CSE student at RKGIT**. I build full-stack web applications with **React, Next.js and FastAPI**, connecting interfaces, APIs and databases. Alongside development, I practise **data structures, algorithms and competitive programming** with **C++ and Python**.
 
-I build full-stack web applications, with a particular interest in **Python and FastAPI backends**. I enjoy connecting useful interfaces to APIs and databases, and working through algorithmic problems alongside development.
+[Portfolio ↗](https://risbh19.xyz) · [LinkedIn](https://www.linkedin.com/in/rishabhpal19/) · [Email](mailto:palrishabh989@gmail.com)
 
-[Portfolio](https://risbh19.xyz) · [LinkedIn](https://www.linkedin.com/in/rishabhpal19/) · [Email](mailto:palrishabh989@gmail.com) · [Repositories](https://github.com/risbh19?tab=repositories)
+## Tech stack
 
-## Skills
-
-| Area | Core stack |
+| Area | Technologies |
 | :--- | :--- |
-| Languages | ![Python](https://img.shields.io/badge/Python-161b22?style=flat-square&logo=python&logoColor=ffd43b) ![C++](https://img.shields.io/badge/C%2B%2B-161b22?style=flat-square&logo=cplusplus&logoColor=7aa2f7) ![JavaScript](https://img.shields.io/badge/JavaScript-161b22?style=flat-square&logo=javascript&logoColor=f7df1e) ![SQL](assets/skill-sql.svg) |
-| Backend | ![FastAPI](https://img.shields.io/badge/FastAPI-161b22?style=flat-square&logo=fastapi&logoColor=5eead4) ![REST APIs](assets/skill-rest.svg) ![JWT](assets/skill-jwt.svg) |
 | Frontend | ![React](https://img.shields.io/badge/React-161b22?style=flat-square&logo=react&logoColor=61dafb) ![Next.js](https://img.shields.io/badge/Next.js-161b22?style=flat-square&logo=nextdotjs&logoColor=ffffff) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-161b22?style=flat-square&logo=tailwindcss&logoColor=38bdf8) |
-| Data | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-161b22?style=flat-square&logo=postgresql&logoColor=7aa2f7) ![MongoDB](https://img.shields.io/badge/MongoDB-161b22?style=flat-square&logo=mongodb&logoColor=47a248) ![Redis](https://img.shields.io/badge/Redis-161b22?style=flat-square&logo=redis&logoColor=ff6b6b) |
-| Tools | ![Docker](https://img.shields.io/badge/Docker-161b22?style=flat-square&logo=docker&logoColor=2496ed) ![Git](https://img.shields.io/badge/Git-161b22?style=flat-square&logo=git&logoColor=f05032) ![Postman](https://img.shields.io/badge/Postman-161b22?style=flat-square&logo=postman&logoColor=ff6c37) |
+| Backend | ![FastAPI](https://img.shields.io/badge/FastAPI-161b22?style=flat-square&logo=fastapi&logoColor=5eead4) ![REST APIs](assets/skill-rest.svg) ![JWT](assets/skill-jwt.svg) |
+| Languages | ![Python](https://img.shields.io/badge/Python-161b22?style=flat-square&logo=python&logoColor=ffd43b) ![C++](https://img.shields.io/badge/C%2B%2B-161b22?style=flat-square&logo=cplusplus&logoColor=7aa2f7) ![JavaScript](https://img.shields.io/badge/JavaScript-161b22?style=flat-square&logo=javascript&logoColor=f7df1e) ![TypeScript](https://img.shields.io/badge/TypeScript-161b22?style=flat-square&logo=typescript&logoColor=3178c6) |
+| Data | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-161b22?style=flat-square&logo=postgresql&logoColor=7aa2f7) ![MongoDB](https://img.shields.io/badge/MongoDB-161b22?style=flat-square&logo=mongodb&logoColor=47a248) ![Redis](https://img.shields.io/badge/Redis-161b22?style=flat-square&logo=redis&logoColor=ff6b6b) ![SQL](assets/skill-sql.svg) |
+| Tools | ![Git](https://img.shields.io/badge/Git-161b22?style=flat-square&logo=git&logoColor=f05032) ![Docker](https://img.shields.io/badge/Docker-161b22?style=flat-square&logo=docker&logoColor=2496ed) ![Postman](https://img.shields.io/badge/Postman-161b22?style=flat-square&logo=postman&logoColor=ff6c37) |
 
 ## Featured projects
 
-### [WaveSafe →](https://github.com/risbh19/waveSafe)
-
-A coastal safety and trip-planning project focused on beach-risk insights and emergency response workflows, using **FastAPI, React and PostgreSQL**. **Private repository.**
-
 ### [College Forum →](https://github.com/risbh19/college-forum)
 
-A college discussion platform with topic boards, posts, comments and voting. Built with **Next.js, TypeScript, Prisma and PostgreSQL**, with authentication and ownership checks.
+A discussion platform with topic boards, posts, comments and voting. **Next.js · TypeScript · Prisma · PostgreSQL**, with authentication, ownership checks and automated tests.
+
+### [WaveSafe →](https://github.com/risbh19/waveSafe)
+
+A coastal safety and trip-planning project with beach-risk insights and emergency response workflows. **React · FastAPI · PostgreSQL**. <sub>Private repository.</sub>
 
 ### [Careflow →](https://github.com/risbh19/Careflow)
 
-A hospital workflow prototype using synthetic data, with separate doctor, nurse and patient roles. Combines a **Next.js frontend** with a **FastAPI backend** and server-side access controls.
+A hospital workflow prototype using synthetic data, with doctor, nurse and patient roles. **Next.js · FastAPI · MongoDB**, with server-side access controls.
 
-## Experience
+## Coding profiles
 
-**Software Testing Intern · R-Cube Green Technology LLP**  
-Remote · **1 month**
+I solve algorithmic problems and take part in contests alongside building applications.
 
-Tested AcadShree School ERP using Postman, covering API validation, functional/regression testing and defect reporting.
-
-## Achievements
-
-- **Global Finalist** — Strategy Storm 2026, IIT Guwahati
-- **Top 8 Teams** — Investomania 2026, IIT Hyderabad
-- **First Runner-Up** — Hackwarts, college hackathon
-
-## Competitive programming
-
-[LeetCode · risbhh19](https://leetcode.com/u/risbhh19/) · [Codeforces · Sensi__](https://codeforces.com/profile/Sensi__) · [CodeChef · risbh_cf](https://www.codechef.com/users/risbh_cf)
-
-<details>
-<summary>Platform statistics</summary>
-
-<br />
+[![LeetCode](https://img.shields.io/badge/LeetCode-risbhh19-161b22?style=flat-square&logo=leetcode&logoColor=ffa116)](https://leetcode.com/u/risbhh19/)
+[![Codeforces](https://img.shields.io/badge/Codeforces-Sensi____-161b22?style=flat-square&logo=codeforces&logoColor=1f8acb)](https://codeforces.com/profile/Sensi__)
+[![CodeChef](https://img.shields.io/badge/CodeChef-risbh__cf-161b22?style=flat-square&logo=codechef&logoColor=c89b70)](https://www.codechef.com/users/risbh_cf)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/coding-dark.svg" />
-  <img src="assets/coding-light.svg" width="500" alt="LeetCode solved problems and difficulty breakdown; Codeforces and CodeChef current and best ratings" />
+  <img src="assets/coding-light.svg" width="600" alt="LeetCode solved problems and difficulty breakdown; Codeforces and CodeChef current and best ratings" />
 </picture>
 
-</details>
-
-## GitHub stats
+## GitHub activity
 
 <!-- CONTRIBUTION_STATS:START -->
 <a href="https://github.com/risbh19">
@@ -92,8 +74,24 @@ Tested AcadShree School ERP using Postman, covering API validation, functional/r
 
 </details>
 
-## After hours
+<details>
+<summary>Experience &amp; achievements</summary>
 
-Anime · Retro aesthetics · Solving the next problem
+### Experience
 
-<sub>Stats refresh every 24 hours · <a href="docs/PROFILE.md">Data &amp; credits</a></sub>
+**Software Testing Intern · R-Cube Green Technology LLP**  
+Remote · **1 month**
+
+Tested AcadShree School ERP using Postman, covering API validation, functional/regression testing and reproducible defect reports.
+
+### Achievements
+
+- **Global Finalist** — Strategy Storm 2026, IIT Guwahati
+- **Top 8 Teams** — Investomania 2026, IIT Hyderabad
+- **First Runner-Up** — Hackwarts, college hackathon
+
+</details>
+
+**After hours:** Anime · Retro aesthetics · Solving the next problem
+
+<sub>Stats refresh every 24 hours · <a href="docs/PROFILE.md">Data &amp; design credits</a></sub>
