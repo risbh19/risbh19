@@ -3,9 +3,13 @@
   <img src="assets/header-light.svg" width="650" alt="Rishabh Pal — full-stack development and competitive programming" />
 </picture>
 
-Hi, I'm **Rishabh Pal**, a **3rd-year CSE student at RKGIT**. I build full-stack web applications with **React, Next.js and FastAPI**, connecting interfaces, APIs and databases. Alongside development, I practise **data structures, algorithms and competitive programming** with **C++ and Python**.
+Hi, I'm **Rishabh Pal**, a **3rd-year CSE student at RKGIT**, focused on **competitive programming and algorithmic problem solving**.
 
-[Portfolio ↗](https://risbh19.xyz) · [LinkedIn](https://www.linkedin.com/in/rishabhpal19/) · [Email](mailto:palrishabh989@gmail.com)
+I practise **data structures and algorithms in C++ and Python**, with an emphasis on selecting efficient approaches, analysing time and space complexity, and handling edge cases. Alongside this, I build **full-stack web applications with React, Next.js and FastAPI**, working across frontend interfaces, REST APIs, authentication and databases.
+
+[![Portfolio](assets/contact-portfolio.svg)](https://risbh19.xyz)
+[![LinkedIn](assets/contact-linkedin.svg)](https://www.linkedin.com/in/rishabhpal19/)
+[![Email](assets/contact-email.svg)](mailto:palrishabh989@gmail.com)
 
 ## Tech stack
 
@@ -33,8 +37,6 @@ A hospital workflow prototype using synthetic data, with doctor, nurse and patie
 
 ## Coding profiles
 
-I solve algorithmic problems and take part in contests alongside building applications.
-
 [![LeetCode](https://img.shields.io/badge/LeetCode-risbhh19-161b22?style=flat-square&logo=leetcode&logoColor=ffa116)](https://leetcode.com/u/risbhh19/)
 [![Codeforces](https://img.shields.io/badge/Codeforces-Sensi____-161b22?style=flat-square&logo=codeforces&logoColor=1f8acb)](https://codeforces.com/profile/Sensi__)
 [![CodeChef](https://img.shields.io/badge/CodeChef-risbh__cf-161b22?style=flat-square&logo=codechef&logoColor=c89b70)](https://www.codechef.com/users/risbh_cf)
@@ -44,7 +46,7 @@ I solve algorithmic problems and take part in contests alongside building applic
   <img src="assets/coding-light.svg" width="600" alt="LeetCode solved problems and difficulty breakdown; Codeforces and CodeChef current and best ratings" />
 </picture>
 
-## GitHub activity
+## GitHub stats
 
 <!-- CONTRIBUTION_STATS:START -->
 <a href="https://github.com/risbh19">
@@ -54,25 +56,6 @@ I solve algorithmic problems and take part in contests alongside building applic
   </picture>
 </a>
 <!-- CONTRIBUTION_STATS:END -->
-
-<a href="https://github.com/risbh19?tab=overview">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
-    <img src="assets/activity-light.svg" width="500" alt="Daily contributions over the last 30 days, current streak and longest streak in the displayed contribution calendar" />
-  </picture>
-</a>
-
-<details>
-<summary>Full contribution calendar</summary>
-
-<br />
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/contributions-dark.svg" />
-  <img src="assets/contributions-light.svg" width="500" alt="Actual GitHub contribution calendar, including daily counts and update time" />
-</picture>
-
-</details>
 
 <details>
 <summary>Experience &amp; achievements</summary>
@@ -91,6 +74,12 @@ Tested AcadShree School ERP using Postman, covering API validation, functional/r
 - **First Runner-Up** — Hackwarts, college hackathon
 
 </details>
+
+<p>
+  <a href="https://giphy.com/stickers/transparent-miiish-XDErub0lDFHcHWlwLO">
+    <img src="https://media2.giphy.com/media/XDErub0lDFHcHWlwLO/giphy.gif" width="100" alt="Tanjiro Kamado from Demon Slayer — animated sticker by Miimpi" />
+  </a>
+</p>
 
 **After hours:** Anime · Retro aesthetics · Solving the next problem
 
