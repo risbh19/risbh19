@@ -2,9 +2,9 @@
 
 The README uses original, repository-hosted SVG cards plus the requested GitHub Readme Stats card. The custom generator uses built-in Node.js 22 modules. The GitHub Stats card uses the maintained upstream action, pinned to v2.1.0's commit and renderer version 2.2.1. Both run with the repository's automatically supplied `GITHUB_TOKEN`; no personal access token is required.
 
-The current layout pairs an original, static 650-pixel profile header with a short full-stack and competitive-programming introduction, five compact technology groups and three featured projects. Coding-profile links and a 600-pixel platform-statistics card are visible. Experience/achievements and the full contribution calendar are expandable. The two GitHub cards remain 500 pixels wide; GitHub scales images down on narrow screens. The refresh generator preserves the current header and the 500-pixel stats-card width.
+The current layout pairs an original, static 650-pixel profile header with an introduction focused on competitive programming, followed by full-stack application development, five compact technology groups and three featured projects. Coding-profile links and a 600-pixel platform-statistics card are visible. Experience/achievements are expandable. The GitHub Stats card remains 500 pixels wide; GitHub scales images down on narrow screens. The activity graph and annual-calendar assets are optional generated outputs and are not embedded in this layout. The refresh generator only replaces the marked GitHub Stats embed, so it does not restore the removed graph or calendar.
 
-Core technologies use compact name-and-icon badges, with frontend, backend, languages, data and tools grouped separately. Brand icons come from Shields.io; SQL, REST APIs and JWT use original repository-hosted database, request/response and key glyphs. A short After Hours line keeps the anime, retro and problem-solving theme.
+Core technologies use compact name-and-icon badges, with frontend, backend, languages, data and tools grouped separately. Brand icons come from Shields.io; SQL, REST APIs and JWT use original repository-hosted database, request/response and key glyphs. Repository-hosted SVG contact buttons link to the portfolio, LinkedIn and email. A 100-pixel transparent Tanjiro GIF accompanies the short After Hours line; it links to the original artist's GIPHY page.
 
 ## Refresh behavior
 
@@ -56,6 +56,8 @@ The following records the earlier design exploration. The current README uses a 
 | Retro | Terminal-style after-hours panel | [Livio Brunner](https://github.com/BrunnerLivio/BrunnerLivio) |
 
 ## Credits and sources
+
+- [Miimpi on GIPHY](https://giphy.com/stickers/transparent-miiish-XDErub0lDFHcHWlwLO): externally hosted animated Tanjiro sticker. The GIF remains hosted on GIPHY and is not relicensed by this repository.
 
 - [GitSkins](https://www.gitskins.com/): minimal README layout reference, reviewed through its public Recruiter-ready and Backend previews.
 - [Awesome GitHub Profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme): category/reference discovery.
