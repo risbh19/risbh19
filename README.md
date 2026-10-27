@@ -58,7 +58,7 @@ A hospital workflow prototype using synthetic data, with doctor, nurse and patie
 <!-- CONTRIBUTION_STATS:END -->
 
 <details>
-<summary>Experience &amp; achievements</summary>
+<summary>Experience</summary>
 
 ### Experience
 
@@ -67,20 +67,14 @@ Remote · **1 month**
 
 Tested AcadShree School ERP using Postman, covering API validation, functional/regression testing and reproducible defect reports.
 
-### Achievements
-
-- **Global Finalist** — Strategy Storm 2026, IIT Guwahati
-- **Top 8 Teams** — Investomania 2026, IIT Hyderabad
-- **First Runner-Up** — Hackwarts, college hackathon
-
 </details>
 
 <p>
-  <a href="https://giphy.com/stickers/transparent-miiish-XDErub0lDFHcHWlwLO">
-    <img src="https://media2.giphy.com/media/XDErub0lDFHcHWlwLO/giphy.gif" width="100" alt="Tanjiro Kamado from Demon Slayer — animated sticker by Miimpi" />
+  <a href="https://tenor.com/view/inosuke-tanjiro-demon-slayer-gif-22324825">
+    <img src="https://media1.tenor.com/m/HPPG89krNFUAAAAC/inosuke-tanjiro.gif" width="300" alt="Tanjiro and Inosuke sharing a funny food moment in Demon Slayer — looping GIF" />
   </a>
 </p>
 
-**After hours:** Anime · Retro aesthetics · Solving the next problem
+**Side quests:** Anime · Retro aesthetics · One more episode
 
 <sub>Stats refresh every 24 hours · <a href="docs/PROFILE.md">Data &amp; design credits</a></sub>
