@@ -70,11 +70,11 @@ Tested AcadShree School ERP using Postman, covering API validation, functional/r
 </details>
 
 <p>
-  <a href="https://tenor.com/view/inosuke-tanjiro-demon-slayer-gif-22324825">
-    <img src="https://media1.tenor.com/m/HPPG89krNFUAAAAC/inosuke-tanjiro.gif" width="300" alt="Tanjiro and Inosuke sharing a funny food moment in Demon Slayer — looping GIF" />
+  <a href="https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX/blob/master/assets/208593.gif">
+    <img src="https://raw.githubusercontent.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX/master/assets/208593.gif" width="300" alt="The Seven Deadly Sins — original animated After Hours GIF" />
   </a>
 </p>
 
-**Side quests:** Anime · Retro aesthetics · One more episode
+**After hours:** Anime · Retro aesthetics · One more episode
 
 <sub>Stats refresh every 8 hours · <a href="docs/PROFILE.md">Data &amp; design credits</a></sub>
