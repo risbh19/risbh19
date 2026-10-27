@@ -58,7 +58,7 @@ A hospital workflow prototype using synthetic data, with doctor, nurse and patie
 <!-- CONTRIBUTION_STATS:END -->
 
 <details>
-<summary>Experience &amp; achievements</summary>
+<summary>Experience</summary>
 
 ### Experience
 
@@ -66,12 +66,6 @@ A hospital workflow prototype using synthetic data, with doctor, nurse and patie
 Remote · **1 month**
 
 Tested AcadShree School ERP using Postman, covering API validation, functional/regression testing and reproducible defect reports.
-
-### Achievements
-
-- **Global Finalist** — Strategy Storm 2026, IIT Guwahati
-- **Top 8 Teams** — Investomania 2026, IIT Hyderabad
-- **First Runner-Up** — Hackwarts, college hackathon
 
 </details>
 
