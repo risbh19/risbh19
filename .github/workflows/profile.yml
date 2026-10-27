@@ -3,7 +3,7 @@ name: Refresh profile
 on:
   workflow_dispatch:
   schedule:
-    - cron: '47 18 * * *' # Daily at 00:17 IST (18:47 UTC)
+    - cron: '47 2,10,18 * * *' # Every 8 hours: 00:17, 08:17, 16:17 IST
   push:
     branches: [main]
     paths:

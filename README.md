@@ -77,4 +77,4 @@ Tested AcadShree School ERP using Postman, covering API validation, functional/r
 
 **Side quests:** Anime · Retro aesthetics · One more episode
 
-<sub>Stats refresh every 24 hours · <a href="docs/PROFILE.md">Data &amp; design credits</a></sub>
+<sub>Stats refresh every 8 hours · <a href="docs/PROFILE.md">Data &amp; design credits</a></sub>

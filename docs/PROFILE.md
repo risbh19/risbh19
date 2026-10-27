@@ -8,11 +8,11 @@ Core technologies use compact name-and-icon badges, with frontend, backend, lang
 
 ## Refresh behavior
 
-- Runs once every 24 hours at 18:47 UTC (00:17 IST), after changes to the README/generator/tests/workflow, and on manual dispatch.
+- Runs every 8 hours at 02:47, 10:47 and 18:47 UTC (08:17, 16:17 and 00:17 IST), after changes to the README/generator/tests/workflow, and on manual dispatch. The same workflow refreshes GitHub Stats and the LeetCode, Codeforces and CodeChef cards.
 - GitHub schedules and image caching can delay visible updates; the README is not a continuously streaming dashboard.
 - Each source has its own observation time. A partial failure preserves its last successful data and marks that source as **Last available**. Missing values display an em dash, never an invented zero or rank.
 - When all data sources fail, the workflow fails and leaves the previously published cards available. Run history and the cards' timestamps make freshness visible.
-- Public repository updates elsewhere appear on the next daily run. The workflow updates the generated images; the marked contribution-stats section embeds the upstream card in light and dark variants.
+- Public repository updates elsewhere appear on the next scheduled run. The workflow updates the generated images; the marked contribution-stats section embeds the upstream card in light and dark variants.
 - The GitHub Stats action fails rather than committing an error image when its data source fails. The previously published card remains available.
 - GitHub may disable scheduled workflows in inactive public repositories. The manual **Actions → Refresh profile → Run workflow** control remains available; re-enable the schedule if GitHub disables it.
 
@@ -39,7 +39,7 @@ The following records the earlier design exploration. The current README uses a 
 
 | Category | Element explored | Reference |
 | --- | --- | --- |
-| GitHub Actions | Daily data refresh and generated assets | [Simon Willison](https://github.com/simonw/simonw) |
+| GitHub Actions | Eight-hour data refresh and generated assets | [Simon Willison](https://github.com/simonw/simonw) |
 | Code Mode | Python developer introduction | [Thaiane Braga](https://github.com/Thaiane/Thaiane) |
 | Dynamic Realtime | Freshness-stamped contribution and coding-platform statistics | [Anurag Hazra](https://github.com/anuraghazra/anuraghazra) |
 | A Little Bit of Everything | Balanced projects, tools, stats and contact sections | [Martin Heinz](https://github.com/MartinHeinz/MartinHeinz) |
@@ -64,7 +64,7 @@ The following records the earlier design exploration. The current README uses a 
 - [Shields.io](https://shields.io/): externally hosted badges.
 - [Skill Icons](https://github.com/tandpfun/skill-icons): externally hosted technology icons.
 - [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats): the card design selected by the profile owner.
-- [GitHub Readme Stats Action](https://github.com/stats-organization/github-readme-stats-action) and its maintained core: daily generation of the repository-hosted stats card.
+- [GitHub Readme Stats Action](https://github.com/stats-organization/github-readme-stats-action) and its maintained core: generation of the repository-hosted stats card every 8 hours.
 - [Martin Heinz wave GIF](https://github.com/MartinHeinz/MartinHeinz/blob/master/wave.gif): externally linked waving-hand animation.
 - [Ashutosh anime GIF](https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX/blob/master/assets/208593.gif): externally linked anime illustration. These two GIFs remain hosted by their respective profile owners and are not relicensed by this repository.
 - [GitHub repository languages](https://docs.github.com/en/rest/repos/repos#list-repository-languages) and [Codeforces API](https://codeforces.com/apiHelp/methods): public data documentation.
