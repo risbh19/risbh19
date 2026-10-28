@@ -1,19 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-27T21:47:35.871Z",
+  "refreshedAt": "2026-10-28T08:58:43.361Z",
   "sources": {
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-27T21:47:35.158Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1484,
-        "maxRating": 1615
-      }
-    },
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-10-27T21:47:35.159Z",
+      "fetchedAt": "2026-10-28T08:58:42.485Z",
       "data": {
         "handle": "risbhh19",
         "solved": 181,
@@ -26,7 +17,7 @@
     },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-10-27T21:47:35.157Z",
+      "fetchedAt": "2026-10-28T08:58:42.483Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1072,
@@ -34,9 +25,58 @@
         "rank": "newbie"
       }
     },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-28T08:58:42.484Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1484,
+        "maxRating": 1615
+      }
+    },
+    "github": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-28T08:58:42.442Z",
+      "data": {
+        "languages": [
+          [
+            "Jupyter Notebook",
+            439604
+          ],
+          [
+            "TypeScript",
+            186204
+          ],
+          [
+            "Python",
+            135130
+          ],
+          [
+            "JavaScript",
+            112885
+          ],
+          [
+            "CSS",
+            55857
+          ],
+          [
+            "Batchfile",
+            428
+          ],
+          [
+            "HTML",
+            360
+          ],
+          [
+            "Dockerfile",
+            329
+          ]
+        ]
+      }
+    },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-27T21:47:35.155Z",
+      "fetchedAt": "2026-10-28T08:58:42.481Z",
       "data": {
         "days": [
           {
@@ -1873,49 +1913,14 @@
             "date": "2026-10-27",
             "count": 0,
             "level": 0
+          },
+          {
+            "date": "2026-10-28",
+            "count": 21,
+            "level": 4
           }
         ],
-        "total": 123
-      }
-    },
-    "github": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-27T21:47:35.116Z",
-      "data": {
-        "languages": [
-          [
-            "Jupyter Notebook",
-            439604
-          ],
-          [
-            "TypeScript",
-            186204
-          ],
-          [
-            "Python",
-            135130
-          ],
-          [
-            "JavaScript",
-            112885
-          ],
-          [
-            "CSS",
-            55857
-          ],
-          [
-            "Batchfile",
-            428
-          ],
-          [
-            "HTML",
-            360
-          ],
-          [
-            "Dockerfile",
-            329
-          ]
-        ]
+        "total": 144
       }
     }
   }
