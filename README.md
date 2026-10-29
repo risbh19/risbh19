@@ -23,10 +23,6 @@ I practise **data structures and algorithms in C++ and Python**, with an emphasi
 
 ## Featured projects
 
-### [College Forum →](https://github.com/risbh19/college-forum)
-
-A discussion platform with topic boards, posts, comments and voting. **Next.js · TypeScript · Prisma · PostgreSQL**, with authentication, ownership checks and automated tests.
-
 ### [WaveSafe →](https://github.com/risbh19/waveSafe)
 
 A coastal safety and trip-planning project with beach-risk insights and emergency response workflows. **React · FastAPI · PostgreSQL**. <sub>Private repository.</sub>
