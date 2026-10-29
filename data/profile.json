@@ -1,32 +1,32 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-29T08:54:52.637Z",
+  "refreshedAt": "2026-10-29T17:04:50.181Z",
   "sources": {
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-29T08:54:51.839Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1551,
-        "maxRating": 1615
-      }
-    },
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-10-29T08:54:51.841Z",
+      "fetchedAt": "2026-10-29T17:04:49.385Z",
       "data": {
         "handle": "risbhh19",
-        "solved": 182,
-        "easy": 115,
+        "solved": 183,
+        "easy": 116,
         "medium": 61,
         "hard": 6,
         "contestRating": 1264,
         "contests": 4
       }
     },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-29T17:04:49.383Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1551,
+        "maxRating": 1615
+      }
+    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-10-29T08:54:51.838Z",
+      "fetchedAt": "2026-10-29T17:04:49.382Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1072,
@@ -34,9 +34,49 @@
         "rank": "newbie"
       }
     },
+    "github": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-29T17:04:49.336Z",
+      "data": {
+        "languages": [
+          [
+            "Jupyter Notebook",
+            439604
+          ],
+          [
+            "TypeScript",
+            186204
+          ],
+          [
+            "Python",
+            135130
+          ],
+          [
+            "JavaScript",
+            112885
+          ],
+          [
+            "CSS",
+            55857
+          ],
+          [
+            "Batchfile",
+            428
+          ],
+          [
+            "HTML",
+            360
+          ],
+          [
+            "Dockerfile",
+            329
+          ]
+        ]
+      }
+    },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-29T08:54:51.837Z",
+      "fetchedAt": "2026-10-29T17:04:49.380Z",
       "data": {
         "days": [
           {
@@ -1886,46 +1926,6 @@
           }
         ],
         "total": 147
-      }
-    },
-    "github": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-29T08:54:51.791Z",
-      "data": {
-        "languages": [
-          [
-            "Jupyter Notebook",
-            439604
-          ],
-          [
-            "TypeScript",
-            186204
-          ],
-          [
-            "Python",
-            135130
-          ],
-          [
-            "JavaScript",
-            112885
-          ],
-          [
-            "CSS",
-            55857
-          ],
-          [
-            "Batchfile",
-            428
-          ],
-          [
-            "HTML",
-            360
-          ],
-          [
-            "Dockerfile",
-            329
-          ]
-        ]
       }
     }
   }
