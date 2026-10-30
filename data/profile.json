@@ -1,19 +1,23 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-29T22:58:21.704Z",
+  "refreshedAt": "2026-10-30T08:58:57.239Z",
   "sources": {
-    "codechef": {
+    "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-10-29T22:58:21.061Z",
+      "fetchedAt": "2026-10-30T08:58:56.584Z",
       "data": {
-        "handle": "risbh_cf",
-        "rating": 1551,
-        "maxRating": 1615
+        "handle": "risbhh19",
+        "solved": 183,
+        "easy": 116,
+        "medium": 61,
+        "hard": 6,
+        "contestRating": 1264,
+        "contests": 4
       }
     },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-10-29T22:58:21.060Z",
+      "fetchedAt": "2026-10-30T08:58:56.582Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1072,
@@ -23,7 +27,7 @@
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-29T22:58:21.059Z",
+      "fetchedAt": "2026-10-30T08:58:56.581Z",
       "data": {
         "days": [
           {
@@ -1870,14 +1874,28 @@
             "date": "2026-10-29",
             "count": 0,
             "level": 0
+          },
+          {
+            "date": "2026-10-30",
+            "count": 7,
+            "level": 2
           }
         ],
-        "total": 147
+        "total": 154
+      }
+    },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-30T08:58:56.583Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1551,
+        "maxRating": 1615
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-10-29T22:58:21.018Z",
+      "fetchedAt": "2026-10-30T08:58:56.548Z",
       "data": {
         "languages": [
           [
@@ -1885,12 +1903,16 @@
             439604
           ],
           [
-            "JavaScript",
-            72857
+            "C++",
+            115506
           ],
           [
             "Python",
-            65706
+            97771
+          ],
+          [
+            "JavaScript",
+            91995
           ],
           [
             "CSS",
@@ -1898,22 +1920,25 @@
           ],
           [
             "HTML",
-            360
+            9926
+          ],
+          [
+            "CMake",
+            4060
+          ],
+          [
+            "Shell",
+            3597
+          ],
+          [
+            "Dockerfile",
+            885
+          ],
+          [
+            "Batchfile",
+            415
           ]
         ]
-      }
-    },
-    "leetcode": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-29T22:58:21.063Z",
-      "data": {
-        "handle": "risbhh19",
-        "solved": 183,
-        "easy": 116,
-        "medium": 61,
-        "hard": 6,
-        "contestRating": 1264,
-        "contests": 4
       }
     }
   }
