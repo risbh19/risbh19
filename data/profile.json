@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-10-31T08:52:14.038Z",
+  "refreshedAt": "2026-10-31T15:52:27.681Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-10-31T08:52:13.276Z",
+      "fetchedAt": "2026-10-31T15:52:26.949Z",
       "data": {
         "handle": "risbhh19",
         "solved": 184,
@@ -15,18 +15,9 @@
         "contests": 4
       }
     },
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-31T08:52:13.275Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1551,
-        "maxRating": 1615
-      }
-    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-10-31T08:52:13.274Z",
+      "fetchedAt": "2026-10-31T15:52:26.947Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1072,
@@ -34,57 +25,9 @@
         "rank": "newbie"
       }
     },
-    "github": {
-      "status": "fresh",
-      "fetchedAt": "2026-10-31T08:52:13.184Z",
-      "data": {
-        "languages": [
-          [
-            "Jupyter Notebook",
-            439604
-          ],
-          [
-            "C++",
-            115506
-          ],
-          [
-            "Python",
-            97771
-          ],
-          [
-            "JavaScript",
-            91995
-          ],
-          [
-            "CSS",
-            55475
-          ],
-          [
-            "HTML",
-            9926
-          ],
-          [
-            "CMake",
-            4060
-          ],
-          [
-            "Shell",
-            3597
-          ],
-          [
-            "Dockerfile",
-            885
-          ],
-          [
-            "Batchfile",
-            415
-          ]
-        ]
-      }
-    },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-10-31T08:52:13.272Z",
+      "fetchedAt": "2026-10-31T15:52:26.946Z",
       "data": {
         "days": [
           {
@@ -1944,6 +1887,63 @@
           }
         ],
         "total": 154
+      }
+    },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-31T15:52:26.948Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1551,
+        "maxRating": 1615
+      }
+    },
+    "github": {
+      "status": "fresh",
+      "fetchedAt": "2026-10-31T15:52:26.918Z",
+      "data": {
+        "languages": [
+          [
+            "Jupyter Notebook",
+            439604
+          ],
+          [
+            "C++",
+            115506
+          ],
+          [
+            "Python",
+            97771
+          ],
+          [
+            "JavaScript",
+            91995
+          ],
+          [
+            "CSS",
+            55475
+          ],
+          [
+            "HTML",
+            9926
+          ],
+          [
+            "CMake",
+            4060
+          ],
+          [
+            "Shell",
+            3597
+          ],
+          [
+            "Dockerfile",
+            885
+          ],
+          [
+            "Batchfile",
+            415
+          ]
+        ]
       }
     }
   }
