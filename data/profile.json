@@ -1,32 +1,33 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-07T16:37:45.366Z",
+  "refreshedAt": "2026-11-07T22:17:40.579Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-07T16:37:25.368Z",
+      "fetchedAt": "2026-11-07T22:17:39.971Z",
       "data": {
         "handle": "risbhh19",
-        "solved": 191,
+        "solved": 192,
         "easy": 119,
-        "medium": 65,
+        "medium": 66,
         "hard": 7,
         "contestRating": 1264,
         "contests": 4
       }
     },
-    "codechef": {
+    "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-07T16:37:25.367Z",
+      "fetchedAt": "2026-11-07T22:17:39.968Z",
       "data": {
-        "handle": "risbh_cf",
-        "rating": 1610,
-        "maxRating": 1615
+        "handle": "Sensi__",
+        "rating": 1170,
+        "maxRating": 1192,
+        "rank": "newbie"
       }
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-07T16:37:25.364Z",
+      "fetchedAt": "2026-11-07T22:17:39.967Z",
       "data": {
         "days": [
           {
@@ -1881,16 +1882,25 @@
           },
           {
             "date": "2026-11-07",
-            "count": 0,
-            "level": 0
+            "count": 1,
+            "level": 1
           }
         ],
-        "total": 200
+        "total": 201
+      }
+    },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-07T22:17:39.970Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1610,
+        "maxRating": 1615
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-07T16:37:25.322Z",
+      "fetchedAt": "2026-11-07T22:17:39.920Z",
       "data": {
         "languages": [
           [
@@ -1934,16 +1944,6 @@
             415
           ]
         ]
-      }
-    },
-    "codeforces": {
-      "status": "stale",
-      "fetchedAt": "2026-11-07T09:15:30.176Z",
-      "data": {
-        "handle": "Sensi__",
-        "rating": 1192,
-        "maxRating": 1192,
-        "rank": "newbie"
       }
     }
   }
