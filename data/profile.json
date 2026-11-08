@@ -1,10 +1,20 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-07T22:17:40.579Z",
+  "refreshedAt": "2026-11-08T09:28:55.271Z",
   "sources": {
+    "codeforces": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-08T09:28:44.261Z",
+      "data": {
+        "handle": "Sensi__",
+        "rating": 1170,
+        "maxRating": 1192,
+        "rank": "newbie"
+      }
+    },
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-07T22:17:39.971Z",
+      "fetchedAt": "2026-11-08T09:28:44.263Z",
       "data": {
         "handle": "risbhh19",
         "solved": 192,
@@ -15,56 +25,68 @@
         "contests": 4
       }
     },
-    "codeforces": {
+    "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-11-07T22:17:39.968Z",
+      "fetchedAt": "2026-11-08T09:28:44.262Z",
       "data": {
-        "handle": "Sensi__",
-        "rating": 1170,
-        "maxRating": 1192,
-        "rank": "newbie"
+        "handle": "risbh_cf",
+        "rating": 1610,
+        "maxRating": 1615
+      }
+    },
+    "github": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-08T09:28:44.230Z",
+      "data": {
+        "languages": [
+          [
+            "Jupyter Notebook",
+            439604
+          ],
+          [
+            "C++",
+            115506
+          ],
+          [
+            "Python",
+            97771
+          ],
+          [
+            "JavaScript",
+            91995
+          ],
+          [
+            "CSS",
+            55475
+          ],
+          [
+            "HTML",
+            9926
+          ],
+          [
+            "CMake",
+            4060
+          ],
+          [
+            "Shell",
+            3597
+          ],
+          [
+            "Dockerfile",
+            885
+          ],
+          [
+            "Batchfile",
+            415
+          ]
+        ]
       }
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-07T22:17:39.967Z",
+      "fetchedAt": "2026-11-08T09:28:44.260Z",
       "data": {
         "days": [
-          {
-            "date": "2025-11-02",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-03",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-04",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-05",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-06",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-07",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-08",
-            "count": 0,
-            "level": 0
-          },
           {
             "date": "2025-11-09",
             "count": 0,
@@ -1884,66 +1906,14 @@
             "date": "2026-11-07",
             "count": 1,
             "level": 1
+          },
+          {
+            "date": "2026-11-08",
+            "count": 4,
+            "level": 1
           }
         ],
-        "total": 201
-      }
-    },
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-07T22:17:39.970Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1610,
-        "maxRating": 1615
-      }
-    },
-    "github": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-07T22:17:39.920Z",
-      "data": {
-        "languages": [
-          [
-            "Jupyter Notebook",
-            439604
-          ],
-          [
-            "C++",
-            115506
-          ],
-          [
-            "Python",
-            97771
-          ],
-          [
-            "JavaScript",
-            91995
-          ],
-          [
-            "CSS",
-            55475
-          ],
-          [
-            "HTML",
-            9926
-          ],
-          [
-            "CMake",
-            4060
-          ],
-          [
-            "Shell",
-            3597
-          ],
-          [
-            "Dockerfile",
-            885
-          ],
-          [
-            "Batchfile",
-            415
-          ]
-        ]
+        "total": 205
       }
     }
   }
