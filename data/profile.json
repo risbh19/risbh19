@@ -1,32 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-08T16:47:08.489Z",
+  "refreshedAt": "2026-11-08T22:28:54.807Z",
   "sources": {
-    "leetcode": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-08T16:47:07.843Z",
-      "data": {
-        "handle": "risbhh19",
-        "solved": 192,
-        "easy": 119,
-        "medium": 66,
-        "hard": 7,
-        "contestRating": 1264,
-        "contests": 4
-      }
-    },
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-08T16:47:07.842Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1610,
-        "maxRating": 1615
-      }
-    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-08T16:47:07.840Z",
+      "fetchedAt": "2026-11-08T22:28:54.102Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1170,
@@ -34,57 +12,9 @@
         "rank": "newbie"
       }
     },
-    "github": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-08T16:47:07.766Z",
-      "data": {
-        "languages": [
-          [
-            "Jupyter Notebook",
-            439604
-          ],
-          [
-            "C++",
-            115506
-          ],
-          [
-            "Python",
-            97771
-          ],
-          [
-            "JavaScript",
-            91995
-          ],
-          [
-            "CSS",
-            55475
-          ],
-          [
-            "HTML",
-            9926
-          ],
-          [
-            "CMake",
-            4060
-          ],
-          [
-            "Shell",
-            3597
-          ],
-          [
-            "Dockerfile",
-            885
-          ],
-          [
-            "Batchfile",
-            415
-          ]
-        ]
-      }
-    },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-08T16:47:07.839Z",
+      "fetchedAt": "2026-11-08T22:28:54.101Z",
       "data": {
         "days": [
           {
@@ -1914,6 +1844,76 @@
           }
         ],
         "total": 205
+      }
+    },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-08T22:28:54.102Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1610,
+        "maxRating": 1615
+      }
+    },
+    "leetcode": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-08T22:28:54.103Z",
+      "data": {
+        "handle": "risbhh19",
+        "solved": 193,
+        "easy": 119,
+        "medium": 67,
+        "hard": 7,
+        "contestRating": 1264,
+        "contests": 4
+      }
+    },
+    "github": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-08T22:28:54.076Z",
+      "data": {
+        "languages": [
+          [
+            "Jupyter Notebook",
+            439604
+          ],
+          [
+            "C++",
+            115506
+          ],
+          [
+            "Python",
+            97771
+          ],
+          [
+            "JavaScript",
+            91995
+          ],
+          [
+            "CSS",
+            55475
+          ],
+          [
+            "HTML",
+            9926
+          ],
+          [
+            "CMake",
+            4060
+          ],
+          [
+            "Shell",
+            3597
+          ],
+          [
+            "Dockerfile",
+            885
+          ],
+          [
+            "Batchfile",
+            415
+          ]
+        ]
       }
     }
   }
