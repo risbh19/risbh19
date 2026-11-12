@@ -1,19 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-11T18:02:32.330Z",
+  "refreshedAt": "2026-11-12T00:59:19.306Z",
   "sources": {
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-11T18:02:31.435Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1644,
-        "maxRating": 1644
-      }
-    },
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-11T18:02:31.437Z",
+      "fetchedAt": "2026-11-12T00:59:18.784Z",
       "data": {
         "handle": "risbhh19",
         "solved": 196,
@@ -26,7 +17,7 @@
     },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-11T18:02:31.434Z",
+      "fetchedAt": "2026-11-12T00:59:18.782Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1170,
@@ -34,9 +25,18 @@
         "rank": "newbie"
       }
     },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-12T00:59:18.783Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1644,
+        "maxRating": 1644
+      }
+    },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-11T18:02:31.432Z",
+      "fetchedAt": "2026-11-12T00:59:18.781Z",
       "data": {
         "days": [
           {
@@ -1878,6 +1878,11 @@
             "date": "2026-11-11",
             "count": 0,
             "level": 0
+          },
+          {
+            "date": "2026-11-12",
+            "count": 0,
+            "level": 0
           }
         ],
         "total": 205
@@ -1885,7 +1890,7 @@
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-11T18:02:31.350Z",
+      "fetchedAt": "2026-11-12T00:59:18.749Z",
       "data": {
         "languages": [
           [
