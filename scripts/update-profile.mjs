@@ -283,12 +283,22 @@ function renderCoding(sources, t) {
 }
 
 function renderHeader(t) {
-  let body = `<path d="M32 30V142" stroke="${t.teal}" stroke-width="3" stroke-linecap="round"/>`;
-  body += txt(54, 42, 'RISBH19  /  BUILD & SOLVE', t.teal, 11, 'class="mono" letter-spacing="1.8"');
-  body += txt(52, 96, 'Rishabh Pal', t.fg, 43, 'font-weight="750" letter-spacing="-1.4"');
-  body += txt(54, 130, 'Full-stack development · Competitive programming', t.muted, 19);
-  body += `<text x="716" y="95" fill="${t.blue}" opacity="0.5" font-family="monospace" font-size="34">{ }</text>`;
-  return svg(800, 172, 'Rishabh Pal — full-stack development and competitive programming', t, body);
+  const body = [
+    `<path d="M22 29v88" stroke="${t.teal}" stroke-width="2" stroke-linecap="round"/>`,
+    txt(42, 40, '@risbh19', t.teal, 14, 'class="mono" letter-spacing="0.6"'),
+    txt(40, 83, 'Rishabh Pal', t.fg, 44, 'font-weight="750" letter-spacing="-1.2"'),
+    txt(42, 113, 'Systems programming · Backend development', t.muted, 19),
+    `<g aria-hidden="true" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M566 73h24m46 0h18V49h20m-20 24v24h20" stroke="${t.line}"/>
+      <rect x="590" y="55" width="46" height="36" rx="7" fill="${t.panel}" stroke="${t.teal}"/>
+      <path d="m603 68 5 5-5 5m10 0h8" stroke="${t.teal}"/>
+      <rect x="674" y="38" width="42" height="22" rx="5" fill="${t.panel}" stroke="${t.line}"/>
+      <rect x="674" y="86" width="42" height="22" rx="5" fill="${t.panel}" stroke="${t.line}"/>
+      <path d="M685 49h20m-20 48h20" stroke="${t.teal}"/>
+      <circle cx="566" cy="73" r="3" fill="${t.teal}" stroke="none"/>
+    </g>`
+  ].join('');
+  return svg(760, 146, 'Rishabh Pal (@risbh19) — systems programming and backend development', t, body);
 }
 
 export async function refresh(root = ROOT) {

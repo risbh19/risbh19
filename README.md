@@ -1,48 +1,53 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg" />
-  <img src="assets/header-light.svg" width="650" alt="Rishabh Pal — full-stack development and competitive programming" />
+  <img src="assets/header-light.svg" width="760" alt="Rishabh Pal (@risbh19) — systems programming and backend development" />
 </picture>
 
-Hi, I'm **Rishabh Pal**, a **3rd-year CSE student at RKGIT**, focused on **competitive programming and algorithmic problem solving**.
+I’m a third-year Computer Science student at RKGIT. I build systems and full-stack apps, and practise competitive programming in C++ and Python.
 
-I practise **data structures and algorithms in C++ and Python**, with an emphasis on selecting efficient approaches, analysing time and space complexity, and handling edge cases. Alongside this, I build **full-stack web applications with React, Next.js and FastAPI**, working across frontend interfaces, REST APIs, authentication and databases.
-
-[![Portfolio](assets/contact-portfolio.svg)](https://risbh19.xyz)
-[![LinkedIn](assets/contact-linkedin.svg)](https://www.linkedin.com/in/rishabhpal19/)
-[![Email](assets/contact-email.svg)](mailto:palrishabh989@gmail.com)
-
-## Tech stack
-
-| Area | Technologies |
-| :--- | :--- |
-| Frontend | ![React](https://img.shields.io/badge/React-161b22?style=flat-square&logo=react&logoColor=61dafb) ![Next.js](https://img.shields.io/badge/Next.js-161b22?style=flat-square&logo=nextdotjs&logoColor=ffffff) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-161b22?style=flat-square&logo=tailwindcss&logoColor=38bdf8) |
-| Backend | ![FastAPI](https://img.shields.io/badge/FastAPI-161b22?style=flat-square&logo=fastapi&logoColor=5eead4) ![REST APIs](assets/skill-rest.svg) ![JWT](assets/skill-jwt.svg) |
-| Languages | ![Python](https://img.shields.io/badge/Python-161b22?style=flat-square&logo=python&logoColor=ffd43b) ![C++](https://img.shields.io/badge/C%2B%2B-161b22?style=flat-square&logo=cplusplus&logoColor=7aa2f7) ![JavaScript](https://img.shields.io/badge/JavaScript-161b22?style=flat-square&logo=javascript&logoColor=f7df1e) ![TypeScript](https://img.shields.io/badge/TypeScript-161b22?style=flat-square&logo=typescript&logoColor=3178c6) |
-| Data | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-161b22?style=flat-square&logo=postgresql&logoColor=7aa2f7) ![MongoDB](https://img.shields.io/badge/MongoDB-161b22?style=flat-square&logo=mongodb&logoColor=47a248) ![Redis](https://img.shields.io/badge/Redis-161b22?style=flat-square&logo=redis&logoColor=ff6b6b) ![SQL](assets/skill-sql.svg) |
-| Tools | ![Git](https://img.shields.io/badge/Git-161b22?style=flat-square&logo=git&logoColor=f05032) ![Docker](https://img.shields.io/badge/Docker-161b22?style=flat-square&logo=docker&logoColor=2496ed) ![Postman](https://img.shields.io/badge/Postman-161b22?style=flat-square&logo=postman&logoColor=ff6c37) |
+[Portfolio](https://risbh19.xyz) · [LinkedIn](https://www.linkedin.com/in/rishabhpal19/) · [Email](mailto:palrishabh989@gmail.com)
 
 ## Featured projects
 
-### [WaveSafe →](https://github.com/risbh19/waveSafe)
+### [mini-redis](https://github.com/risbh19/mini-redis) · C++17
 
-A coastal safety and trip-planning project with beach-risk insights and emergency response workflows. **React · FastAPI · PostgreSQL**. <sub>Private repository.</sub>
+A Redis-compatible string store built from scratch with a Linux `epoll` reactor and the RESP2 protocol. It implements TTL, LRU eviction, snapshots and an append-only log. [Architecture](https://github.com/risbh19/mini-redis/blob/main/docs/architecture.md) · [Benchmarks](https://github.com/risbh19/mini-redis/blob/main/docs/benchmarks.md)
 
-### [Careflow →](https://github.com/risbh19/Careflow)
+### [RaceSafe](https://github.com/risbh19/racesafe) · FastAPI, PostgreSQL, React
 
-A hospital workflow prototype using synthetic data, with doctor, nurse and patient roles. **Next.js · FastAPI · MongoDB**, with server-side access controls.
+A hackathon team-formation app that uses PostgreSQL transactions to prevent concurrent requests from taking the same seat. The board endpoint measured **18.53 ms p95** in CI with 100 virtual users and 20,000 seeded users. [Design](https://github.com/risbh19/racesafe/blob/main/docs/DESIGN.md) · [Load test](https://github.com/risbh19/racesafe/blob/main/docs/LOAD-TEST.md)
 
-## Coding profiles
+### [Orbit](https://github.com/risbh19/ide) · TypeScript, Electron
 
-[![LeetCode](https://img.shields.io/badge/LeetCode-risbhh19-161b22?style=flat-square&logo=leetcode&logoColor=ffa116)](https://leetcode.com/u/risbhh19/)
-[![Codeforces](https://img.shields.io/badge/Codeforces-Sensi____-161b22?style=flat-square&logo=codeforces&logoColor=1f8acb)](https://codeforces.com/profile/Sensi__)
-[![CodeChef](https://img.shields.io/badge/CodeChef-risbh__cf-161b22?style=flat-square&logo=codechef&logoColor=c89b70)](https://www.codechef.com/users/risbh_cf)
+A desktop IDE with a custom piece-table editor, multi-cursor editing, a TypeScript language server and an integrated terminal. [Windows release](https://github.com/risbh19/ide/releases/tag/v0.1.0)
+
+### [Paper Trading Engine](https://github.com/risbh19/trading-bot) · C++20, Python
+
+A simulator with deterministic market-data replay, simulated fills and pre-trade risk checks. Python research tooling reconciles the trade ledger and evaluates strategy settings on rolling holdout windows. [Research methods](https://github.com/risbh19/trading-bot/blob/main/docs/research.md)
+
+## Tech stack
+
+- **Languages** — C++, Python, TypeScript, JavaScript, SQL
+- **Backend and data** — FastAPI, REST APIs, PostgreSQL, Redis, MongoDB, JWT
+- **Frontend and tooling** — React, Next.js, Tailwind CSS, Electron, Linux, Docker, Git, Postman
+
+## Experience
+
+**Software Testing Intern · R-Cube Green Technology LLP** · Remote, 1 month
+
+Tested the AcadShree School ERP with Postman. Validated API responses, ran functional and regression tests, and wrote defect reports with reproduction steps.
+
+## Competitive programming
+
+[LeetCode](https://leetcode.com/u/risbhh19/) · [Codeforces](https://codeforces.com/profile/Sensi__) · [CodeChef](https://www.codechef.com/users/risbh_cf)
+
+<details>
+<summary>Coding and GitHub stats</summary>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/coding-dark.svg" />
-  <img src="assets/coding-light.svg" width="600" alt="LeetCode solved problems and difficulty breakdown; Codeforces and CodeChef current and best ratings" />
+  <img src="assets/coding-light.svg" width="600" alt="LeetCode problem counts and Codeforces and CodeChef ratings" />
 </picture>
-
-## GitHub stats
 
 <!-- CONTRIBUTION_STATS:START -->
 <a href="https://github.com/risbh19">
@@ -53,17 +58,14 @@ A hospital workflow prototype using synthetic data, with doctor, nurse and patie
 </a>
 <!-- CONTRIBUTION_STATS:END -->
 
-<details>
-<summary>Experience</summary>
-
-### Experience
-
-**Software Testing Intern · R-Cube Green Technology LLP**  
-Remote · **1 month**
-
-Tested AcadShree School ERP using Postman, covering API validation, functional/regression testing and reproducible defect reports.
+[Data sources and refresh schedule](docs/PROFILE.md)
 
 </details>
+
+<details>
+<summary>After hours</summary>
+
+Anime, retro aesthetics and one more episode.
 
 <p>
   <a href="https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX/blob/master/assets/208593.gif">
@@ -71,6 +73,4 @@ Tested AcadShree School ERP using Postman, covering API validation, functional/r
   </a>
 </p>
 
-**After hours:** Anime · Retro aesthetics · One more episode
-
-<sub>Stats refresh every 8 hours · <a href="docs/PROFILE.md">Data &amp; design credits</a></sub>
+</details>

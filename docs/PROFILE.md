@@ -2,9 +2,9 @@
 
 The README uses original, repository-hosted SVG cards plus the requested GitHub Readme Stats card. The custom generator uses built-in Node.js 22 modules. The GitHub Stats card uses the maintained upstream action, pinned to v2.1.0's commit and renderer version 2.2.1. Both run with the repository's automatically supplied `GITHUB_TOKEN`; no personal access token is required.
 
-The current layout pairs an original, static 650-pixel profile header with an introduction focused on competitive programming, followed by full-stack application development, five compact technology groups and three featured projects. Coding-profile links and a 600-pixel platform-statistics card are visible. The experience section is expandable. The GitHub Stats card remains 500 pixels wide; GitHub scales images down on narrow screens. The activity graph and annual-calendar assets are optional generated outputs and are not embedded in this layout. The refresh generator only replaces the marked GitHub Stats embed, so it does not restore the removed graph or calendar.
+The profile opens with a light or dark 760-pixel header, a short introduction and direct contact links. Four public projects follow, each with implementation details and links to source, design notes, benchmarks or a release. The technology list and internship are visible. Coding-platform and GitHub stats share a disclosure. The refresh generator replaces only the marked GitHub Stats embed in the README.
 
-Core technologies use compact name-and-icon badges, with frontend, backend, languages, data and tools grouped separately. Brand icons come from Shields.io; SQL, REST APIs and JWT use original repository-hosted database, request/response and key glyphs. Repository-hosted SVG contact buttons link to the portfolio, LinkedIn and email. The original Seven Deadly Sins GIF from the first After Hours design is restored at a compact 300-pixel width, linking to its source in Ashutosh's public profile assets.
+Core technologies are grouped as text for easier scanning on narrow screens. The original Seven Deadly Sins GIF appears in the After hours disclosure at 300 pixels and links to its source in Ashutosh's public profile assets.
 
 ## Refresh behavior
 
@@ -25,7 +25,7 @@ Core technologies use compact name-and-icon badges, with frontend, backend, lang
 - **LeetCode:** accepted problem counts by difficulty and contest rating from the platform's public GraphQL endpoint. This endpoint is not a guaranteed stable public API.
 - **Codeforces:** current rating, maximum rating and rank from the official public `user.info` API.
 - **CodeChef:** current and highest ratings parsed from the public profile page. A layout change or access block causes a marked stale/unavailable state.
-- **Featured projects:** WaveSafe, College Forum and Careflow. WaveSafe is a private repository explicitly selected by the profile owner; its link requires repository access. Its basic project overview is included, while private code and statistics are not fetched by the scheduled workflow.
+- **Featured projects:** mini-redis, RaceSafe, Orbit and Paper Trading Engine. The RaceSafe p95 figure refers to the board endpoint in GitHub Actions with 100 virtual users and 20,000 seeded users. See the linked load-test report for conditions.
 
 ## Design references
 
@@ -35,7 +35,7 @@ The earlier design explored categories from [Awesome GitHub Profile README](http
 
 [Arvind Kumar's profile](https://github.com/arvindkumar-ship-it/arvindkumar-ship-it) also informed the presentation of GitHub stats, streaks and contribution activity. This profile keeps its own introduction, project descriptions, skills and original light/dark chart design. Skills, achievements and the one-month work experience were supplied by the profile owner.
 
-The following records the earlier design exploration. The current README uses a static profile header, technology/platform badges and a short After Hours line. Code-mode introductions, waving-hand animations and large decorative panels are omitted.
+The following records the earlier design exploration. The current README uses a static profile header, plain-text links and expandable stats and After hours sections.
 
 | Category | Element explored | Reference |
 | --- | --- | --- |
