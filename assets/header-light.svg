@@ -1,49 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="170" viewBox="0 0 760 170" role="img" aria-labelledby="header-title">
-  <title id="header-title">Rishabh Pal (@risbh19) — systems programming and backend development</title>
-  <defs>
-    <linearGradient id="surface" x2="100%" y2="0%">
-      <stop stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#f6f8fa"/>
-    </linearGradient>
-    <linearGradient id="signal" x1="0%" x2="100%" y1="100%" y2="0%">
-      <stop stop-color="#087f75"/>
-      <stop offset="1" stop-color="#8250df"/>
-    </linearGradient>
-    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M20 0H0v20" fill="none" stroke="#d1d9e0" stroke-width="1"/>
-    </pattern>
-    <clipPath id="frame">
-      <path d="M14 .5h723L759.5 23v133a13.5 13.5 0 0 1-13.5 13.5H23L.5 147V14A13.5 13.5 0 0 1 14 .5Z"/>
-    </clipPath>
-  </defs>
-  <g clip-path="url(#frame)">
-    <path d="M0 0h760v170H0z" fill="url(#surface)"/>
-    <path d="M474 0h286v170H474z" fill="url(#grid)" opacity=".6"/>
-    <path d="M444 170 506 0H0v170z" fill="#ffffff"/>
-    <path d="M444 170 506 0" fill="none" stroke="#d1d9e0"/>
-    <path d="M26 0h75m560 170h74" stroke="url(#signal)" stroke-width="5"/>
-  </g>
-  <path d="M14 .5h723L759.5 23v133a13.5 13.5 0 0 1-13.5 13.5H23L.5 147V14A13.5 13.5 0 0 1 14 .5Z" fill="none" stroke="#d1d9e0"/>
-  <g font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-    <path d="M38 41h10l5-5h11" fill="none" stroke="#087f75" stroke-width="1.5"/>
-    <text x="74" y="45" fill="#087f75" font-family="Consolas, Menlo, monospace" font-size="15" letter-spacing="1.25">@risbh19</text>
-    <text x="36" y="102" fill="#1f2328" font-size="54" font-weight="740" letter-spacing="-1.7">Rishabh Pal</text>
-    <text x="38" y="137" fill="#59636e" font-size="19">Systems programming · Backend development</text>
-  </g>
-  <g aria-hidden="true" transform="translate(617 85)">
-    <circle r="53" fill="#f6f8fa" stroke="#d1d9e0"/>
-    <circle r="62" fill="none" stroke="#d1d9e0" stroke-dasharray="2 5"/>
-    <path d="M-68 0h13m110 0h13M0-68v13m0 110v13" stroke="#087f75" stroke-width="1.25" opacity=".7"/>
-    <ellipse rx="83" ry="24" transform="rotate(-25)" fill="none" stroke="url(#signal)" stroke-width="1.75"/>
-    <ellipse rx="77" ry="34" transform="rotate(27)" fill="none" stroke="#0969da" stroke-width="1" opacity=".55"/>
-    <path d="M-51-34h90l12 12v56h-90l-12-12z" fill="#ffffff" stroke="#087f75" stroke-width="1.5"/>
-    <path d="M-50-16h100" stroke="#d1d9e0"/>
-    <circle cx="-37" cy="-25" r="2" fill="#087f75"/>
-    <circle cx="-28" cy="-25" r="2" fill="#0969da"/>
-    <circle cx="-19" cy="-25" r="2" fill="#8250df"/>
-    <path d="m-34-3 6 6-6 6m12 0h10" fill="none" stroke="#087f75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M-35 21h37M13 21h18M-4 3h31" stroke="#d1d9e0" stroke-width="1.5" stroke-linecap="round"/>
-    <circle cx="75" cy="-35" r="3.5" fill="#8250df"/>
-    <circle cx="-75" cy="35" r="3.5" fill="#087f75"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="279" viewBox="0 0 840 279" role="img" aria-labelledby="panel-title">
+<title id="panel-title">Rishabh Pal, @risbh19. Systems programming and backend development.</title>
+<style>
+text{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.mono{font-family:Consolas,Menlo,monospace}
+.sweep{animation:sweep 4.4s ease-in-out}
+.cursor{animation:blink 1.25s step-end 3}
+.boot-prompt{animation:boot-in .32s ease-out both}
+.boot-name{animation:boot-in .42s .24s ease-out both}
+.boot-output{animation:boot-in .42s .52s ease-out both}
+@keyframes sweep{0%,100%{transform:translateY(0);opacity:.25}50%{transform:translateY(128px);opacity:.7}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes boot-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.sweep,.cursor,.boot-prompt,.boot-name,.boot-output{animation:none}}
+</style>
+<rect x=".5" y=".5" width="839" height="278" rx="12" fill="#ffffff" stroke="#d1d9e0"/>
+<defs>
+<linearGradient id="trace"><stop stop-color="#087f75"/><stop offset="1" stop-color="#8250df"/></linearGradient>
+<pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0v18" fill="none" stroke="#d1d9e0"/></pattern>
+</defs>
+<path d="M1 40V13a12 12 0 0 1 12-12h814a12 12 0 0 1 12 12v27Z" fill="#f6f8fa"/>
+<path d="M1 40.5h838M39.5 41v202M1 243.5h838" stroke="#d1d9e0"/>
+<path d="M83 2h142v38H83z" fill="#ffffff"/>
+<path d="M83 40.5h142" stroke="url(#trace)" stroke-width="2"/>
+<path d="M22 15h8l5 5v8H22zM30 15v5h5" fill="none" stroke="#087f75" stroke-linejoin="round"/>
+<text x="100" y="26" fill="#1f2328" font-size="14" class="mono">README.md</text>
+<text x="816" y="26" fill="#59636e" font-size="13" class="mono" text-anchor="end">risbh19 / risbh19</text>
+<path d="M14 67h12m-12 5h8m-8 23h12m-12 5h8" stroke="#59636e" opacity=".6" stroke-linecap="round"/>
+<path d="M16 119l4 4-4 4m6 0h5" fill="none" stroke="#087f75" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="61" y="80" fill="#087f75" font-size="19" class="mono boot-prompt">risbh19@github:~$ whoami</text>
+<text x="59" y="145" fill="#1f2328" font-size="58" class="boot-name" font-weight="740" letter-spacing="-2.4">Rishabh Pal</text>
+<g class="boot-output">
+<text x="62" y="184" fill="#1f2328" font-size="23" >Systems programming</text>
+<text x="62" y="213" fill="#59636e" font-size="23" >Backend development</text>
+<path class="cursor" d="M310 198h11v17h-11z" fill="#087f75" opacity=".8"/>
+</g>
+<rect x="545" y="62" width="267" height="160" rx="8" fill="#f6f8fa" stroke="#d1d9e0"/>
+<rect x="546" y="63" width="265" height="158" rx="7" fill="url(#grid)" opacity=".7"/>
+<path class="sweep" d="M553 77h251" stroke="url(#trace)" stroke-width="1.5"/>
+<path d="M566 98V82h16m191 0h17v16m0 90v15h-17m-191 0h-16v-15" fill="none" stroke="#087f75" opacity=".75"/>
+<path d="M566 143h42l12-17 15 35 18-67 21 92 16-42h29l13-21 14 27 13-7h31" fill="none" stroke="url(#trace)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="653" cy="94" r="4" fill="#8250df"/>
+<circle cx="790" cy="143" r="3.5" fill="#087f75"/>
+<text x="62" y="265" fill="#087f75" font-size="13" class="mono">~/risbh19</text>
+<text x="816" y="265" fill="#59636e" font-size="13" class="mono" text-anchor="end">Markdown</text>
 </svg>

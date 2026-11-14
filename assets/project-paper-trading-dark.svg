@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="105" viewBox="0 0 840 105" role="img" aria-labelledby="panel-title">
+<title id="panel-title">Open Paper Trading Engine. C++20 / Python. Deterministic market-data replay, simulated fills and risk checks.</title>
+<style>
+text{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.mono{font-family:Consolas,Menlo,monospace}
+.sweep{animation:sweep 4.4s ease-in-out}
+.cursor{animation:blink 1.25s step-end 3}
+.boot-prompt{animation:boot-in .32s ease-out both}
+.boot-name{animation:boot-in .42s .24s ease-out both}
+.boot-output{animation:boot-in .42s .52s ease-out both}
+@keyframes sweep{0%,100%{transform:translateY(0);opacity:.25}50%{transform:translateY(128px);opacity:.7}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes boot-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.sweep,.cursor,.boot-prompt,.boot-name,.boot-output{animation:none}}
+</style>
+<rect x=".5" y=".5" width="839" height="104" rx="12" fill="#0d1117" stroke="#30363d"/>
+<path d="M2 18v75" fill="none" stroke="#c4b5fd" stroke-width="3" stroke-linecap="round"/>
+<rect x="23" y="21" width="48" height="48" rx="8" fill="#161b22" stroke="#30363d"/>
+<path d="m34 40 7 6-7 6m12 0h12" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92" y="42" fill="#e6edf3" font-size="30" font-weight="700">Paper Trading Engine</text>
+<text x="92" y="79" fill="#9da7b3" font-size="20" >Deterministic market-data replay, simulated fills and risk checks.</text>
+<text x="780" y="38" fill="#c4b5fd" font-size="17" class="mono" text-anchor="end">C++20 / Python</text>
+<path d="M800 30h15v15m0-15-16 16" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

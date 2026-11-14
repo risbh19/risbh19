@@ -123,9 +123,11 @@ test('partial failures preserve last-good values, escape SVG text, and never sen
     assert.ok(!coding.includes('<script>'));
     const activity = await readFile(join(root, 'assets/activity-dark.svg'), 'utf8');
     assert.ok(activity.includes('Contribution activity'));
-    assert.equal((activity.match(/<circle /g) || []).length, 30);
+    assert.equal([...activity.matchAll(/<title>\d{4}-\d{2}-\d{2}: \d+ contributions?<\/title>/g)].length, 30);
     assert.ok(activity.includes('2025-12-31:'));
     assert.ok(!activity.includes('2026-10-20:'));
+    const project = await readFile(join(root, 'assets/project-mini-redis-light.svg'), 'utf8');
+    assert.match(project, /<title id="panel-title">Open mini-redis/);
     const snapshot = await readFile(join(root, 'data/profile.json'), 'utf8');
     assert.ok(!snapshot.includes(token));
     assert.ok(requests.some(r => new URL(r.address).hostname === 'api.github.com' && r.authorization === `Bearer ${token}`));

@@ -218,51 +218,6 @@ function renderCalendar(source, t) {
   return svg(800, 254, 'GitHub contribution heatmap', t, body);
 }
 
-function renderActivity(source, t) {
-  const summary = activitySummary(source?.data?.days || []);
-  const label = date => new Date(date + 'T00:00:00Z').toLocaleDateString('en-GB', { day: '2-digit', month: 'short', timeZone: 'UTC' });
-  if (!summary) {
-    return svg(600, 160, 'GitHub activity graph temporarily unavailable', t,
-      heading('Contribution activity', 'Daily contributions from my public GitHub calendar', t) +
-      txt(28, 98, 'The 30-day contribution window is temporarily unavailable.', t.muted, 12) +
-      txt(28, 137, sourceLabel(source), t.muted, 10));
-  }
-  const days = summary.days;
-  const range = `${label(days[0].date)} – ${label(days.at(-1).date)} ${days.at(-1).date.slice(0, 4)}`;
-  let body = txt(22, 30, 'Contribution activity', t.fg, 19, 'font-weight="650"') +
-    txt(22, 50, `Last 30 days · ${range} · UTC`, t.muted, 11);
-  const metrics = [
-    { x: 22, label: 'CONTRIBUTIONS', value: number(summary.total), color: t.teal },
-    { x: 220, label: 'CURRENT STREAK', value: `${summary.current} day${summary.current === 1 ? '' : 's'}`, color: t.blue },
-    { x: 410, label: 'LONGEST IN CALENDAR', value: `${summary.longest} day${summary.longest === 1 ? '' : 's'}`, color: t.purple }
-  ];
-  for (const metric of metrics) {
-    body += txt(metric.x, 78, metric.label, t.muted, 10, 'letter-spacing="0.3"');
-    body += txt(metric.x, 103, metric.value, metric.color, 20, 'font-weight="650"');
-  }
-  const left = 42, right = 572, top = 135, bottom = 239;
-  const maximum = Math.max(4, Math.ceil(Math.max(...days.map(day => day.count)) / 4) * 4);
-  for (let index = 0; index <= 2; index++) {
-    const y = bottom - index / 2 * (bottom - top);
-    body += `<path d="M${left} ${y}H${right}" stroke="${t.line}" stroke-dasharray="3 5"/>`;
-    body += txt(32, y + 4, number(maximum * index / 2), t.muted, 10, 'text-anchor="end"');
-  }
-  const points = days.map((day, index) => ({ ...day,
-    x: left + index / (days.length - 1) * (right - left),
-    y: bottom - day.count / maximum * (bottom - top)
-  }));
-  const path = points.map((point, index) => `${index ? 'L' : 'M'}${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
-  body += `<defs><linearGradient id="activity-fill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="${t.teal}" stop-opacity="0.22"/><stop offset="1" stop-color="${t.teal}" stop-opacity="0.02"/></linearGradient></defs>`;
-  body += `<path d="${path} L${right} ${bottom} L${left} ${bottom} Z" fill="url(#activity-fill)"/>`;
-  body += `<path d="${path}" stroke="${t.teal}" stroke-width="2.2" fill="none" stroke-linejoin="round"/>`;
-  for (const point of points) {
-    body += `<circle cx="${point.x.toFixed(2)}" cy="${point.y.toFixed(2)}" r="2.5" fill="${t.bg}" stroke="${t.teal}" stroke-width="1.3"><title>${point.date}: ${point.count} contribution${point.count === 1 ? '' : 's'}</title></circle>`;
-  }
-  for (const index of [0, 7, 14, 21, 29]) body += txt(points[index].x, 258, label(points[index].date), t.muted, 10, 'text-anchor="middle"');
-  body += txt(22, 283, sourceLabel(source), t.muted, 10);
-  return svg(600, 300, `Rishabh Pal's last 30 days of GitHub contributions: ${summary.total} contributions, current streak ${summary.current} days, longest streak in the displayed calendar ${summary.longest} days`, t, body);
-}
-
 function renderCoding(sources, t) {
   const lc = sources.leetcode?.data, cf = sources.codeforces?.data, cc = sources.codechef?.data;
   let body = heading('The problem-solving side', 'LeetCode · Codeforces · CodeChef', t);
@@ -282,58 +237,144 @@ function renderCoding(sources, t) {
   return svg(800, 316, 'Competitive programming statistics', t, body);
 }
 
+const PROJECT_CARDS = [
+  {
+    file: 'project-mini-redis',
+    title: 'mini-redis',
+    stack: 'C++17 / Linux',
+    summary: 'Redis-compatible string store with epoll, RESP2 and persistence.',
+    accent: 'teal'
+  },
+  {
+    file: 'project-orbit',
+    title: 'Orbit',
+    stack: 'TypeScript / Electron',
+    summary: 'Desktop IDE with a piece-table editor, TypeScript LSP and terminal.',
+    accent: 'blue'
+  },
+  {
+    file: 'project-paper-trading',
+    title: 'Paper Trading Engine',
+    stack: 'C++20 / Python',
+    summary: 'Deterministic market-data replay, simulated fills and risk checks.',
+    accent: 'purple'
+  }
+];
+
+function editorPanel(height, title, t, body) {
+  return [
+    '<svg xmlns="http://www.w3.org/2000/svg" width="840" height="' + height + '" viewBox="0 0 840 ' + height + '" role="img" aria-labelledby="panel-title">',
+    '<title id="panel-title">' + esc(title) + '</title>',
+    '<style>',
+    'text{font-family:system-ui,-apple-system,Segoe UI,sans-serif}',
+    '.mono{font-family:Consolas,Menlo,monospace}',
+    '.sweep{animation:sweep 4.4s ease-in-out}',
+    '.cursor{animation:blink 1.25s step-end 3}',
+    '.boot-prompt{animation:boot-in .32s ease-out both}',
+    '.boot-name{animation:boot-in .42s .24s ease-out both}',
+    '.boot-output{animation:boot-in .42s .52s ease-out both}',
+    '@keyframes sweep{0%,100%{transform:translateY(0);opacity:.25}50%{transform:translateY(128px);opacity:.7}}',
+    '@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}',
+    '@keyframes boot-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}',
+    '@media(prefers-reduced-motion:reduce){.sweep,.cursor,.boot-prompt,.boot-name,.boot-output{animation:none}}',
+    '</style>',
+    '<rect x=".5" y=".5" width="839" height="' + (height - 1) + '" rx="12" fill="' + t.bg + '" stroke="' + t.line + '"/>',
+    body,
+    '</svg>\n'
+  ].join('\n');
+}
+
 function renderHeader(t) {
-  const title = 'Rishabh Pal (@risbh19) — systems programming and backend development';
-  const body = `<svg xmlns="http://www.w3.org/2000/svg" width="760" height="170" viewBox="0 0 760 170" role="img" aria-labelledby="header-title">
-  <title id="header-title">${esc(title)}</title>
-  <defs>
-    <linearGradient id="surface" x2="100%" y2="0%">
-      <stop stop-color="${t.bg}"/>
-      <stop offset="1" stop-color="${t.panel}"/>
-    </linearGradient>
-    <linearGradient id="signal" x1="0%" x2="100%" y1="100%" y2="0%">
-      <stop stop-color="${t.teal}"/>
-      <stop offset="1" stop-color="${t.purple}"/>
-    </linearGradient>
-    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M20 0H0v20" fill="none" stroke="${t.line}" stroke-width="1"/>
-    </pattern>
-    <clipPath id="frame">
-      <path d="M14 .5h723L759.5 23v133a13.5 13.5 0 0 1-13.5 13.5H23L.5 147V14A13.5 13.5 0 0 1 14 .5Z"/>
-    </clipPath>
-  </defs>
-  <g clip-path="url(#frame)">
-    <path d="M0 0h760v170H0z" fill="url(#surface)"/>
-    <path d="M474 0h286v170H474z" fill="url(#grid)" opacity=".6"/>
-    <path d="M444 170 506 0H0v170z" fill="${t.bg}"/>
-    <path d="M444 170 506 0" fill="none" stroke="${t.line}"/>
-    <path d="M26 0h75m560 170h74" stroke="url(#signal)" stroke-width="5"/>
-  </g>
-  <path d="M14 .5h723L759.5 23v133a13.5 13.5 0 0 1-13.5 13.5H23L.5 147V14A13.5 13.5 0 0 1 14 .5Z" fill="none" stroke="${t.line}"/>
-  <g font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-    <path d="M38 41h10l5-5h11" fill="none" stroke="${t.teal}" stroke-width="1.5"/>
-    <text x="74" y="45" fill="${t.teal}" font-family="Consolas, Menlo, monospace" font-size="15" letter-spacing="1.25">@risbh19</text>
-    <text x="36" y="102" fill="${t.fg}" font-size="54" font-weight="740" letter-spacing="-1.7">Rishabh Pal</text>
-    <text x="38" y="137" fill="${t.muted}" font-size="19">Systems programming · Backend development</text>
-  </g>
-  <g aria-hidden="true" transform="translate(617 85)">
-    <circle r="53" fill="${t.panel}" stroke="${t.line}"/>
-    <circle r="62" fill="none" stroke="${t.line}" stroke-dasharray="2 5"/>
-    <path d="M-68 0h13m110 0h13M0-68v13m0 110v13" stroke="${t.teal}" stroke-width="1.25" opacity=".7"/>
-    <ellipse rx="83" ry="24" transform="rotate(-25)" fill="none" stroke="url(#signal)" stroke-width="1.75"/>
-    <ellipse rx="77" ry="34" transform="rotate(27)" fill="none" stroke="${t.blue}" stroke-width="1" opacity=".55"/>
-    <path d="M-51-34h90l12 12v56h-90l-12-12z" fill="${t.bg}" stroke="${t.teal}" stroke-width="1.5"/>
-    <path d="M-50-16h100" stroke="${t.line}"/>
-    <circle cx="-37" cy="-25" r="2" fill="${t.teal}"/>
-    <circle cx="-28" cy="-25" r="2" fill="${t.blue}"/>
-    <circle cx="-19" cy="-25" r="2" fill="${t.purple}"/>
-    <path d="m-34-3 6 6-6 6m12 0h10" fill="none" stroke="${t.teal}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M-35 21h37M13 21h18M-4 3h31" stroke="${t.line}" stroke-width="1.5" stroke-linecap="round"/>
-    <circle cx="75" cy="-35" r="3.5" fill="${t.purple}"/>
-    <circle cx="-75" cy="35" r="3.5" fill="${t.teal}"/>
-  </g>
-</svg>`;
-  return body + '\n';
+  const title = 'Rishabh Pal, @risbh19. Systems programming and backend development.';
+  const mono = 'class="mono"';
+  const body = [
+    '<defs>',
+    '<linearGradient id="trace"><stop stop-color="' + t.teal + '"/><stop offset="1" stop-color="' + t.purple + '"/></linearGradient>',
+    '<pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0v18" fill="none" stroke="' + t.line + '"/></pattern>',
+    '</defs>',
+    '<path d="M1 40V13a12 12 0 0 1 12-12h814a12 12 0 0 1 12 12v27Z" fill="' + t.panel + '"/>',
+    '<path d="M1 40.5h838M39.5 41v202M1 243.5h838" stroke="' + t.line + '"/>',
+    '<path d="M83 2h142v38H83z" fill="' + t.bg + '"/>',
+    '<path d="M83 40.5h142" stroke="url(#trace)" stroke-width="2"/>',
+    '<path d="M22 15h8l5 5v8H22zM30 15v5h5" fill="none" stroke="' + t.teal + '" stroke-linejoin="round"/>',
+    txt(100, 26, 'README.md', t.fg, 14, mono),
+    txt(816, 26, 'risbh19 / risbh19', t.muted, 13, mono + ' text-anchor="end"'),
+    '<path d="M14 67h12m-12 5h8m-8 23h12m-12 5h8" stroke="' + t.muted + '" opacity=".6" stroke-linecap="round"/>',
+    '<path d="M16 119l4 4-4 4m6 0h5" fill="none" stroke="' + t.teal + '" stroke-linecap="round" stroke-linejoin="round"/>',
+    txt(61, 80, 'risbh19@github:~$ whoami', t.teal, 19, 'class="mono boot-prompt"'),
+    txt(59, 145, 'Rishabh Pal', t.fg, 58, 'class="boot-name" font-weight="740" letter-spacing="-2.4"'),
+    '<g class="boot-output">',
+    txt(62, 184, 'Systems programming', t.fg, 23),
+    txt(62, 213, 'Backend development', t.muted, 23),
+    '<path class="cursor" d="M310 198h11v17h-11z" fill="' + t.teal + '" opacity=".8"/>',
+    '</g>',
+    '<rect x="545" y="62" width="267" height="160" rx="8" fill="' + t.panel + '" stroke="' + t.line + '"/>',
+    '<rect x="546" y="63" width="265" height="158" rx="7" fill="url(#grid)" opacity=".7"/>',
+    '<path class="sweep" d="M553 77h251" stroke="url(#trace)" stroke-width="1.5"/>',
+    '<path d="M566 98V82h16m191 0h17v16m0 90v15h-17m-191 0h-16v-15" fill="none" stroke="' + t.teal + '" opacity=".75"/>',
+    '<path d="M566 143h42l12-17 15 35 18-67 21 92 16-42h29l13-21 14 27 13-7h31" fill="none" stroke="url(#trace)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>',
+    '<circle cx="653" cy="94" r="4" fill="' + t.purple + '"/>',
+    '<circle cx="790" cy="143" r="3.5" fill="' + t.teal + '"/>',
+    txt(62, 265, '~/risbh19', t.teal, 13, mono),
+    txt(816, 265, 'Markdown', t.muted, 13, mono + ' text-anchor="end"')
+  ].join('\n');
+  return editorPanel(279, title, t, body);
+}
+
+function renderProjectCard(project, t) {
+  const accent = t[project.accent];
+  const body = [
+    '<path d="M2 18v75" fill="none" stroke="' + accent + '" stroke-width="3" stroke-linecap="round"/>',
+    '<rect x="23" y="21" width="48" height="48" rx="8" fill="' + t.panel + '" stroke="' + t.line + '"/>',
+    '<path d="m34 40 7 6-7 6m12 0h12" fill="none" stroke="' + accent + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+    txt(92, 42, project.title, t.fg, 30, 'font-weight="700"'),
+    txt(92, 79, project.summary, t.muted, 20),
+    txt(780, 38, project.stack, accent, 17, 'class="mono" text-anchor="end"'),
+    '<path d="M800 30h15v15m0-15-16 16" fill="none" stroke="' + accent + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
+  ].join('\n');
+  return editorPanel(105, 'Open ' + project.title + '. ' + project.stack + '. ' + project.summary, t, body);
+}
+
+function renderActivity(source, t) {
+  const summary = activitySummary(source?.data?.days || []);
+  const mono = 'class="mono"';
+  let body = '<path d="M1 40.5h838" stroke="' + t.line + '"/>\n' +
+    txt(22, 26, '~/github/activity.log', t.teal, 17, mono) + '\n' +
+    txt(817, 26, 'PUBLIC GITHUB ACTIVITY', t.muted, 13, mono + ' text-anchor="end"') + '\n';
+  if (!summary) {
+    body += txt(24, 83, 'Contribution activity temporarily unavailable', t.fg, 24) + '\n' +
+      txt(24, 116, 'Waiting for 30 observed days', t.muted, 15);
+    return editorPanel(142, 'GitHub contribution telemetry temporarily unavailable', t, body);
+  }
+
+  const contributions = number(summary.total);
+  const formatDays = count => count + (count === 1 ? ' day' : ' days');
+  const metrics = [
+    [24, 'CONTRIBUTIONS / 30D', contributions, t.teal],
+    [304, 'CURRENT STREAK', formatDays(summary.current), t.blue],
+    [570, 'LONGEST IN CALENDAR', formatDays(summary.longest), t.purple]
+  ];
+  for (const [x, label, value, accent] of metrics) {
+    body += txt(x, 72, label, t.muted, 15, mono) + '\n' +
+      txt(x, 112, value, accent, 33, 'font-weight="710"') + '\n';
+  }
+
+  const maximum = Math.max(1, ...summary.days.map(day => day.count));
+  body += '<path d="M24 140.5h792m-792 38h792m-792 38h792" fill="none" stroke="' + t.line + '" stroke-dasharray="3 5"/>\n';
+  for (const [index, day] of summary.days.entries()) {
+    const height = Math.max(2, Math.round(day.count / maximum * 76));
+    const fill = day.count ? (index === summary.days.length - 1 ? t.purple : t.teal) : t.line;
+    body += '<rect x="' + (26 + index * 26.4).toFixed(1) + '" y="' + (216 - height) +
+      '" width="16" height="' + height + '" rx="3" fill="' + fill +
+      '"><title>' + day.date + ': ' + day.count + (day.count === 1 ? ' contribution' : ' contributions') + '</title></rect>\n';
+  }
+  const date = day => new Date(day.date + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+  body += txt(24, 244, date(summary.days[0]) + ' – ' + date(summary.days.at(-1)) + ' · UTC', t.muted, 15, mono) +
+    '\n' + txt(24, 273, sourceLabel(source), t.muted, 14, mono);
+  const title = 'Contribution activity. ' + contributions + (summary.total === 1 ? ' contribution' : ' contributions') +
+    ' over 30 days. Current streak ' + formatDays(summary.current) + '. Longest streak in the calendar ' +
+    formatDays(summary.longest) + '. ' + sourceLabel(source);
+  return editorPanel(293, title, t, body);
 }
 
 export async function refresh(root = ROOT) {
@@ -365,6 +406,7 @@ export async function refresh(root = ROOT) {
       contributions: renderCalendar(sources.calendar, theme), activity: renderActivity(sources.calendar, theme),
       coding: renderCoding(sources, theme)
     };
+    for (const project of PROJECT_CARDS) images[project.file] = renderProjectCard(project, theme);
     await Promise.all(Object.entries(images).map(([key, content]) => writeFile(resolve(root, `assets/${key}-${name}.svg`), content)));
   }
   const readmePath = resolve(root, 'README.md');

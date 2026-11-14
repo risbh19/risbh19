@@ -2,7 +2,7 @@
 
 The README uses original, repository-hosted SVG cards plus the requested GitHub Readme Stats card. The custom generator uses built-in Node.js 22 modules. The GitHub Stats card uses the maintained upstream action, pinned to v2.1.0's commit and renderer version 2.2.1. Both run with the repository's automatically supplied `GITHUB_TOKEN`; no personal access token is required.
 
-The profile opens with a centered 760-pixel orbital header with a terminal graphic, light and dark variants, and direct contact links. Three public projects follow, each with implementation details and links to source, design notes, benchmarks or a release. The technology list and internship are visible. A single disclosure groups the 30-day contribution chart, coding-platform statistics and GitHub stats. The refresh generator replaces only the marked GitHub Stats embed in the README.
+The README opens with an editor-window header and a short `whoami` terminal prompt in light and dark variants. The Command center links three project cards directly to their repositories, with implementation details and supporting links below each card. GitHub telemetry shows 30 days of contribution activity. A disclosure contains coding-platform statistics and the GitHub Stats card. The refresh generator replaces only the marked GitHub Stats embed in the README.
 
 Core technologies are grouped as text for easier scanning on narrow screens. The original Seven Deadly Sins GIF appears in the After hours disclosure at 300 pixels and links to its source in Ashutosh's public profile assets.
 
@@ -20,7 +20,7 @@ Core technologies are grouped as text for easier scanning on narrow screens. The
 
 - **Languages (optional asset):** source bytes from public, owned, non-fork repositories, excluding the profile repo. This asset is not shown in the minimal README. It describes repository composition, not time spent coding or a proficiency score.
 - **Contributions:** counts from the same public GitHub calendar shown to a visitor. The displayed calendar can include a partial starting week. It follows GitHub's attribution rules and can include anonymized contribution counts if the account has chosen to display them publicly.
-- **Activity graph:** an original 30-day line chart of those same calendar counts, ending on the last observed date. It shows the window's total, current streak (including yesterday if today has no contributions yet), and longest streak within the displayed calendar. The longest streak is not an all-time record. A missing daily observation makes the chart unavailable instead of inventing a zero. Cached charts retain their original date range and observation timestamp.
+- **Telemetry chart:** a 30-day bar chart of those same calendar counts, ending on the last observed date. It shows the window's total, current streak (including yesterday if today has no contributions yet), and longest streak within the displayed calendar. The longest streak is not an all-time record. A missing daily observation makes the chart unavailable instead of inventing a zero. Cached charts retain their original date range and observation timestamp.
 - **GitHub Stats card:** total stars, total commits (`include_all_commits=true`), pull requests, issues, repositories contributed to in the last year, and the upstream rank ring. Counts and the rank are computed by the upstream renderer from the accessible public profile, not copied from the example screenshot. The rank is that project's scoring system, not an official GitHub rating.
 - **LeetCode:** accepted problem counts by difficulty and contest rating from the platform's public GraphQL endpoint. This endpoint is not a guaranteed stable public API.
 - **Codeforces:** current rating, maximum rating and rank from the official public `user.info` API.
@@ -28,6 +28,8 @@ Core technologies are grouped as text for easier scanning on narrow screens. The
 - **Featured projects:** mini-redis, Orbit and Paper Trading Engine.
 
 ## Design references
+
+The editor window, terminal prompt, Command center and telemetry layout are inspired by [Cipher PR’s profile README](https://github.com/lord-saviord1/lord-saviord1). The original SVG panels are rendered from this profile’s data and respect the viewer’s reduced-motion preference where supported.
 
 The terminal and contribution visual draw inspiration from [Shaarav Raghu’s profile](https://github.com/shaaravraghu/shaaravraghu). The centered header and grouped technology labels draw inspiration from [Ananya Katiyar’s profile](https://github.com/Ananya-katiyar/Ananya-katiyar). The header art and chart are generated in this repository.
 
@@ -37,7 +39,7 @@ The earlier design explored categories from [Awesome GitHub Profile README](http
 
 [Arvind Kumar's profile](https://github.com/arvindkumar-ship-it/arvindkumar-ship-it) also informed the presentation of GitHub stats, streaks and contribution activity. This profile keeps its own introduction, project descriptions, skills and original light/dark chart design. Skills, achievements and the one-month work experience were supplied by the profile owner.
 
-The following records the earlier design exploration. The current README uses a static orbital header, plain-text links and expandable stats and After hours sections.
+The following records the earlier design exploration.
 
 | Category | Element explored | Reference |
 | --- | --- | --- |
