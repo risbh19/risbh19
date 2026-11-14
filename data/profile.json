@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-14T09:24:20.922Z",
+  "refreshedAt": "2026-11-14T16:44:05.169Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-14T09:24:19.875Z",
+      "fetchedAt": "2026-11-14T16:44:04.463Z",
       "data": {
         "handle": "risbhh19",
         "solved": 197,
@@ -15,18 +15,9 @@
         "contests": 4
       }
     },
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-14T09:24:19.874Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1644,
-        "maxRating": 1644
-      }
-    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-14T09:24:19.873Z",
+      "fetchedAt": "2026-11-14T16:44:04.459Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1217,
@@ -34,9 +25,82 @@
         "rank": "pupil"
       }
     },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-14T16:44:04.461Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1644,
+        "maxRating": 1644
+      }
+    },
+    "github": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-14T16:44:04.323Z",
+      "data": {
+        "languages": [
+          [
+            "Python",
+            1115720
+          ],
+          [
+            "Jupyter Notebook",
+            439604
+          ],
+          [
+            "TypeScript",
+            413116
+          ],
+          [
+            "C++",
+            264175
+          ],
+          [
+            "JavaScript",
+            242340
+          ],
+          [
+            "CSS",
+            101357
+          ],
+          [
+            "HTML",
+            15252
+          ],
+          [
+            "CMake",
+            9339
+          ],
+          [
+            "PowerShell",
+            5230
+          ],
+          [
+            "C",
+            4972
+          ],
+          [
+            "Shell",
+            3597
+          ],
+          [
+            "Dockerfile",
+            1921
+          ],
+          [
+            "Batchfile",
+            843
+          ],
+          [
+            "Mako",
+            704
+          ]
+        ]
+      }
+    },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-14T09:24:19.873Z",
+      "fetchedAt": "2026-11-14T16:44:04.457Z",
       "data": {
         "days": [
           {
@@ -1896,70 +1960,6 @@
           }
         ],
         "total": 235
-      }
-    },
-    "github": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-14T09:24:19.846Z",
-      "data": {
-        "languages": [
-          [
-            "Python",
-            1115720
-          ],
-          [
-            "Jupyter Notebook",
-            439604
-          ],
-          [
-            "TypeScript",
-            413116
-          ],
-          [
-            "C++",
-            264175
-          ],
-          [
-            "JavaScript",
-            242340
-          ],
-          [
-            "CSS",
-            101357
-          ],
-          [
-            "HTML",
-            15252
-          ],
-          [
-            "CMake",
-            9339
-          ],
-          [
-            "PowerShell",
-            5230
-          ],
-          [
-            "C",
-            4972
-          ],
-          [
-            "Shell",
-            3597
-          ],
-          [
-            "Dockerfile",
-            1921
-          ],
-          [
-            "Batchfile",
-            843
-          ],
-          [
-            "Mako",
-            704
-          ]
-        ]
       }
     }
   }
