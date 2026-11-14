@@ -322,8 +322,13 @@ function renderHeader(t) {
     <path d="M-68 0h13m110 0h13M0-68v13m0 110v13" stroke="${t.teal}" stroke-width="1.25" opacity=".7"/>
     <ellipse rx="83" ry="24" transform="rotate(-25)" fill="none" stroke="url(#signal)" stroke-width="1.75"/>
     <ellipse rx="77" ry="34" transform="rotate(27)" fill="none" stroke="${t.blue}" stroke-width="1" opacity=".55"/>
-    <path d="M-18-14h24l11 11v18h-24l-11-11z" fill="${t.bg}" stroke="${t.teal}" stroke-width="1.5"/>
-    <path d="m-10-4 4 4-4 4m11 0h7" fill="none" stroke="${t.teal}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-51-34h90l12 12v56h-90l-12-12z" fill="${t.bg}" stroke="${t.teal}" stroke-width="1.5"/>
+    <path d="M-50-16h100" stroke="${t.line}"/>
+    <circle cx="-37" cy="-25" r="2" fill="${t.teal}"/>
+    <circle cx="-28" cy="-25" r="2" fill="${t.blue}"/>
+    <circle cx="-19" cy="-25" r="2" fill="${t.purple}"/>
+    <path d="m-34-3 6 6-6 6m12 0h10" fill="none" stroke="${t.teal}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-35 21h37M13 21h18M-4 3h31" stroke="${t.line}" stroke-width="1.5" stroke-linecap="round"/>
     <circle cx="75" cy="-35" r="3.5" fill="${t.purple}"/>
     <circle cx="-75" cy="35" r="3.5" fill="${t.teal}"/>
   </g>

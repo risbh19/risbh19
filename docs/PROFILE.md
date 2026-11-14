@@ -2,7 +2,7 @@
 
 The README uses original, repository-hosted SVG cards plus the requested GitHub Readme Stats card. The custom generator uses built-in Node.js 22 modules. The GitHub Stats card uses the maintained upstream action, pinned to v2.1.0's commit and renderer version 2.2.1. Both run with the repository's automatically supplied `GITHUB_TOKEN`; no personal access token is required.
 
-The profile opens with a 760-pixel orbital-grid header with light and dark variants, followed by direct contact links. Three public projects follow, each with implementation details and links to source, design notes, benchmarks or a release. The technology list and internship are visible. Coding-platform and GitHub stats share a disclosure. The refresh generator replaces only the marked GitHub Stats embed in the README.
+The profile opens with a centered 760-pixel orbital header with a terminal graphic, light and dark variants, and direct contact links. Three public projects follow, each with implementation details and links to source, design notes, benchmarks or a release. The technology list and internship are visible. A single disclosure groups the 30-day contribution chart, coding-platform statistics and GitHub stats. The refresh generator replaces only the marked GitHub Stats embed in the README.
 
 Core technologies are grouped as text for easier scanning on narrow screens. The original Seven Deadly Sins GIF appears in the After hours disclosure at 300 pixels and links to its source in Ashutosh's public profile assets.
 
@@ -28,6 +28,8 @@ Core technologies are grouped as text for easier scanning on narrow screens. The
 - **Featured projects:** mini-redis, Orbit and Paper Trading Engine.
 
 ## Design references
+
+The terminal and contribution visual draw inspiration from [Shaarav Raghu’s profile](https://github.com/shaaravraghu/shaaravraghu). The centered header and grouped technology labels draw inspiration from [Ananya Katiyar’s profile](https://github.com/Ananya-katiyar/Ananya-katiyar). The header art and chart are generated in this repository.
 
 The October 2026 redesign draws layout inspiration from GitSkins' [Recruiter-ready](https://www.gitskins.com/templates/recruiter) and [Backend](https://www.gitskins.com/templates/backend) previews: an explicit role, concise sections and direct access to projects. The README wording, header SVG and custom statistics cards are original to this repository. GitSkins template code, generated claims and follower counters were not imported.
 

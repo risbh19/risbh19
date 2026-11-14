@@ -1,9 +1,14 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg" />
-  <img src="assets/header-light.svg" width="760" alt="Rishabh Pal (@risbh19) — systems programming and backend development" />
-</picture>
-
-[Portfolio](https://risbh19.xyz) · [LinkedIn](https://www.linkedin.com/in/rishabhpal19/) · [Email](mailto:palrishabh989@gmail.com)
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg" />
+    <img src="assets/header-light.svg" width="760" alt="Rishabh Pal (@risbh19) — systems programming and backend development" />
+  </picture>
+  <p>
+    <a href="https://risbh19.xyz">Portfolio</a> ·
+    <a href="https://www.linkedin.com/in/rishabhpal19/">LinkedIn</a> ·
+    <a href="mailto:palrishabh989@gmail.com">Email</a>
+  </p>
+</div>
 
 ## Featured projects
 
@@ -24,9 +29,9 @@ A simulator with deterministic market-data replay, simulated fills and pre-trade
 
 ## Tech stack
 
-- **Languages** — C++, Python, TypeScript, JavaScript, SQL
-- **Backend and data** — FastAPI, REST APIs, PostgreSQL, Redis, MongoDB, JWT
-- **Frontend and tooling** — React, Next.js, Tailwind CSS, Electron, Linux, Docker, Git, Postman
+- **Languages** — `C++` `Python` `TypeScript` `JavaScript` `SQL`
+- **Backend and data** — `FastAPI` `REST APIs` `PostgreSQL` `Redis` `MongoDB` `JWT`
+- **Frontend and tooling** — `React` `Next.js` `Tailwind CSS` `Electron` `Linux` `Docker` `Git` `Postman`
 
 ## Experience
 
@@ -40,6 +45,11 @@ Tested the AcadShree School ERP with Postman. Validated API responses, ran funct
 
 <details>
 <summary>Coding and GitHub stats</summary>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
+  <img src="assets/activity-light.svg" width="600" alt="GitHub contribution activity over the last 30 days" />
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/coding-dark.svg" />
