@@ -2,7 +2,7 @@
 
 The README uses original, repository-hosted SVG cards plus the requested GitHub Readme Stats card. The custom generator uses built-in Node.js 22 modules. The GitHub Stats card uses the maintained upstream action, pinned to v2.1.0's commit and renderer version 2.2.1. Both run with the repository's automatically supplied `GITHUB_TOKEN`; no personal access token is required.
 
-The profile opens with a light or dark 760-pixel header, a short introduction and direct contact links. Four public projects follow, each with implementation details and links to source, design notes, benchmarks or a release. The technology list and internship are visible. Coding-platform and GitHub stats share a disclosure. The refresh generator replaces only the marked GitHub Stats embed in the README.
+The profile opens with a light or dark 760-pixel header and direct contact links. Three public projects follow, each with implementation details and links to source, design notes, benchmarks or a release. The technology list and internship are visible. Coding-platform and GitHub stats share a disclosure. The refresh generator replaces only the marked GitHub Stats embed in the README.
 
 Core technologies are grouped as text for easier scanning on narrow screens. The original Seven Deadly Sins GIF appears in the After hours disclosure at 300 pixels and links to its source in Ashutosh's public profile assets.
 
@@ -25,7 +25,7 @@ Core technologies are grouped as text for easier scanning on narrow screens. The
 - **LeetCode:** accepted problem counts by difficulty and contest rating from the platform's public GraphQL endpoint. This endpoint is not a guaranteed stable public API.
 - **Codeforces:** current rating, maximum rating and rank from the official public `user.info` API.
 - **CodeChef:** current and highest ratings parsed from the public profile page. A layout change or access block causes a marked stale/unavailable state.
-- **Featured projects:** mini-redis, RaceSafe, Orbit and Paper Trading Engine. The RaceSafe p95 figure refers to the board endpoint in GitHub Actions with 100 virtual users and 20,000 seeded users. See the linked load-test report for conditions.
+- **Featured projects:** mini-redis, Orbit and Paper Trading Engine.
 
 ## Design references
 

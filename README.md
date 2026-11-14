@@ -3,8 +3,6 @@
   <img src="assets/header-light.svg" width="760" alt="Rishabh Pal (@risbh19) — systems programming and backend development" />
 </picture>
 
-I’m a third-year Computer Science student at RKGIT. I build systems and full-stack apps, and practise competitive programming in C++ and Python.
-
 [Portfolio](https://risbh19.xyz) · [LinkedIn](https://www.linkedin.com/in/rishabhpal19/) · [Email](mailto:palrishabh989@gmail.com)
 
 ## Featured projects
@@ -12,10 +10,6 @@ I’m a third-year Computer Science student at RKGIT. I build systems and full-s
 ### [mini-redis](https://github.com/risbh19/mini-redis) · C++17
 
 A Redis-compatible string store built from scratch with a Linux `epoll` reactor and the RESP2 protocol. It implements TTL, LRU eviction, snapshots and an append-only log. [Architecture](https://github.com/risbh19/mini-redis/blob/main/docs/architecture.md) · [Benchmarks](https://github.com/risbh19/mini-redis/blob/main/docs/benchmarks.md)
-
-### [RaceSafe](https://github.com/risbh19/racesafe) · FastAPI, PostgreSQL, React
-
-A hackathon team-formation app that uses PostgreSQL transactions to prevent concurrent requests from taking the same seat. The board endpoint measured **18.53 ms p95** in CI with 100 virtual users and 20,000 seeded users. [Design](https://github.com/risbh19/racesafe/blob/main/docs/DESIGN.md) · [Load test](https://github.com/risbh19/racesafe/blob/main/docs/LOAD-TEST.md)
 
 ### [Orbit](https://github.com/risbh19/ide) · TypeScript, Electron
 
