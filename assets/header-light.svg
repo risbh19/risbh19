@@ -1,9 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="146" viewBox="0 0 760 146" role="img" aria-label="Rishabh Pal (@risbh19) — systems programming and backend development"><title>Rishabh Pal (@risbh19) — systems programming and backend development</title><style>text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif} .mono{font-family:Consolas,Menlo,monospace} @media(prefers-reduced-motion:reduce){animate,animateMotion{display:none}.motion{display:none}}</style><rect x="0.5" y="0.5" width="759" height="145" rx="16" fill="#ffffff" stroke="#d1d9e0"/><path d="M22 29v88" stroke="#087f75" stroke-width="2" stroke-linecap="round"/><text x="42" y="40" fill="#087f75" font-size="14" class="mono" letter-spacing="0.6">@risbh19</text><text x="40" y="83" fill="#1f2328" font-size="44" font-weight="750" letter-spacing="-1.2">Rishabh Pal</text><text x="42" y="113" fill="#59636e" font-size="19" >Systems programming · Backend development</text><g aria-hidden="true" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M566 73h24m46 0h18V49h20m-20 24v24h20" stroke="#d1d9e0"/>
-      <rect x="590" y="55" width="46" height="36" rx="7" fill="#f6f8fa" stroke="#087f75"/>
-      <path d="m603 68 5 5-5 5m10 0h8" stroke="#087f75"/>
-      <rect x="674" y="38" width="42" height="22" rx="5" fill="#f6f8fa" stroke="#d1d9e0"/>
-      <rect x="674" y="86" width="42" height="22" rx="5" fill="#f6f8fa" stroke="#d1d9e0"/>
-      <path d="M685 49h20m-20 48h20" stroke="#087f75"/>
-      <circle cx="566" cy="73" r="3" fill="#087f75" stroke="none"/>
-    </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="170" viewBox="0 0 760 170" role="img" aria-labelledby="header-title">
+  <title id="header-title">Rishabh Pal (@risbh19) — systems programming and backend development</title>
+  <defs>
+    <linearGradient id="surface" x2="100%" y2="0%">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f6f8fa"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0%" x2="100%" y1="100%" y2="0%">
+      <stop stop-color="#087f75"/>
+      <stop offset="1" stop-color="#8250df"/>
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0v20" fill="none" stroke="#d1d9e0" stroke-width="1"/>
+    </pattern>
+    <clipPath id="frame">
+      <path d="M14 .5h723L759.5 23v133a13.5 13.5 0 0 1-13.5 13.5H23L.5 147V14A13.5 13.5 0 0 1 14 .5Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <path d="M0 0h760v170H0z" fill="url(#surface)"/>
+    <path d="M474 0h286v170H474z" fill="url(#grid)" opacity=".6"/>
+    <path d="M444 170 506 0H0v170z" fill="#ffffff"/>
+    <path d="M444 170 506 0" fill="none" stroke="#d1d9e0"/>
+    <path d="M26 0h75m560 170h74" stroke="url(#signal)" stroke-width="5"/>
+  </g>
+  <path d="M14 .5h723L759.5 23v133a13.5 13.5 0 0 1-13.5 13.5H23L.5 147V14A13.5 13.5 0 0 1 14 .5Z" fill="none" stroke="#d1d9e0"/>
+  <g font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+    <path d="M38 41h10l5-5h11" fill="none" stroke="#087f75" stroke-width="1.5"/>
+    <text x="74" y="45" fill="#087f75" font-family="Consolas, Menlo, monospace" font-size="15" letter-spacing="1.25">@risbh19</text>
+    <text x="36" y="102" fill="#1f2328" font-size="54" font-weight="740" letter-spacing="-1.7">Rishabh Pal</text>
+    <text x="38" y="137" fill="#59636e" font-size="19">Systems programming · Backend development</text>
+  </g>
+  <g aria-hidden="true" transform="translate(617 85)">
+    <circle r="53" fill="#f6f8fa" stroke="#d1d9e0"/>
+    <circle r="62" fill="none" stroke="#d1d9e0" stroke-dasharray="2 5"/>
+    <path d="M-68 0h13m110 0h13M0-68v13m0 110v13" stroke="#087f75" stroke-width="1.25" opacity=".7"/>
+    <ellipse rx="83" ry="24" transform="rotate(-25)" fill="none" stroke="url(#signal)" stroke-width="1.75"/>
+    <ellipse rx="77" ry="34" transform="rotate(27)" fill="none" stroke="#0969da" stroke-width="1" opacity=".55"/>
+    <path d="M-18-14h24l11 11v18h-24l-11-11z" fill="#ffffff" stroke="#087f75" stroke-width="1.5"/>
+    <path d="m-10-4 4 4-4 4m11 0h7" fill="none" stroke="#087f75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="75" cy="-35" r="3.5" fill="#8250df"/>
+    <circle cx="-75" cy="35" r="3.5" fill="#087f75"/>
+  </g>
+</svg>

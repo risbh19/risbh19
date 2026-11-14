@@ -7,17 +7,20 @@
 
 ## Featured projects
 
-### [mini-redis](https://github.com/risbh19/mini-redis) · C++17
+### [mini-redis](https://github.com/risbh19/mini-redis) · `C++17`
 
-A Redis-compatible string store built from scratch with a Linux `epoll` reactor and the RESP2 protocol. It implements TTL, LRU eviction, snapshots and an append-only log. [Architecture](https://github.com/risbh19/mini-redis/blob/main/docs/architecture.md) · [Benchmarks](https://github.com/risbh19/mini-redis/blob/main/docs/benchmarks.md)
+A Redis-compatible string store built from scratch with a Linux `epoll` reactor and the RESP2 protocol. It implements TTL, LRU eviction, snapshots and an append-only log.  
+[Architecture](https://github.com/risbh19/mini-redis/blob/main/docs/architecture.md) · [Benchmarks](https://github.com/risbh19/mini-redis/blob/main/docs/benchmarks.md)
 
-### [Orbit](https://github.com/risbh19/ide) · TypeScript, Electron
+### [Orbit](https://github.com/risbh19/ide) · `TypeScript` · `Electron`
 
-A desktop IDE with a custom piece-table editor, multi-cursor editing, a TypeScript language server and an integrated terminal. [Windows release](https://github.com/risbh19/ide/releases/tag/v0.1.0)
+A desktop IDE with a custom piece-table editor, multi-cursor editing, a TypeScript language server and an integrated terminal.  
+[Windows release](https://github.com/risbh19/ide/releases/tag/v0.1.0)
 
-### [Paper Trading Engine](https://github.com/risbh19/trading-bot) · C++20, Python
+### [Paper Trading Engine](https://github.com/risbh19/trading-bot) · `C++20` · `Python`
 
-A simulator with deterministic market-data replay, simulated fills and pre-trade risk checks. Python research tooling reconciles the trade ledger and evaluates strategy settings on rolling holdout windows. [Research methods](https://github.com/risbh19/trading-bot/blob/main/docs/research.md)
+A simulator with deterministic market-data replay, simulated fills and pre-trade risk checks. Python research tooling reconciles the trade ledger and evaluates strategy settings on rolling holdout windows.  
+[Research methods](https://github.com/risbh19/trading-bot/blob/main/docs/research.md)
 
 ## Tech stack
 
