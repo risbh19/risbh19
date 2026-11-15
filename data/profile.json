@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-14T22:44:30.654Z",
+  "refreshedAt": "2026-11-15T09:54:26.000Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-14T22:44:29.960Z",
+      "fetchedAt": "2026-11-15T09:54:24.537Z",
       "data": {
         "handle": "risbhh19",
         "solved": 198,
@@ -15,9 +15,18 @@
         "contests": 4
       }
     },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-15T09:54:24.535Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1644,
+        "maxRating": 1644
+      }
+    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-14T22:44:29.959Z",
+      "fetchedAt": "2026-11-15T09:54:24.534Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1217,
@@ -27,44 +36,9 @@
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-14T22:44:29.958Z",
+      "fetchedAt": "2026-11-15T09:54:24.533Z",
       "data": {
         "days": [
-          {
-            "date": "2025-11-09",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-10",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-11",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-12",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-13",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-14",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-15",
-            "count": 0,
-            "level": 0
-          },
           {
             "date": "2025-11-16",
             "count": 0,
@@ -1884,23 +1858,19 @@
             "date": "2026-11-14",
             "count": 7,
             "level": 1
+          },
+          {
+            "date": "2026-11-15",
+            "count": 0,
+            "level": 0
           }
         ],
         "total": 236
       }
     },
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-14T22:44:29.960Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1644,
-        "maxRating": 1644
-      }
-    },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-14T22:44:29.924Z",
+      "fetchedAt": "2026-11-15T09:54:24.465Z",
       "data": {
         "languages": [
           [
