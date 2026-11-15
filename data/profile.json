@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-15T17:24:12.296Z",
+  "refreshedAt": "2026-11-15T23:10:20.104Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-15T17:24:11.763Z",
+      "fetchedAt": "2026-11-15T23:10:19.480Z",
       "data": {
         "handle": "risbhh19",
         "solved": 199,
@@ -15,19 +15,28 @@
         "contests": 4
       }
     },
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-15T23:10:19.478Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1644,
+        "maxRating": 1644
+      }
+    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-15T17:24:11.760Z",
+      "fetchedAt": "2026-11-15T23:10:19.477Z",
       "data": {
         "handle": "Sensi__",
-        "rating": 1217,
-        "maxRating": 1217,
+        "rating": 1243,
+        "maxRating": 1243,
         "rank": "pupil"
       }
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-15T17:24:11.759Z",
+      "fetchedAt": "2026-11-15T23:10:19.475Z",
       "data": {
         "days": [
           {
@@ -1859,23 +1868,14 @@
         "total": 243
       }
     },
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-15T17:24:11.761Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1644,
-        "maxRating": 1644
-      }
-    },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-15T17:24:11.717Z",
+      "fetchedAt": "2026-11-15T23:10:19.431Z",
       "data": {
         "languages": [
           [
             "Python",
-            1115720
+            852544
           ],
           [
             "Jupyter Notebook",
@@ -1883,35 +1883,27 @@
           ],
           [
             "TypeScript",
-            413116
-          ],
-          [
-            "C++",
-            264175
+            279458
           ],
           [
             "JavaScript",
-            242340
+            188048
+          ],
+          [
+            "C++",
+            115506
           ],
           [
             "CSS",
-            101357
+            80963
           ],
           [
             "HTML",
-            15252
+            10299
           ],
           [
             "CMake",
-            9339
-          ],
-          [
-            "PowerShell",
-            5230
-          ],
-          [
-            "C",
-            4972
+            4060
           ],
           [
             "Shell",
