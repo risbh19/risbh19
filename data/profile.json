@@ -1,10 +1,19 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-15T23:10:20.104Z",
+  "refreshedAt": "2026-11-16T10:10:33.553Z",
   "sources": {
+    "codechef": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-16T10:10:31.959Z",
+      "data": {
+        "handle": "risbh_cf",
+        "rating": 1644,
+        "maxRating": 1644
+      }
+    },
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-15T23:10:19.480Z",
+      "fetchedAt": "2026-11-16T10:10:31.960Z",
       "data": {
         "handle": "risbhh19",
         "solved": 199,
@@ -15,18 +24,9 @@
         "contests": 4
       }
     },
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-15T23:10:19.478Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1644,
-        "maxRating": 1644
-      }
-    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-15T23:10:19.477Z",
+      "fetchedAt": "2026-11-16T10:10:31.958Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1243,
@@ -36,7 +36,7 @@
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-15T23:10:19.475Z",
+      "fetchedAt": "2026-11-16T10:10:31.956Z",
       "data": {
         "days": [
           {
@@ -1721,7 +1721,7 @@
           },
           {
             "date": "2026-10-18",
-            "count": 11,
+            "count": 12,
             "level": 2
           },
           {
@@ -1796,12 +1796,12 @@
           },
           {
             "date": "2026-11-02",
-            "count": 5,
-            "level": 1
+            "count": 9,
+            "level": 2
           },
           {
             "date": "2026-11-03",
-            "count": 1,
+            "count": 2,
             "level": 1
           },
           {
@@ -1863,14 +1863,19 @@
             "date": "2026-11-15",
             "count": 7,
             "level": 1
+          },
+          {
+            "date": "2026-11-16",
+            "count": 11,
+            "level": 2
           }
         ],
-        "total": 243
+        "total": 260
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-15T23:10:19.431Z",
+      "fetchedAt": "2026-11-16T10:10:31.885Z",
       "data": {
         "languages": [
           [
