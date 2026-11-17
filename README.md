@@ -67,18 +67,21 @@ Remote · 1 month
 </a>
 <!-- CONTRIBUTION_STATS:END -->
 
-### Problem solving
+### Coding profiles
 
 <p align="center">
-  <a href="https://leetcode.com/u/risbhh19/">LeetCode</a> ·
-  <a href="https://codeforces.com/profile/Sensi__">Codeforces</a> ·
-  <a href="https://www.codechef.com/users/risbh_cf">CodeChef</a>
+  <a href="https://leetcode.com/u/risbhh19/" title="LeetCode">
+    <img src="https://cdn.simpleicons.org/leetcode/FFA116" width="30" height="30" alt="LeetCode profile" />
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://codeforces.com/profile/Sensi__" title="Codeforces">
+    <img src="https://cdn.simpleicons.org/codeforces/1F8ACB" width="30" height="30" alt="Codeforces profile" />
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.codechef.com/users/risbh_cf" title="CodeChef">
+    <img src="https://cdn.simpleicons.org/codechef/A67C52" width="30" height="30" alt="CodeChef profile" />
+  </a>
 </p>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/coding-dark.svg" />
-  <img src="assets/coding-light.svg" width="800" alt="LeetCode problem counts and Codeforces and CodeChef ratings" />
-</picture>
 
 [Data sources and refresh schedule](docs/PROFILE.md)
 
