@@ -98,17 +98,6 @@ Currently focused on **database transactions, concurrency, authentication and re
 | [RaceSafe](https://github.com/risbh19/racesafe) | Hackathon team formation with concurrency-safe seat allocation, expiring invites and live updates. |
 | [NextUp](https://github.com/risbh19/NextUp) | A clinic operations demo with transactional bookings, waitlists, live queues and patient/staff portals. |
 
-<h2 align="center">Experience</h2>
-
-<p align="center">
-  <strong>Software Testing Intern · R-Cube Green Technology LLP</strong><br>
-  <sub>Remote · 1 month</sub>
-</p>
-
-Tested AcadShree School ERP APIs and workflows using Postman, validated API responses, ran functional and regression checks, and documented defects with reproduction steps.
-
----
-
 <h2 align="center">GitHub Stats</h2>
 
 <div align="center">
