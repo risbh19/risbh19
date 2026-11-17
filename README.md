@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/psyduck.png" width="155" alt="Psyduck at a desk surrounded by paperwork" />
+  <img src="assets/psyduck-square.png" width="220" height="220" alt="Psyduck at a desk surrounded by paperwork" />
 </p>
 
 <h1 align="center">Hey, I'm Rishabh.</h1>
