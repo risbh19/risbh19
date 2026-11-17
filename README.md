@@ -102,17 +102,8 @@ Remote · 1 month
 
 ---
 
-### GitHub activity &amp; stats
+### GitHub stats
 
-<table>
-  <tr>
-    <td width="60%" align="center" valign="middle">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
-  <img src="assets/activity-light.svg" width="500" alt="GitHub contribution activity over the last 30 days" />
-</picture>
-    </td>
-    <td width="40%" align="center" valign="middle">
 <!-- CONTRIBUTION_STATS:START -->
 <a href="https://github.com/risbh19">
   <picture>
@@ -121,9 +112,6 @@ Remote · 1 month
   </picture>
 </a>
 <!-- CONTRIBUTION_STATS:END -->
-    </td>
-  </tr>
-</table>
 
 [Data sources and refresh schedule](docs/PROFILE.md)
 
