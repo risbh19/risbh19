@@ -81,15 +81,14 @@ I'm a Computer Science undergraduate interested in how software works beneath th
   <img src="https://skillicons.dev/icons?i=postman" width="36" height="36" alt="Postman" title="Postman" />
 </p>
 
-### Selected work
+### Featured projects
 
-| Project | What I built | Stack |
-| --- | --- | --- |
-| [mini-redis](https://github.com/risbh19/mini-redis) | A Redis-compatible string store with an `epoll` reactor, RESP2, incremental rehashing, TTL/LRU eviction, snapshots and an append-only log. | C++17 · Linux |
-| [Orbit](https://github.com/risbh19/ide) | A desktop IDE with a custom piece-table editor, undo/redo, multi-cursor editing, JavaScript/TypeScript language intelligence and a PTY terminal. | TypeScript · Electron |
-| [Paper Trading Engine](https://github.com/risbh19/trading-bot) | A simulator with deterministic replay, partial fills, fees and pre-trade risk checks. Python tools analyse sessions and reconcile the trade ledger. | C++20 · Python |
-| [RaceSafe](https://github.com/risbh19/racesafe) | Hackathon team formation with concurrency-safe seat allocation, expiring invites, leader approvals and live updates. | FastAPI · PostgreSQL · React |
-| [College Forum](https://github.com/risbh19/college-forum) | A campus discussion platform with Google sign-in, pseudonymous usernames, posts, comments, voting and moderation. [Live app](https://college-forum.vercel.app/) | Next.js · FastAPI · PostgreSQL |
+| Project | Description |
+| --- | --- |
+| [mini-redis](https://github.com/risbh19/mini-redis) | A Redis-compatible C++ key-value server with `epoll`, RESP2, TTL/LRU eviction and persistence. |
+| [College Forum](https://github.com/risbh19/college-forum) | A campus discussion platform with Google sign-in, pseudonymous profiles, posts, voting and moderation. |
+| [RaceSafe](https://github.com/risbh19/racesafe) | Hackathon team formation with concurrency-safe seat allocation, expiring invites and live updates. |
+| [NextUp](https://github.com/risbh19/NextUp) | A clinic operations demo with transactional bookings, waitlists, live queues and patient/staff portals. |
 
 ### Experience
 
