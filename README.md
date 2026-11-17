@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/psyduck.png" width="170" alt="Psyduck at a desk surrounded by paperwork" />
+</p>
+
 <h1 align="center">Hey, I'm Rishabh.</h1>
 
 <p align="center"><i>Computer Science at RKGIT, Ghaziabad · Backend &amp; systems programming</i></p>
