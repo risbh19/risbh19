@@ -12,6 +12,20 @@
   <a href="mailto:palrishabh989@gmail.com">Email</a>
 </p>
 
+<p align="center">
+  <a href="https://leetcode.com/u/risbhh19/" title="LeetCode">
+    <img src="https://cdn.simpleicons.org/leetcode/FFA116" width="30" height="30" alt="LeetCode profile" />
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://codeforces.com/profile/Sensi__" title="Codeforces">
+    <img src="https://cdn.simpleicons.org/codeforces/1F8ACB" width="30" height="30" alt="Codeforces profile" />
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.codechef.com/users/risbh_cf" title="CodeChef">
+    <img src="https://cdn.simpleicons.org/codechef/A67C52" width="30" height="30" alt="CodeChef profile" />
+  </a>
+</p>
+
 ---
 
 ### About me
@@ -25,10 +39,57 @@ I'm a Computer Science undergraduate interested in how software works beneath th
 
 ### Working with
 
-**Languages** &nbsp; `C++` `Python` `TypeScript` `JavaScript` `SQL`  
-**Backend & data** &nbsp; `FastAPI` `REST APIs` `PostgreSQL` `Redis` `MongoDB`  
-**Frontend & desktop** &nbsp; `React` `Next.js` `Tailwind CSS` `Electron`  
-**Tools & platforms** &nbsp; `Linux` `Docker` `Git` `Postman`
+**Languages**
+
+<p>
+  <img src="https://skillicons.dev/icons?i=cpp" width="36" height="36" alt="C++" title="C++" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=python" width="36" height="36" alt="Python" title="Python" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=ts" width="36" height="36" alt="TypeScript" title="TypeScript" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=js" width="36" height="36" alt="JavaScript" title="JavaScript" />
+  &nbsp;
+  <img src="https://api.iconify.design/mdi/database.svg?color=%236B8EAD" width="36" height="36" alt="SQL" title="SQL" />
+</p>
+
+**Backend &amp; data**
+
+<p>
+  <img src="https://skillicons.dev/icons?i=fastapi" width="36" height="36" alt="FastAPI" title="FastAPI" />
+  &nbsp;
+  <img src="https://api.iconify.design/mdi/api.svg?color=%236B8EAD" width="36" height="36" alt="REST APIs" title="REST APIs" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=postgres" width="36" height="36" alt="PostgreSQL" title="PostgreSQL" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=redis" width="36" height="36" alt="Redis" title="Redis" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=mongodb" width="36" height="36" alt="MongoDB" title="MongoDB" />
+</p>
+
+**Frontend &amp; desktop**
+
+<p>
+  <img src="https://skillicons.dev/icons?i=react" width="36" height="36" alt="React" title="React" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=nextjs" width="36" height="36" alt="Next.js" title="Next.js" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=tailwind" width="36" height="36" alt="Tailwind CSS" title="Tailwind CSS" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=electron" width="36" height="36" alt="Electron" title="Electron" />
+</p>
+
+**Tools &amp; platforms**
+
+<p>
+  <img src="https://skillicons.dev/icons?i=linux" width="36" height="36" alt="Linux" title="Linux" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=docker" width="36" height="36" alt="Docker" title="Docker" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=git" width="36" height="36" alt="Git" title="Git" />
+  &nbsp;
+  <img src="https://skillicons.dev/icons?i=postman" width="36" height="36" alt="Postman" title="Postman" />
+</p>
 
 ### Selected work
 
@@ -66,22 +127,6 @@ Remote · 1 month
   </picture>
 </a>
 <!-- CONTRIBUTION_STATS:END -->
-
-### Coding profiles
-
-<p align="center">
-  <a href="https://leetcode.com/u/risbhh19/" title="LeetCode">
-    <img src="https://cdn.simpleicons.org/leetcode/FFA116" width="30" height="30" alt="LeetCode profile" />
-  </a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://codeforces.com/profile/Sensi__" title="Codeforces">
-    <img src="https://cdn.simpleicons.org/codeforces/1F8ACB" width="30" height="30" alt="Codeforces profile" />
-  </a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://www.codechef.com/users/risbh_cf" title="CodeChef">
-    <img src="https://cdn.simpleicons.org/codechef/A67C52" width="30" height="30" alt="CodeChef profile" />
-  </a>
-</p>
 
 [Data sources and refresh schedule](docs/PROFILE.md)
 
