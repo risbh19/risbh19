@@ -37,9 +37,7 @@ I'm a Computer Science undergraduate interested in how software works beneath th
 - **Problem solving:** practising data structures and algorithms in C++.
 - **Looking for:** software engineering internships with hands-on backend and systems work.
 
-### Working with
-
-**Languages**
+### Tools &amp; Skills
 
 <p>
   <img src="https://skillicons.dev/icons?i=cpp" width="36" height="36" alt="C++" title="C++" />
@@ -51,11 +49,7 @@ I'm a Computer Science undergraduate interested in how software works beneath th
   <img src="https://skillicons.dev/icons?i=js" width="36" height="36" alt="JavaScript" title="JavaScript" />
   &nbsp;
   <img src="https://api.iconify.design/mdi/database.svg?color=%236B8EAD" width="36" height="36" alt="SQL" title="SQL" />
-</p>
-
-**Backend &amp; data**
-
-<p>
+  &nbsp;
   <img src="https://skillicons.dev/icons?i=fastapi" width="36" height="36" alt="FastAPI" title="FastAPI" />
   &nbsp;
   <img src="https://api.iconify.design/mdi/api.svg?color=%236B8EAD" width="36" height="36" alt="REST APIs" title="REST APIs" />
@@ -65,11 +59,7 @@ I'm a Computer Science undergraduate interested in how software works beneath th
   <img src="https://skillicons.dev/icons?i=redis" width="36" height="36" alt="Redis" title="Redis" />
   &nbsp;
   <img src="https://skillicons.dev/icons?i=mongodb" width="36" height="36" alt="MongoDB" title="MongoDB" />
-</p>
-
-**Frontend &amp; desktop**
-
-<p>
+  &nbsp;
   <img src="https://skillicons.dev/icons?i=react" width="36" height="36" alt="React" title="React" />
   &nbsp;
   <img src="https://skillicons.dev/icons?i=nextjs" width="36" height="36" alt="Next.js" title="Next.js" />
@@ -77,11 +67,7 @@ I'm a Computer Science undergraduate interested in how software works beneath th
   <img src="https://skillicons.dev/icons?i=tailwind" width="36" height="36" alt="Tailwind CSS" title="Tailwind CSS" />
   &nbsp;
   <img src="https://skillicons.dev/icons?i=electron" width="36" height="36" alt="Electron" title="Electron" />
-</p>
-
-**Tools &amp; platforms**
-
-<p>
+  &nbsp;
   <img src="https://skillicons.dev/icons?i=linux" width="36" height="36" alt="Linux" title="Linux" />
   &nbsp;
   <img src="https://skillicons.dev/icons?i=docker" width="36" height="36" alt="Docker" title="Docker" />
