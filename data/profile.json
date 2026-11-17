@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-17T11:08:18.809Z",
+  "refreshedAt": "2026-11-17T18:37:26.034Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-17T11:08:18.061Z",
+      "fetchedAt": "2026-11-17T18:37:24.951Z",
       "data": {
         "handle": "risbhh19",
         "solved": 201,
@@ -17,7 +17,7 @@
     },
     "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-11-17T11:08:18.060Z",
+      "fetchedAt": "2026-11-17T18:37:24.950Z",
       "data": {
         "handle": "risbh_cf",
         "rating": 1644,
@@ -26,7 +26,7 @@
     },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-17T11:08:18.059Z",
+      "fetchedAt": "2026-11-17T18:37:24.949Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1243,
@@ -36,7 +36,7 @@
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-17T11:08:18.058Z",
+      "fetchedAt": "2026-11-17T18:37:24.948Z",
       "data": {
         "days": [
           {
@@ -1547,7 +1547,7 @@
           {
             "date": "2026-09-13",
             "count": 21,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-09-14",
@@ -1627,7 +1627,7 @@
           {
             "date": "2026-09-29",
             "count": 16,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-09-30",
@@ -1722,17 +1722,17 @@
           {
             "date": "2026-10-18",
             "count": 12,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-10-19",
             "count": 25,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-10-20",
             "count": 27,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-10-21",
@@ -1772,7 +1772,7 @@
           {
             "date": "2026-10-28",
             "count": 24,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-10-29",
@@ -1807,12 +1807,12 @@
           {
             "date": "2026-11-04",
             "count": 28,
-            "level": 4
+            "level": 2
           },
           {
             "date": "2026-11-05",
             "count": 12,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-11-06",
@@ -1852,7 +1852,7 @@
           {
             "date": "2026-11-13",
             "count": 24,
-            "level": 3
+            "level": 2
           },
           {
             "date": "2026-11-14",
@@ -1867,25 +1867,25 @@
           {
             "date": "2026-11-16",
             "count": 17,
-            "level": 2
+            "level": 1
           },
           {
             "date": "2026-11-17",
-            "count": 36,
+            "count": 71,
             "level": 4
           }
         ],
-        "total": 302
+        "total": 337
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-17T11:08:18.017Z",
+      "fetchedAt": "2026-11-17T18:37:24.881Z",
       "data": {
         "languages": [
           [
             "Python",
-            852544
+            1435045
           ],
           [
             "Jupyter Notebook",
@@ -1893,27 +1893,35 @@
           ],
           [
             "TypeScript",
-            279458
-          ],
-          [
-            "JavaScript",
-            188048
+            400340
           ],
           [
             "C++",
-            115506
+            264175
+          ],
+          [
+            "JavaScript",
+            233420
           ],
           [
             "CSS",
-            80963
+            90195
           ],
           [
             "HTML",
-            10299
+            14734
           ],
           [
             "CMake",
-            4060
+            9339
+          ],
+          [
+            "PowerShell",
+            5230
+          ],
+          [
+            "C",
+            4972
           ],
           [
             "Shell",
@@ -1921,15 +1929,15 @@
           ],
           [
             "Dockerfile",
-            1921
+            3031
+          ],
+          [
+            "Mako",
+            1141
           ],
           [
             "Batchfile",
             843
-          ],
-          [
-            "Mako",
-            704
           ]
         ]
       }

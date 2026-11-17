@@ -54,7 +54,7 @@ Tested ERP APIs and workflows with Postman; ran functional and regression checks
 <a href="https://github.com/risbh19">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/github-stats-dark.svg" />
-    <img src="assets/github-stats-light.svg" width="500" alt="GitHub statistics for Rishabh Pal" />
+    <img src="assets/github-stats-light.svg" width="500" alt="Rishabh Pal's GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />
   </picture>
 </a>
 <!-- CONTRIBUTION_STATS:END -->
