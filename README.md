@@ -44,41 +44,24 @@ I'm a Computer Science undergraduate interested in how software works beneath th
 ### Tools &amp; Skills
 
 <p>
-  <img src="https://skillicons.dev/icons?i=cpp" width="36" height="36" alt="C++" title="C++" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=python" width="36" height="36" alt="Python" title="Python" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=ts" width="36" height="36" alt="TypeScript" title="TypeScript" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=js" width="36" height="36" alt="JavaScript" title="JavaScript" />
-  &nbsp;
-  <img src="https://api.iconify.design/mdi/database.svg?color=%236B8EAD" width="36" height="36" alt="SQL" title="SQL" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=fastapi" width="36" height="36" alt="FastAPI" title="FastAPI" />
-  &nbsp;
-  <img src="https://api.iconify.design/mdi/api.svg?color=%236B8EAD" width="36" height="36" alt="REST APIs" title="REST APIs" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=postgres" width="36" height="36" alt="PostgreSQL" title="PostgreSQL" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=redis" width="36" height="36" alt="Redis" title="Redis" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=mongodb" width="36" height="36" alt="MongoDB" title="MongoDB" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=react" width="36" height="36" alt="React" title="React" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=nextjs" width="36" height="36" alt="Next.js" title="Next.js" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=tailwind" width="36" height="36" alt="Tailwind CSS" title="Tailwind CSS" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=electron" width="36" height="36" alt="Electron" title="Electron" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=linux" width="36" height="36" alt="Linux" title="Linux" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=docker" width="36" height="36" alt="Docker" title="Docker" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=git" width="36" height="36" alt="Git" title="Git" />
-  &nbsp;
-  <img src="https://skillicons.dev/icons?i=postman" width="36" height="36" alt="Postman" title="Postman" />
+  <img src="https://img.shields.io/badge/C%2B%2B-334155?style=flat-square&amp;logo=cplusplus&amp;logoColor=white" alt="C++" height="22" />
+  <img src="https://img.shields.io/badge/Python-334155?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python" height="22" />
+  <img src="https://img.shields.io/badge/TypeScript-334155?style=flat-square&amp;logo=typescript&amp;logoColor=white" alt="TypeScript" height="22" />
+  <img src="https://img.shields.io/badge/JavaScript-334155?style=flat-square&amp;logo=javascript&amp;logoColor=white" alt="JavaScript" height="22" />
+  <img src="https://img.shields.io/badge/SQL-334155?style=flat-square" alt="SQL" height="22" />
+  <img src="https://img.shields.io/badge/FastAPI-334155?style=flat-square&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" height="22" />
+  <img src="https://img.shields.io/badge/REST_APIs-334155?style=flat-square" alt="REST APIs" height="22" />
+  <img src="https://img.shields.io/badge/PostgreSQL-334155?style=flat-square&amp;logo=postgresql&amp;logoColor=white" alt="PostgreSQL" height="22" />
+  <img src="https://img.shields.io/badge/Redis-334155?style=flat-square&amp;logo=redis&amp;logoColor=white" alt="Redis" height="22" />
+  <img src="https://img.shields.io/badge/MongoDB-334155?style=flat-square&amp;logo=mongodb&amp;logoColor=white" alt="MongoDB" height="22" />
+  <img src="https://img.shields.io/badge/React-334155?style=flat-square&amp;logo=react&amp;logoColor=white" alt="React" height="22" />
+  <img src="https://img.shields.io/badge/Next.js-334155?style=flat-square&amp;logo=nextdotjs&amp;logoColor=white" alt="Next.js" height="22" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-334155?style=flat-square&amp;logo=tailwindcss&amp;logoColor=white" alt="Tailwind CSS" height="22" />
+  <img src="https://img.shields.io/badge/Electron-334155?style=flat-square&amp;logo=electron&amp;logoColor=white" alt="Electron" height="22" />
+  <img src="https://img.shields.io/badge/Linux-334155?style=flat-square&amp;logo=linux&amp;logoColor=white" alt="Linux" height="22" />
+  <img src="https://img.shields.io/badge/Docker-334155?style=flat-square&amp;logo=docker&amp;logoColor=white" alt="Docker" height="22" />
+  <img src="https://img.shields.io/badge/Git-334155?style=flat-square&amp;logo=git&amp;logoColor=white" alt="Git" height="22" />
+  <img src="https://img.shields.io/badge/Postman-334155?style=flat-square&amp;logo=postman&amp;logoColor=white" alt="Postman" height="22" />
 </p>
 
 ### Featured projects
