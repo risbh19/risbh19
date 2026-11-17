@@ -44,24 +44,24 @@ I'm a Computer Science undergraduate interested in how software works beneath th
 ### Tools &amp; Skills
 
 <p>
-  <img src="https://img.shields.io/badge/C%2B%2B-334155?style=flat-square&amp;logo=cplusplus&amp;logoColor=white" alt="C++" height="22" />
-  <img src="https://img.shields.io/badge/Python-334155?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python" height="22" />
-  <img src="https://img.shields.io/badge/TypeScript-334155?style=flat-square&amp;logo=typescript&amp;logoColor=white" alt="TypeScript" height="22" />
-  <img src="https://img.shields.io/badge/JavaScript-334155?style=flat-square&amp;logo=javascript&amp;logoColor=white" alt="JavaScript" height="22" />
-  <img src="https://img.shields.io/badge/SQL-334155?style=flat-square" alt="SQL" height="22" />
-  <img src="https://img.shields.io/badge/FastAPI-334155?style=flat-square&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" height="22" />
-  <img src="https://img.shields.io/badge/REST_APIs-334155?style=flat-square" alt="REST APIs" height="22" />
-  <img src="https://img.shields.io/badge/PostgreSQL-334155?style=flat-square&amp;logo=postgresql&amp;logoColor=white" alt="PostgreSQL" height="22" />
-  <img src="https://img.shields.io/badge/Redis-334155?style=flat-square&amp;logo=redis&amp;logoColor=white" alt="Redis" height="22" />
-  <img src="https://img.shields.io/badge/MongoDB-334155?style=flat-square&amp;logo=mongodb&amp;logoColor=white" alt="MongoDB" height="22" />
-  <img src="https://img.shields.io/badge/React-334155?style=flat-square&amp;logo=react&amp;logoColor=white" alt="React" height="22" />
-  <img src="https://img.shields.io/badge/Next.js-334155?style=flat-square&amp;logo=nextdotjs&amp;logoColor=white" alt="Next.js" height="22" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-334155?style=flat-square&amp;logo=tailwindcss&amp;logoColor=white" alt="Tailwind CSS" height="22" />
-  <img src="https://img.shields.io/badge/Electron-334155?style=flat-square&amp;logo=electron&amp;logoColor=white" alt="Electron" height="22" />
-  <img src="https://img.shields.io/badge/Linux-334155?style=flat-square&amp;logo=linux&amp;logoColor=white" alt="Linux" height="22" />
-  <img src="https://img.shields.io/badge/Docker-334155?style=flat-square&amp;logo=docker&amp;logoColor=white" alt="Docker" height="22" />
-  <img src="https://img.shields.io/badge/Git-334155?style=flat-square&amp;logo=git&amp;logoColor=white" alt="Git" height="22" />
-  <img src="https://img.shields.io/badge/Postman-334155?style=flat-square&amp;logo=postman&amp;logoColor=white" alt="Postman" height="22" />
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&amp;logo=cplusplus&amp;logoColor=white" alt="C++" height="22" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python" height="22" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&amp;logo=typescript&amp;logoColor=white" alt="TypeScript" height="22" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&amp;logo=javascript&amp;logoColor=black" alt="JavaScript" height="22" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square" alt="SQL" height="22" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" height="22" />
+  <img src="https://img.shields.io/badge/REST_APIs-009688?style=flat-square" alt="REST APIs" height="22" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&amp;logo=postgresql&amp;logoColor=white" alt="PostgreSQL" height="22" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&amp;logo=redis&amp;logoColor=white" alt="Redis" height="22" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&amp;logo=mongodb&amp;logoColor=white" alt="MongoDB" height="22" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&amp;logo=react&amp;logoColor=black" alt="React" height="22" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&amp;logo=nextdotjs&amp;logoColor=white" alt="Next.js" height="22" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&amp;logo=tailwindcss&amp;logoColor=white" alt="Tailwind CSS" height="22" />
+  <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&amp;logo=electron&amp;logoColor=white" alt="Electron" height="22" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&amp;logo=linux&amp;logoColor=black" alt="Linux" height="22" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&amp;logo=docker&amp;logoColor=white" alt="Docker" height="22" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&amp;logo=git&amp;logoColor=white" alt="Git" height="22" />
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&amp;logo=postman&amp;logoColor=white" alt="Postman" height="22" />
 </p>
 
 ### Featured projects
