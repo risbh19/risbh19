@@ -14,36 +14,44 @@
 
 ---
 
+### About me
+
+I'm a Computer Science undergraduate interested in how software works beneath the interface—from network protocols and storage engines to APIs and database transactions.
+
+- **Systems:** building a Redis-compatible server and a desktop editor from the document model up.
+- **Backend:** working with authentication, concurrency, data consistency and real-time updates.
+- **Problem solving:** practising data structures and algorithms in C++.
+- **Looking for:** software engineering internships with hands-on backend and systems work.
+
 ### Working with
 
-**Languages** &nbsp; `C++` `Python` `TypeScript` `SQL`  
-**Tools** &nbsp; `FastAPI` `React` `Next.js` `PostgreSQL` `Redis` `Linux` `Docker`
+**Languages** &nbsp; `C++` `Python` `TypeScript` `JavaScript` `SQL`  
+**Backend & data** &nbsp; `FastAPI` `REST APIs` `PostgreSQL` `Redis` `MongoDB`  
+**Frontend & desktop** &nbsp; `React` `Next.js` `Tailwind CSS` `Electron`  
+**Tools & platforms** &nbsp; `Linux` `Docker` `Git` `Postman`
 
 ### Selected work
 
-| Project | What I built |
-| --- | --- |
-| [mini-redis](https://github.com/risbh19/mini-redis) | A Redis-compatible C++ server with `epoll`, RESP2, TTL/LRU eviction and persistence. |
-| [Orbit](https://github.com/risbh19/ide) | A desktop IDE with a piece-table editor, multi-cursor editing, a language server and terminal. |
-| [Paper Trading Engine](https://github.com/risbh19/trading-bot) | Deterministic market replay, simulated fills and pre-trade risk checks, with Python research tools. |
+| Project | What I built | Stack |
+| --- | --- | --- |
+| [mini-redis](https://github.com/risbh19/mini-redis) | A Redis-compatible string store with an `epoll` reactor, RESP2, incremental rehashing, TTL/LRU eviction, snapshots and an append-only log. | C++17 · Linux |
+| [Orbit](https://github.com/risbh19/ide) | A desktop IDE with a custom piece-table editor, undo/redo, multi-cursor editing, JavaScript/TypeScript language intelligence and a PTY terminal. | TypeScript · Electron |
+| [Paper Trading Engine](https://github.com/risbh19/trading-bot) | A simulator with deterministic replay, partial fills, fees and pre-trade risk checks. Python tools analyse sessions and reconcile the trade ledger. | C++20 · Python |
+| [RaceSafe](https://github.com/risbh19/racesafe) | Hackathon team formation with concurrency-safe seat allocation, expiring invites, leader approvals and live updates. | FastAPI · PostgreSQL · React |
+| [College Forum](https://github.com/risbh19/college-forum) | A campus discussion platform with Google sign-in, pseudonymous usernames, posts, comments, voting and moderation. [Live app](https://college-forum.vercel.app/) | Next.js · FastAPI · PostgreSQL |
 
 ### Experience
 
 **Software Testing Intern · R-Cube Green Technology LLP**  
-Tested ERP APIs and workflows with Postman; ran functional and regression checks and documented defects.
+Remote · 1 month
+
+- Tested AcadShree School ERP APIs and workflows using Postman.
+- Validated API responses and ran functional and regression checks.
+- Documented defects with reproduction steps.
 
 ---
 
-<p align="center">
-  <a href="https://leetcode.com/u/risbhh19/">LeetCode</a> ·
-  <a href="https://codeforces.com/profile/Sensi__">Codeforces</a> ·
-  <a href="https://www.codechef.com/users/risbh_cf">CodeChef</a>
-</p>
-
-<details>
-<summary>Activity &amp; coding profiles</summary>
-
-<br>
+### GitHub activity
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
@@ -59,6 +67,14 @@ Tested ERP APIs and workflows with Postman; ran functional and regression checks
 </a>
 <!-- CONTRIBUTION_STATS:END -->
 
+### Problem solving
+
+<p align="center">
+  <a href="https://leetcode.com/u/risbhh19/">LeetCode</a> ·
+  <a href="https://codeforces.com/profile/Sensi__">Codeforces</a> ·
+  <a href="https://www.codechef.com/users/risbh_cf">CodeChef</a>
+</p>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/coding-dark.svg" />
   <img src="assets/coding-light.svg" width="800" alt="LeetCode problem counts and Codeforces and CodeChef ratings" />
@@ -66,6 +82,6 @@ Tested ERP APIs and workflows with Postman; ran functional and regression checks
 
 [Data sources and refresh schedule](docs/PROFILE.md)
 
-</details>
+---
 
 <p align="center"><sub>After hours: anime, retro aesthetics, and one more episode.</sub></p>
