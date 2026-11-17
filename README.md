@@ -113,7 +113,7 @@ Remote · 1 month
 </a>
 <!-- CONTRIBUTION_STATS:END -->
 
-[Data sources and refresh schedule](docs/PROFILE.md)
+
 
 ---
 
