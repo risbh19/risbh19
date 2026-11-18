@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-18T01:18:29.682Z",
+  "refreshedAt": "2026-11-18T10:44:03.081Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-18T01:18:28.852Z",
+      "fetchedAt": "2026-11-18T10:44:02.168Z",
       "data": {
         "handle": "risbhh19",
         "solved": 201,
@@ -15,18 +15,9 @@
         "contests": 4
       }
     },
-    "codechef": {
-      "status": "fresh",
-      "fetchedAt": "2026-11-18T01:18:28.851Z",
-      "data": {
-        "handle": "risbh_cf",
-        "rating": 1644,
-        "maxRating": 1644
-      }
-    },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-18T01:18:28.850Z",
+      "fetchedAt": "2026-11-18T10:44:02.167Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1243,
@@ -34,73 +25,18 @@
         "rank": "pupil"
       }
     },
-    "github": {
+    "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-11-18T01:18:28.813Z",
+      "fetchedAt": "2026-11-18T10:44:02.168Z",
       "data": {
-        "languages": [
-          [
-            "Python",
-            1435045
-          ],
-          [
-            "Jupyter Notebook",
-            439604
-          ],
-          [
-            "TypeScript",
-            400340
-          ],
-          [
-            "C++",
-            264175
-          ],
-          [
-            "JavaScript",
-            233650
-          ],
-          [
-            "CSS",
-            90195
-          ],
-          [
-            "HTML",
-            14734
-          ],
-          [
-            "CMake",
-            9339
-          ],
-          [
-            "PowerShell",
-            5230
-          ],
-          [
-            "C",
-            4972
-          ],
-          [
-            "Shell",
-            3597
-          ],
-          [
-            "Dockerfile",
-            3031
-          ],
-          [
-            "Mako",
-            1141
-          ],
-          [
-            "Batchfile",
-            843
-          ]
-        ]
+        "handle": "risbh_cf",
+        "rating": 1644,
+        "maxRating": 1646
       }
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-18T01:18:28.849Z",
+      "fetchedAt": "2026-11-18T10:44:02.166Z",
       "data": {
         "days": [
           {
@@ -1945,6 +1881,70 @@
           }
         ],
         "total": 362
+      }
+    },
+    "github": {
+      "status": "fresh",
+      "fetchedAt": "2026-11-18T10:44:02.140Z",
+      "data": {
+        "languages": [
+          [
+            "Python",
+            1435045
+          ],
+          [
+            "Jupyter Notebook",
+            439604
+          ],
+          [
+            "TypeScript",
+            400340
+          ],
+          [
+            "C++",
+            264175
+          ],
+          [
+            "JavaScript",
+            233650
+          ],
+          [
+            "CSS",
+            90195
+          ],
+          [
+            "HTML",
+            14734
+          ],
+          [
+            "CMake",
+            9339
+          ],
+          [
+            "PowerShell",
+            5230
+          ],
+          [
+            "C",
+            4972
+          ],
+          [
+            "Shell",
+            3597
+          ],
+          [
+            "Dockerfile",
+            3031
+          ],
+          [
+            "Mako",
+            1141
+          ],
+          [
+            "Batchfile",
+            843
+          ]
+        ]
       }
     }
   }
