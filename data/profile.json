@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-17T19:35:37.210Z",
+  "refreshedAt": "2026-11-18T01:18:29.682Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-17T19:35:35.378Z",
+      "fetchedAt": "2026-11-18T01:18:28.852Z",
       "data": {
         "handle": "risbhh19",
         "solved": 201,
@@ -17,7 +17,7 @@
     },
     "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-11-17T19:35:35.377Z",
+      "fetchedAt": "2026-11-18T01:18:28.851Z",
       "data": {
         "handle": "risbh_cf",
         "rating": 1644,
@@ -26,7 +26,7 @@
     },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-17T19:35:35.376Z",
+      "fetchedAt": "2026-11-18T01:18:28.850Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1243,
@@ -36,7 +36,7 @@
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-17T19:35:35.347Z",
+      "fetchedAt": "2026-11-18T01:18:28.813Z",
       "data": {
         "languages": [
           [
@@ -57,7 +57,7 @@
           ],
           [
             "JavaScript",
-            233420
+            233650
           ],
           [
             "CSS",
@@ -100,7 +100,7 @@
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-17T19:35:35.375Z",
+      "fetchedAt": "2026-11-18T01:18:28.849Z",
       "data": {
         "days": [
           {
@@ -1937,9 +1937,14 @@
             "date": "2026-11-17",
             "count": 71,
             "level": 4
+          },
+          {
+            "date": "2026-11-18",
+            "count": 25,
+            "level": 2
           }
         ],
-        "total": 337
+        "total": 362
       }
     }
   }
