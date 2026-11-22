@@ -86,9 +86,12 @@ test('partial failures preserve last-good values, escape SVG text, and never sen
   const oldLog = console.log;
   const token = 'test-only-synthetic-token';
   const requests = [];
+  const originalReadme = replaceContributionSection('Profile intro\n<!-- CONTRIBUTION_STATS:START -->\nold\n<!-- CONTRIBUTION_STATS:END -->\nProfile footer', {
+    versions: { light: 'abcdef1234567890', dark: 'abcdef1234567890' }, updatedAt: '2026-10-19T10:00:00Z'
+  });
   try {
     await mkdir(join(root, 'data'));
-    await writeFile(join(root, 'README.md'), 'Profile intro\n<!-- CONTRIBUTION_STATS:START -->\nold\n<!-- CONTRIBUTION_STATS:END -->\nProfile footer');
+    await writeFile(join(root, 'README.md'), originalReadme);
     await writeFile(join(root, 'data/profile.json'), JSON.stringify({ sources: {
       codeforces: { fetchedAt: '2026-10-19T10:00:00Z', data: { rating: 1200, maxRating: 1400, rank: '<script>unsafe</script>' } }
     } }));
@@ -115,7 +118,7 @@ test('partial failures preserve last-good values, escape SVG text, and never sen
     assert.equal(result.sources.collaboration, undefined);
     assert.ok(!requests.some(r => r.address.includes('/events/') || r.address.includes('/search/issues')));
     const readme = await readFile(join(root, 'README.md'), 'utf8');
-    assert.ok(readme.includes('assets/github-stats-light.svg'));
+    assert.equal(readme, originalReadme, 'Other data refreshes must preserve the last published stats versions/time');
     assert.ok(!readme.includes('| Metric |'));
     const coding = await readFile(join(root, 'assets/coding-dark.svg'), 'utf8');
     assert.ok(coding.includes('Last available'));

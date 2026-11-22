@@ -32,24 +32,28 @@ test('publish matching cards with stable content versions and a success time, pr
     const first = await readFile(join(root, 'README.md'), 'utf8');
     assert.ok(first.startsWith('Keep intro\n'));
     assert.ok(first.endsWith('\nKeep footer'));
-    assert.match(first, /github-stats-light\.svg\?v=[a-f0-9]{16}/);
-    assert.match(first, /github-stats-dark\.svg\?v=[a-f0-9]{16}/);
-    assert.match(first, /src="https:\/\/raw\.githubusercontent\.com\/risbh19\/risbh19\/main\/assets\/github-stats-light\.svg\?v=/);
-    assert.match(first, /srcset="https:\/\/raw\.githubusercontent\.com\/risbh19\/risbh19\/main\/assets\/github-stats-dark\.svg\?v=/);
+    const image = (content, theme) => content.match(new RegExp(`github-stats-${theme}-[a-f0-9]{16}\\.svg`))[0];
+    for (const theme of ['light', 'dark']) {
+      assert.equal(await readFile(join(root, 'assets', image(first, theme)), 'utf8'), theme === 'light' ? light : dark);
+    }
+    assert.match(first, /src="https:\/\/raw\.githubusercontent\.com\/risbh19\/risbh19\/main\/assets\/github-stats-light-[a-f0-9]{16}\.svg"/);
+    assert.match(first, /srcset="https:\/\/raw\.githubusercontent\.com\/risbh19\/risbh19\/main\/assets\/github-stats-dark-[a-f0-9]{16}\.svg"/);
     assert.match(first, /Rishabh Pal \(@risbh19\)/);
     assert.match(first, /22 Nov 2026, 15:53 IST/);
     assert.match(first, /Scheduled every 12 hours/);
     assert.match(first, /actions\/workflows\/profile\.yml/);
     await publishStats(root, '2026-11-22T22:23:13Z');
     const second = await readFile(join(root, 'README.md'), 'utf8');
-    assert.equal(first.match(/github-stats-light\.svg\?v=\w+/)[0], second.match(/github-stats-light\.svg\?v=\w+/)[0]);
+    assert.equal(image(first, 'light'), image(second, 'light'));
     // A data change must produce a new image URL for both themes.
     for (const [theme, svg] of [['light', light], ['dark', dark]]) {
       await writeFile(join(root, `assets/github-stats-${theme}.svg`), svg.replace(/data-testid="prs"\s*>[^<]+/, 'data-testid="prs">123'));
     }
     await publishStats(root, '2026-11-22T22:23:13Z');
     const third = await readFile(join(root, 'README.md'), 'utf8');
-    assert.notEqual(second.match(/github-stats-light\.svg\?v=\w+/)[0], third.match(/github-stats-light\.svg\?v=\w+/)[0]);
+    assert.notEqual(image(second, 'light'), image(third, 'light'));
+    // The preceding pair remains available to a cached README.
+    assert.equal(await readFile(join(root, 'assets', image(second, 'light')), 'utf8'), light);
     // A partial generation must leave the previously published URLs/time intact.
     await writeFile(join(root, 'assets/github-stats-dark.svg'), dark.replace(/data-testid="prs"\s*>[^<]+/, 'data-testid="prs">456'));
     await assert.rejects(publishStats(root), /counts differ/);

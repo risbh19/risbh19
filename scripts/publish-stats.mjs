@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, readdir, unlink } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { replaceContributionSection } from './update-profile.mjs';
@@ -32,6 +32,7 @@ export function validateStats(svg) {
 export async function publishStats(root = ROOT, updatedAt = new Date().toISOString()) {
   if (!Number.isFinite(Date.parse(updatedAt))) throw new Error('Invalid stats refresh time');
   const versions = {};
+  const cards = {};
   let reference;
   for (const theme of ['light', 'dark']) {
     const svg = await readFile(resolve(root, `assets/github-stats-${theme}.svg`), 'utf8');
@@ -41,11 +42,25 @@ export async function publishStats(root = ROOT, updatedAt = new Date().toISOStri
     }
     reference = metrics;
     versions[theme] = createHash('sha256').update(svg).digest('hex').slice(0, 16);
+    cards[theme] = svg;
   }
   const path = resolve(root, 'README.md');
   const readme = await readFile(path, 'utf8');
+  const keep = new Set([...readme.matchAll(/github-stats-(?:light|dark)-[a-f0-9]{16}\.svg/g)].map(match => match[0]));
+  for (const theme of ['light', 'dark']) {
+    const filename = `github-stats-${theme}-${versions[theme]}.svg`;
+    keep.add(filename);
+    await writeFile(resolve(root, 'assets', filename), cards[theme]);
+  }
   // Only publish the new image URLs and success time after BOTH cards pass.
   await writeFile(path, replaceContributionSection(readme, { versions, updatedAt }));
+  // Retain the preceding published pair for cached README pages, while bounding
+  // the working tree to two versions per theme instead of adding files forever.
+  for (const filename of await readdir(resolve(root, 'assets'))) {
+    if (/^github-stats-(?:light|dark)-[a-f0-9]{16}\.svg$/.test(filename) && !keep.has(filename)) {
+      await unlink(resolve(root, 'assets', filename));
+    }
+  }
   console.log(JSON.stringify({ account: 'risbh19', updatedAt, versions, metrics: reference }));
 }
 

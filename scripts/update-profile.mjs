@@ -84,8 +84,8 @@ export function activitySummary(days, endDate = days.at(-1)?.date) {
 }
 
 export function contributionSection({ versions = {}, updatedAt } = {}) {
-  // GitHub's /raw/ redirect strips query parameters from relative image URLs.
-  const image = theme => `https://raw.githubusercontent.com/risbh19/risbh19/main/assets/github-stats-${theme}.svg${versions[theme] ? `?v=${versions[theme]}` : ''}`;
+  // Put the version in the filename: raw/CDN caches may ignore query strings.
+  const image = theme => `https://raw.githubusercontent.com/risbh19/risbh19/main/assets/github-stats-${theme}${versions[theme] ? `-${versions[theme]}` : ''}.svg`;
   return [
     '<a href="https://github.com/risbh19" title="Rishabh Pal (@risbh19)">',
     '  <picture>',
@@ -412,9 +412,8 @@ export async function refresh(root = ROOT) {
     for (const project of PROJECT_CARDS) images[project.file] = renderProjectCard(project, theme);
     await Promise.all(Object.entries(images).map(([key, content]) => writeFile(resolve(root, `assets/${key}-${name}.svg`), content)));
   }
-  const readmePath = resolve(root, 'README.md');
-  const readme = await readFile(readmePath, 'utf8');
-  await writeFile(readmePath, replaceContributionSection(readme));
+  // Stats publication runs after the upstream cards are generated. Keep its
+  // previous filenames and success time intact until both new variants pass.
   console.log(JSON.stringify({ refreshedAt: snapshot.refreshedAt, sources: Object.fromEntries(Object.entries(sources).map(([key, s]) => [key, { status: s.status, fetchedAt: s.fetchedAt }])) }, null, 2));
   if (!Object.values(sources).some(s => s.status === 'fresh')) throw new Error('All sources failed; kept the previous data with stale labels');
   return snapshot;
