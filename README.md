@@ -49,8 +49,6 @@ Currently focused on **database transactions, concurrency, authentication and re
     <img src="https://cdn.simpleicons.org/leetcode/FFA116" width="30" height="30" alt="LeetCode profile" />
   </a>
   &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.simpleicons.org/codeforces/1F8ACB" width="30" height="30" alt="Codeforces" />
-  &nbsp;&nbsp;&nbsp;
   <a href="https://www.codechef.com/users/risbh_cf" title="CodeChef">
     <img src="https://cdn.simpleicons.org/codechef/A67C52" width="30" height="30" alt="CodeChef profile" />
   </a>
