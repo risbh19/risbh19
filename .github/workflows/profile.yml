@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: '22'
       - name: Verify data handling
-        run: node --test tests/profile.test.mjs
+        run: node --test tests/*.test.mjs
       - name: Refresh public data and render cards
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -59,6 +59,8 @@ jobs:
           path: assets/github-stats-dark.svg
           token: ${{ github.token }}
           fail_on_error: 'true'
+      - name: Validate both stats cards and publish refresh time
+        run: node scripts/publish-stats.mjs
       - name: Commit generated assets when changed
         run: |
           git config user.name 'github-actions[bot]'

@@ -103,12 +103,14 @@ Currently focused on **database transactions, concurrency, authentication and re
 <div align="center">
 
 <!-- CONTRIBUTION_STATS:START -->
-<a href="https://github.com/risbh19">
+<a href="https://github.com/risbh19" title="Rishabh Pal (@risbh19)">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/github-stats-dark.svg" />
-    <img src="assets/github-stats-light.svg" width="500" alt="Rishabh Pal's GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />
+    <source media="(prefers-color-scheme: dark)" srcset="assets/github-stats-dark.svg?v=ebec14cb9cc29e4e" />
+    <img src="assets/github-stats-light.svg?v=bdf38192c750e82e" width="500" height="195" alt="Rishabh Pal (@risbh19) GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />
   </picture>
 </a>
+<br />
+<sub>Last refreshed: 22 Nov 2026, 15:53 IST · Scheduled every 12 hours · <a href="https://github.com/risbh19/risbh19/actions/workflows/profile.yml">Refresh status</a></sub>
 <!-- CONTRIBUTION_STATS:END -->
 
 </div>

@@ -8,12 +8,13 @@ Core technologies are grouped as text for easier scanning on narrow screens. The
 
 ## Refresh behavior
 
-- Runs every 8 hours at 02:47, 10:47 and 18:47 UTC (08:17, 16:17 and 00:17 IST), after changes to the README/generator/tests/workflow, and on manual dispatch. The same workflow refreshes GitHub Stats and the LeetCode, Codeforces and CodeChef cards.
+- Runs every 12 hours at 02:47 and 14:47 UTC (08:17 and 20:17 IST), after changes to the README/generator/tests/workflow, and on manual dispatch. The same workflow refreshes GitHub Stats and the LeetCode, Codeforces and CodeChef cards.
 - GitHub schedules and image caching can delay visible updates; the README is not a continuously streaming dashboard.
 - Each source has its own observation time. A partial failure preserves its last successful data and marks that source as **Last available**. Missing values display an em dash, never an invented zero or rank.
 - When all data sources fail, the workflow fails and leaves the previously published cards available. Run history and the cards' timestamps make freshness visible.
 - Public repository updates elsewhere appear on the next scheduled run. The workflow updates the generated images; the marked contribution-stats section embeds the upstream card in light and dark variants.
 - The GitHub Stats action fails rather than committing an error image when its data source fails. The previously published card remains available.
+- After generation, `scripts/publish-stats.mjs` checks both SVGs for the expected Rishabh Pal title, all five metric values and the rank, and rejects upstream error images or mismatched light/dark counts. Only then does it update the README's stats section with content-versioned image URLs and the successful refresh time. Changed images get new URLs to avoid reusing an older cached image; unchanged counts keep their existing image versions. The refresh-status link opens this repository's workflow history. A failed run leaves the last published images and success time intact.
 - GitHub may disable scheduled workflows in inactive public repositories. The manual **Actions → Refresh profile → Run workflow** control remains available; re-enable the schedule if GitHub disables it.
 
 ## What the numbers mean
@@ -66,7 +67,7 @@ The following records the earlier design exploration.
 - [Shields.io](https://shields.io/): externally hosted badges.
 - [Skill Icons](https://github.com/tandpfun/skill-icons): externally hosted technology icons.
 - [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats): the card design selected by the profile owner.
-- [GitHub Readme Stats Action](https://github.com/stats-organization/github-readme-stats-action) and its maintained core: generation of the repository-hosted stats card every 8 hours.
+- [GitHub Readme Stats Action](https://github.com/stats-organization/github-readme-stats-action) and its maintained core: generation of the repository-hosted stats card every 12 hours for `risbh19`, titled **Rishabh Pal's GitHub Stats**.
 - [Martin Heinz wave GIF](https://github.com/MartinHeinz/MartinHeinz/blob/master/wave.gif): externally linked waving-hand animation.
 - [Ashutosh's Seven Deadly Sins GIF](https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX/blob/master/assets/208593.gif): the externally hosted animation restored in After Hours. The GIF remains hosted in its source repository and is not relicensed by this profile.
 - [GitHub repository languages](https://docs.github.com/en/rest/repos/repos#list-repository-languages) and [Codeforces API](https://codeforces.com/apiHelp/methods): public data documentation.
@@ -74,8 +75,10 @@ The following records the earlier design exploration.
 ## Local use
 
 ```sh
-node --test tests/profile.test.mjs
+node --test tests/*.test.mjs
 node scripts/update-profile.mjs
 ```
+
+The workflow then generates both GitHub Stats SVGs using the pinned upstream action and runs `node scripts/publish-stats.mjs` to validate them and publish their image versions and success time. Do not run the publication step alone against old assets and present it as a fresh data fetch.
 
 Set `GITHUB_TOKEN` in the process environment only if authenticated GitHub API quota is needed. The token is sent exclusively to `api.github.com`, never to coding platforms, and is not written to output files. The public profile links and email are explicitly supplied by the profile owner.

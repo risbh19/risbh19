@@ -83,18 +83,20 @@ export function activitySummary(days, endDate = days.at(-1)?.date) {
   };
 }
 
-export function contributionSection() {
+export function contributionSection({ versions = {}, updatedAt } = {}) {
+  const image = theme => `assets/github-stats-${theme}.svg${versions[theme] ? `?v=${versions[theme]}` : ''}`;
   return [
-    '<a href="https://github.com/risbh19">',
+    '<a href="https://github.com/risbh19" title="Rishabh Pal (@risbh19)">',
     '  <picture>',
-    '    <source media="(prefers-color-scheme: dark)" srcset="assets/github-stats-dark.svg" />',
-    '    <img src="assets/github-stats-light.svg" width="500" alt="Rishabh Pal\'s GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />',
+    `    <source media="(prefers-color-scheme: dark)" srcset="${image('dark')}" />`,
+    `    <img src="${image('light')}" width="500" height="195" alt="Rishabh Pal (@risbh19) GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />`,
     '  </picture>',
-    '</a>'
+    '</a>',
+    ...(updatedAt ? ['<br />', `<sub>Last refreshed: ${esc(stamp(updatedAt))} · Scheduled every 12 hours · <a href="https://github.com/risbh19/risbh19/actions/workflows/profile.yml">Refresh status</a></sub>`] : [])
   ].join('\n');
 }
 
-export function replaceContributionSection(readme) {
+export function replaceContributionSection(readme, details) {
   const start = '<!-- CONTRIBUTION_STATS:START -->';
   const end = '<!-- CONTRIBUTION_STATS:END -->';
   if (readme.split(start).length !== 2 || readme.split(end).length !== 2 || readme.indexOf(start) > readme.indexOf(end)) {
@@ -102,7 +104,7 @@ export function replaceContributionSection(readme) {
   }
   const first = readme.indexOf(start) + start.length;
   const last = readme.indexOf(end);
-  return readme.slice(0, first) + '\n' + contributionSection() + '\n' + readme.slice(last);
+  return readme.slice(0, first) + '\n' + contributionSection(details) + '\n' + readme.slice(last);
 }
 
 export function parseCodeChef(html) {
