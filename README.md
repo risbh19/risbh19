@@ -49,9 +49,7 @@ Currently focused on **database transactions, concurrency, authentication and re
     <img src="https://cdn.simpleicons.org/leetcode/FFA116" width="30" height="30" alt="LeetCode profile" />
   </a>
   &nbsp;&nbsp;&nbsp;
-  <a href="https://codeforces.com/profile/Sensi__" title="Codeforces">
-    <img src="https://cdn.simpleicons.org/codeforces/1F8ACB" width="30" height="30" alt="Codeforces profile" />
-  </a>
+  <img src="https://cdn.simpleicons.org/codeforces/1F8ACB" width="30" height="30" alt="Codeforces" />
   &nbsp;&nbsp;&nbsp;
   <a href="https://www.codechef.com/users/risbh_cf" title="CodeChef">
     <img src="https://cdn.simpleicons.org/codechef/A67C52" width="30" height="30" alt="CodeChef profile" />
@@ -110,7 +108,7 @@ Currently focused on **database transactions, concurrency, authentication and re
   </picture>
 </a>
 <br />
-<sub>Last refreshed: 23 Nov 2026, 01:11 IST · Scheduled every 12 hours · <a href="https://github.com/risbh19/risbh19/actions/workflows/profile.yml">Refresh status</a></sub>
+<sub>Last refreshed: 23 Nov 2026, 01:11 IST · Scheduled every 10 hours · <a href="https://github.com/risbh19/risbh19/actions/workflows/profile.yml">Refresh status</a></sub>
 <!-- CONTRIBUTION_STATS:END -->
 
 </div>

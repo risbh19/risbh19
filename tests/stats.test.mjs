@@ -40,7 +40,7 @@ test('publish matching cards with stable content versions and a success time, pr
     assert.match(first, /srcset="https:\/\/raw\.githubusercontent\.com\/risbh19\/risbh19\/main\/assets\/github-stats-dark-[a-f0-9]{16}\.svg"/);
     assert.match(first, /Rishabh Pal \(@risbh19\)/);
     assert.match(first, /22 Nov 2026, 15:53 IST/);
-    assert.match(first, /Scheduled every 12 hours/);
+    assert.match(first, /Scheduled every 10 hours/);
     assert.match(first, /actions\/workflows\/profile\.yml/);
     await publishStats(root, '2026-11-22T22:23:13Z');
     const second = await readFile(join(root, 'README.md'), 'utf8');

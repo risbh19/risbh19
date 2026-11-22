@@ -8,7 +8,7 @@ Core technologies are grouped as text for easier scanning on narrow screens. The
 
 ## Refresh behavior
 
-- Runs every 12 hours at 02:47 and 14:47 UTC (08:17 and 20:17 IST), after changes to the README/generator/tests/workflow, and on manual dispatch. The same workflow refreshes GitHub Stats and the LeetCode, Codeforces and CodeChef cards.
+- Refreshes once per 10-hour UTC window, after changes to the README/generator/tests/workflow, and on manual dispatch. An hourly check at minute 47 compares the current window with the last successfully published `data/profile.json` observation; runs within the same window skip generation. Windows are anchored at 00:47 UTC on 1 January 1970 and advance continuously across midnight, month ends and year ends. For example, successive windows begin at 00:47, 10:47, 20:47, then 06:47 and 16:47 UTC on the following day. A simple `*/10` hour cron would incorrectly leave a four-hour gap at midnight. Failed or missed refreshes are retried by the next hourly check. Pushes and manual runs refresh immediately. The same workflow refreshes GitHub Stats and the LeetCode, Codeforces and CodeChef cards.
 - GitHub schedules and image caching can delay visible updates; the README is not a continuously streaming dashboard.
 - Each source has its own observation time. A partial failure preserves its last successful data and marks that source as **Last available**. Missing values display an em dash, never an invented zero or rank.
 - When all data sources fail, the workflow fails and leaves the previously published cards available. Run history and the cards' timestamps make freshness visible.
@@ -67,7 +67,7 @@ The following records the earlier design exploration.
 - [Shields.io](https://shields.io/): externally hosted badges.
 - [Skill Icons](https://github.com/tandpfun/skill-icons): externally hosted technology icons.
 - [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats): the card design selected by the profile owner.
-- [GitHub Readme Stats Action](https://github.com/stats-organization/github-readme-stats-action) and its maintained core: generation of the repository-hosted stats card every 12 hours for `risbh19`, titled **Rishabh Pal's GitHub Stats**.
+- [GitHub Readme Stats Action](https://github.com/stats-organization/github-readme-stats-action) and its maintained core: generation of the repository-hosted stats card every 10 hours for `risbh19`, titled **Rishabh Pal's GitHub Stats**.
 - [Martin Heinz wave GIF](https://github.com/MartinHeinz/MartinHeinz/blob/master/wave.gif): externally linked waving-hand animation.
 - [Ashutosh's Seven Deadly Sins GIF](https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX/blob/master/assets/208593.gif): the externally hosted animation restored in After Hours. The GIF remains hosted in its source repository and is not relicensed by this profile.
 - [GitHub repository languages](https://docs.github.com/en/rest/repos/repos#list-repository-languages) and [Codeforces API](https://codeforces.com/apiHelp/methods): public data documentation.

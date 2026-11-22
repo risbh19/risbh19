@@ -93,7 +93,7 @@ export function contributionSection({ versions = {}, updatedAt } = {}) {
     `    <img src="${image('light')}" width="500" height="195" alt="Rishabh Pal (@risbh19) GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />`,
     '  </picture>',
     '</a>',
-    ...(updatedAt ? ['<br />', `<sub>Last refreshed: ${esc(stamp(updatedAt))} · Scheduled every 12 hours · <a href="https://github.com/risbh19/risbh19/actions/workflows/profile.yml">Refresh status</a></sub>`] : [])
+    ...(updatedAt ? ['<br />', `<sub>Last refreshed: ${esc(stamp(updatedAt))} · Scheduled every 10 hours · <a href="https://github.com/risbh19/risbh19/actions/workflows/profile.yml">Refresh status</a></sub>`] : [])
   ].join('\n');
 }
 
