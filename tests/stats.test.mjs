@@ -34,6 +34,8 @@ test('publish matching cards with stable content versions and a success time, pr
     assert.ok(first.endsWith('\nKeep footer'));
     assert.match(first, /github-stats-light\.svg\?v=[a-f0-9]{16}/);
     assert.match(first, /github-stats-dark\.svg\?v=[a-f0-9]{16}/);
+    assert.match(first, /src="https:\/\/raw\.githubusercontent\.com\/risbh19\/risbh19\/main\/assets\/github-stats-light\.svg\?v=/);
+    assert.match(first, /srcset="https:\/\/raw\.githubusercontent\.com\/risbh19\/risbh19\/main\/assets\/github-stats-dark\.svg\?v=/);
     assert.match(first, /Rishabh Pal \(@risbh19\)/);
     assert.match(first, /22 Nov 2026, 15:53 IST/);
     assert.match(first, /Scheduled every 12 hours/);

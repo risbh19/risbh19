@@ -84,7 +84,8 @@ export function activitySummary(days, endDate = days.at(-1)?.date) {
 }
 
 export function contributionSection({ versions = {}, updatedAt } = {}) {
-  const image = theme => `assets/github-stats-${theme}.svg${versions[theme] ? `?v=${versions[theme]}` : ''}`;
+  // GitHub's /raw/ redirect strips query parameters from relative image URLs.
+  const image = theme => `https://raw.githubusercontent.com/risbh19/risbh19/main/assets/github-stats-${theme}.svg${versions[theme] ? `?v=${versions[theme]}` : ''}`;
   return [
     '<a href="https://github.com/risbh19" title="Rishabh Pal (@risbh19)">',
     '  <picture>',
