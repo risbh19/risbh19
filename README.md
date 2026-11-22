@@ -103,12 +103,12 @@ Currently focused on **database transactions, concurrency, authentication and re
 <!-- CONTRIBUTION_STATS:START -->
 <a href="https://github.com/risbh19" title="Rishabh Pal (@risbh19)">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/risbh19/risbh19/main/assets/github-stats-dark-1fea8f0ab241b8c4.svg" />
-    <img src="https://raw.githubusercontent.com/risbh19/risbh19/main/assets/github-stats-light-9d5b132c2d1e5d96.svg" width="500" height="195" alt="Rishabh Pal (@risbh19) GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/risbh19/risbh19/main/assets/github-stats-dark-a0211d5ba4c199a9.svg" />
+    <img src="https://raw.githubusercontent.com/risbh19/risbh19/main/assets/github-stats-light-481ee57076a115ec.svg" width="500" height="195" alt="Rishabh Pal (@risbh19) GitHub Stats: total stars, commits, pull requests, issues, repositories contributed to and rank" />
   </picture>
 </a>
 <br />
-<sub>Last refreshed: 23 Nov 2026, 01:11 IST · Scheduled every 10 hours · <a href="https://github.com/risbh19/risbh19/actions/workflows/profile.yml">Refresh status</a></sub>
+<sub>Last refreshed: 23 Nov 2026, 01:19 IST · Scheduled every 10 hours · <a href="https://github.com/risbh19/risbh19/actions/workflows/profile.yml">Refresh status</a></sub>
 <!-- CONTRIBUTION_STATS:END -->
 
 </div>
