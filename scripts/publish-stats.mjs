@@ -25,7 +25,7 @@ export function validateStats(svg) {
     return [key, text];
   }));
   const rank = svg.match(/<text\b[^>]*data-testid="level-rank-icon"[^>]*>([^<]+)<\/text>/)?.[1]?.trim();
-  if (!rank || !/^(?:S|A\+?|B\+?|C\+?)$/.test(rank)) throw new Error('GitHub Stats card is missing its rank');
+  if (!rank || !/^(?:S|[AB][+-]?|C\+?)$/.test(rank)) throw new Error(`GitHub Stats card has a missing or invalid rank: ${rank || 'missing'}`);
   return { ...metrics, rank };
 }
 

@@ -14,6 +14,10 @@ test('reject upstream errors, wrong account titles and missing counts before pub
   assert.throws(() => validateStats(light.replaceAll('Rishabh Pal', 'Another User')), /account/);
   assert.throws(() => validateStats(light.replace('data-testid="commits"', 'data-testid="missing"')), /commits/);
   assert.throws(() => validateStats(light.replace(/data-testid="prs"\s*>[^<]+/, 'data-testid="prs">NaN')), /prs/);
+  for (const rank of ['S', 'A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C']) {
+    assert.equal(validateStats(light.replace(/data-testid="level-rank-icon"\s*>[^<]+/, `data-testid="level-rank-icon">${rank}`)).rank, rank);
+  }
+  assert.throws(() => validateStats(light.replace('data-testid="level-rank-icon"', 'data-testid="missing"')), /rank/);
 });
 
 test('publish matching cards with stable content versions and a success time, preserving the rest of README', async () => {
