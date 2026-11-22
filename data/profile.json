@@ -1,19 +1,23 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-21T20:40:38.780Z",
+  "refreshedAt": "2026-11-22T10:22:56.464Z",
   "sources": {
-    "codechef": {
+    "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-21T20:40:38.202Z",
+      "fetchedAt": "2026-11-22T10:22:55.911Z",
       "data": {
-        "handle": "risbh_cf",
-        "rating": 1680,
-        "maxRating": 1680
+        "handle": "risbhh19",
+        "solved": 206,
+        "easy": 128,
+        "medium": 71,
+        "hard": 7,
+        "contestRating": 1264,
+        "contests": 4
       }
     },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-21T20:40:38.201Z",
+      "fetchedAt": "2026-11-22T10:22:55.909Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1222,
@@ -21,59 +25,20 @@
         "rank": "pupil"
       }
     },
-    "leetcode": {
+    "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-11-21T20:40:38.203Z",
+      "fetchedAt": "2026-11-22T10:22:55.910Z",
       "data": {
-        "handle": "risbhh19",
-        "solved": 205,
-        "easy": 127,
-        "medium": 71,
-        "hard": 7,
-        "contestRating": 1264,
-        "contests": 4
+        "handle": "risbh_cf",
+        "rating": 1680,
+        "maxRating": 1680
       }
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-21T20:40:38.199Z",
+      "fetchedAt": "2026-11-22T10:22:55.907Z",
       "data": {
         "days": [
-          {
-            "date": "2025-11-16",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-17",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-18",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-19",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-20",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-21",
-            "count": 0,
-            "level": 0
-          },
-          {
-            "date": "2025-11-22",
-            "count": 0,
-            "level": 0
-          },
           {
             "date": "2025-11-23",
             "count": 0,
@@ -1893,14 +1858,19 @@
             "date": "2026-11-21",
             "count": 26,
             "level": 2
+          },
+          {
+            "date": "2026-11-22",
+            "count": 18,
+            "level": 2
           }
         ],
-        "total": 409
+        "total": 427
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-21T20:40:38.156Z",
+      "fetchedAt": "2026-11-22T10:22:55.866Z",
       "data": {
         "languages": [
           [
