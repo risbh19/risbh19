@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-23T01:09:24.297Z",
+  "refreshedAt": "2026-11-23T20:39:44.531Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-23T01:09:23.572Z",
+      "fetchedAt": "2026-11-23T20:39:43.828Z",
       "data": {
         "handle": "risbhh19",
-        "solved": 206,
-        "easy": 128,
+        "solved": 207,
+        "easy": 129,
         "medium": 71,
         "hard": 7,
         "contestRating": 1264,
@@ -17,7 +17,7 @@
     },
     "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-11-23T01:09:23.571Z",
+      "fetchedAt": "2026-11-23T20:39:43.827Z",
       "data": {
         "handle": "risbh_cf",
         "rating": 1680,
@@ -26,7 +26,7 @@
     },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-23T01:09:23.569Z",
+      "fetchedAt": "2026-11-23T20:39:43.826Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1211,
@@ -36,7 +36,7 @@
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-23T01:09:23.568Z",
+      "fetchedAt": "2026-11-23T20:39:43.824Z",
       "data": {
         "days": [
           {
@@ -1866,45 +1866,45 @@
           },
           {
             "date": "2026-11-23",
-            "count": 19,
+            "count": 31,
             "level": 2
           }
         ],
-        "total": 452
+        "total": 464
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-23T01:09:23.528Z",
+      "fetchedAt": "2026-11-23T20:39:43.786Z",
       "data": {
         "languages": [
           [
             "Python",
-            1762779
+            1852394
           ],
           [
             "TypeScript",
-            485055
+            676583
           ],
           [
             "Jupyter Notebook",
             439604
           ],
           [
+            "JavaScript",
+            286441
+          ],
+          [
             "C++",
             264175
           ],
           [
-            "JavaScript",
-            251989
-          ],
-          [
             "CSS",
-            94735
+            135655
           ],
           [
             "HTML",
-            15084
+            15960
           ],
           [
             "CMake",
@@ -1915,12 +1915,12 @@
             5339
           ],
           [
-            "C",
-            4972
+            "Dockerfile",
+            5082
           ],
           [
-            "Dockerfile",
-            4317
+            "C",
+            4972
           ],
           [
             "Shell",
@@ -1928,7 +1928,7 @@
           ],
           [
             "Mako",
-            1845
+            2202
           ],
           [
             "Batchfile",
