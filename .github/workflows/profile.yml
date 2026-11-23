@@ -3,7 +3,7 @@ name: Refresh profile
 on:
   workflow_dispatch:
   schedule:
-    - cron: '47 * * * *' # Hourly check; the gate below refreshes once per 10-hour window.
+    - cron: '17,47 * * * *' # Retry twice hourly; the gate permits one refresh per 10-hour window.
   push:
     branches: [main]
     paths:
