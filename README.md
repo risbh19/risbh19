@@ -99,6 +99,7 @@ Currently focused on **database transactions, concurrency, authentication and re
 <div align="center">
 
 <!-- CONTRIBUTION_STATS:START -->
+<!-- On-demand refresh requested 2026-11-24; removed automatically after regeneration. -->
 <a href="https://github.com/risbh19" title="Rishabh Pal (@risbh19)">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/risbh19/risbh19/main/assets/github-stats-dark-c80102d8696e7d7b.svg" />
