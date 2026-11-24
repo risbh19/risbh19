@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-23T20:39:44.531Z",
+  "refreshedAt": "2026-11-24T04:58:53.559Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-23T20:39:43.828Z",
+      "fetchedAt": "2026-11-24T04:58:52.183Z",
       "data": {
         "handle": "risbhh19",
         "solved": 207,
@@ -17,7 +17,7 @@
     },
     "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-11-23T20:39:43.827Z",
+      "fetchedAt": "2026-11-24T04:58:52.183Z",
       "data": {
         "handle": "risbh_cf",
         "rating": 1680,
@@ -26,7 +26,7 @@
     },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-23T20:39:43.826Z",
+      "fetchedAt": "2026-11-24T04:58:52.182Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1211,
@@ -36,7 +36,7 @@
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-23T20:39:43.824Z",
+      "fetchedAt": "2026-11-24T04:58:52.181Z",
       "data": {
         "days": [
           {
@@ -1868,23 +1868,28 @@
             "date": "2026-11-23",
             "count": 31,
             "level": 2
+          },
+          {
+            "date": "2026-11-24",
+            "count": 32,
+            "level": 2
           }
         ],
-        "total": 464
+        "total": 496
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-23T20:39:43.786Z",
+      "fetchedAt": "2026-11-24T04:58:52.151Z",
       "data": {
         "languages": [
           [
             "Python",
-            1852394
+            1911071
           ],
           [
             "TypeScript",
-            676583
+            703925
           ],
           [
             "Jupyter Notebook",
@@ -1892,7 +1897,7 @@
           ],
           [
             "JavaScript",
-            286441
+            298197
           ],
           [
             "C++",
@@ -1916,7 +1921,7 @@
           ],
           [
             "Dockerfile",
-            5082
+            5272
           ],
           [
             "C",
