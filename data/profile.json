@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "refreshedAt": "2026-11-26T20:10:02.766Z",
+  "refreshedAt": "2026-11-27T11:17:39.529Z",
   "sources": {
     "leetcode": {
       "status": "fresh",
-      "fetchedAt": "2026-11-26T20:10:02.031Z",
+      "fetchedAt": "2026-11-27T11:17:38.663Z",
       "data": {
         "handle": "risbhh19",
         "solved": 209,
@@ -17,7 +17,7 @@
     },
     "codeforces": {
       "status": "fresh",
-      "fetchedAt": "2026-11-26T20:10:02.029Z",
+      "fetchedAt": "2026-11-27T11:17:38.661Z",
       "data": {
         "handle": "Sensi__",
         "rating": 1211,
@@ -27,7 +27,7 @@
     },
     "codechef": {
       "status": "fresh",
-      "fetchedAt": "2026-11-26T20:10:02.030Z",
+      "fetchedAt": "2026-11-27T11:17:38.662Z",
       "data": {
         "handle": "risbh_cf",
         "rating": 1681,
@@ -36,7 +36,7 @@
     },
     "calendar": {
       "status": "fresh",
-      "fetchedAt": "2026-11-26T20:10:02.027Z",
+      "fetchedAt": "2026-11-27T11:17:38.659Z",
       "data": {
         "days": [
           {
@@ -1883,14 +1883,19 @@
             "date": "2026-11-26",
             "count": 18,
             "level": 2
+          },
+          {
+            "date": "2026-11-27",
+            "count": 6,
+            "level": 1
           }
         ],
-        "total": 536
+        "total": 542
       }
     },
     "github": {
       "status": "fresh",
-      "fetchedAt": "2026-11-26T20:10:01.989Z",
+      "fetchedAt": "2026-11-27T11:17:38.617Z",
       "data": {
         "languages": [
           [
@@ -1907,7 +1912,7 @@
           ],
           [
             "JavaScript",
-            382566
+            382288
           ],
           [
             "C++",
