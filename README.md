@@ -27,10 +27,6 @@ Currently focused on **database transactions, concurrency, authentication and re
 <h2 align="center">Connect</h2>
 
 <p align="center">
-  <a href="https://risbh19.xyz">
-    <img src="https://img.shields.io/badge/Portfolio-0F172A?style=flat-square" height="32" alt="Portfolio" />
-  </a>
-  &nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/rishabhpal19/" title="LinkedIn">
     <img src="https://skillicons.dev/icons?i=linkedin" width="36" height="36" alt="LinkedIn" />
   </a>
